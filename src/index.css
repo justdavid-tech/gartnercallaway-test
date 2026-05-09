@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* v4 Variable Mapping */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Custom Easings */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Define your GC Colors here (replaces tailwind.config.js) */
+  --color-gc-green-200: #e1f0e5; /* Replace with your actual hex */
+  --color-gc-green-400: #7fb38d;
+  --color-gc-green-500: #4a8a5b;
+  --color-gc-green-900: #1a3321;
+  
+  --color-gc-red-400: #e07a5f;
+  
+  --color-gc-stone-100: #f4f4f2;
+  --color-gc-stone-500: #787870;
+  --color-gc-stone-800: #2c2c2a;
+}
+
+/* ── BASE ───────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    overflow-x: hidden !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  :focus-visible {
+    /* v4 uses --color-* variables */
+    outline: 2px solid var(--color-gc-green-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-gc-green-200);
+    color: var(--color-gc-green-900);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-gc-stone-100); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gc-green-400);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-gc-green-500); }
+}
+
+/* ── COMPONENTS ─────────────────────────────────────────────── */
+@layer components {
+  .eyebrow {
+    @apply text-xs font-medium tracking-[0.22em] uppercase text-gc-red-400;
+    font-family: var(--font-body);
+  }
+
+  .glass {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .quote-pull {
+    @apply border-l-[3px] border-gc-red-400 pl-6 my-8;
+  }
+
+  .quote-pull blockquote {
+    @apply text-xl italic font-light leading-snug text-gc-stone-800;
+    font-family: var(--font-display);
+  }
+
+  .quote-pull cite {
+    @apply block mt-3 text-xs not-italic tracking-[0.18em] uppercase text-gc-stone-500;
+  }
+}
+
+/* ── UTILITIES ──────────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-gc-green-500), var(--color-gc-red-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .progress-gradient {
+    background: linear-gradient(90deg, var(--color-gc-green-500), var(--color-gc-red-400));
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    /* In v4, transition-timing-function can map to theme vars directly */
+    @apply absolute bottom-0 left-0 h-[2px] w-0 bg-gc-red-400 rounded-full transition-[width] duration-300;
+    transition-timing-function: var(--ease-spring);
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+
+/* AUTO SLIDER */
+
+.slider-track-left {
+  width: max-content;
+  animation: slideLeft 25s linear infinite;
+}
+
+/* CHANGE SPEED HERE */
+.slider-track-right {
+  width: max-content;
+  animation: slideRight 25s linear infinite;
+}
+
+/* TOP SLIDER DIRECTION */
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* BOTTOM SLIDER DIRECTION */
+@keyframes slideRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
