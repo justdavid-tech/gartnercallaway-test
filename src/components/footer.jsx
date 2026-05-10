@@ -150,8 +150,6 @@ export default function Footer() {
           --g500: #4a8a5b; --g400: #7fb38d; --g200: #e1f0e5;
           --r400: #e07a5f;
           --s100: #f4f4f2; --s500: #787870; --s800: #2c2c2a;
-          --fd: "Cormorant Garamond", Georgia, serif;
-          --fb: "DM Sans", system-ui, sans-serif;
           --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
           --es: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           font-family: var(--fb);

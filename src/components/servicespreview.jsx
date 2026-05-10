@@ -161,8 +161,8 @@ export default function ServicesPreview() {
           --g200: #e1f0e5;
           --r400: #FF0000;
           --stone: #f4f4f2;
-          --fd: "Cormorant Garamond", Georgia, serif;
-          --fb: "DM Sans", system-ui, sans-serif;
+          // --fd: "Cormorant Garamond", Georgia, serif;
+          // --fb: "DM Sans", system-ui, sans-serif;
           --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
           --es: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }

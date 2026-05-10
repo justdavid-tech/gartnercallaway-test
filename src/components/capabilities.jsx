@@ -161,6 +161,7 @@ export default function CapabilityStrip() {
   return (
     <>
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         /* ── tokens + reset ── */
         .gc-cap-section, .gc-cap-section * { box-sizing: border-box; }
         .gc-cap-section {
@@ -173,8 +174,8 @@ export default function CapabilityStrip() {
           --stone-100: #f4f4f2;
           --stone-500: #787870;
           --stone-800: #2c2c2a;
-          --fd: "Cormorant Garamond", Georgia, serif;
-          --fb: "DM Sans", system-ui, sans-serif;
+          --fd: "Montserrat", system-ui, sans-serif;
+          --fb: "Montserrat", system-ui, sans-serif;
           --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
           --es: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }

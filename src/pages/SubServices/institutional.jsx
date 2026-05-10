@@ -137,7 +137,7 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-[1.05] mb-5"
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light font-montserrat text-white leading-[1.05] mb-5"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(24px)", transition: "opacity .9s ease .2s, transform .9s ease .2s" }}>
             Field services built<br />
             <em className="not-italic text-gc-green-400">for institutions.</em>

@@ -248,12 +248,11 @@ export default function HeroSection() {
       {heroReady && (
         <>
           <style>{`
+          // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
             .gc-hero, .gc-hero * { box-sizing: border-box; margin: 0; padding: 0; }
             .gc-hero {
               --g900: #0e1f14; --g800: #1a3321; --g500: #4a8a5b; --g400: #7fb38d;
               --g200: #e1f0e5; --r400: #e07a5f;
-              --fd: "Cormorant Garamond", Georgia, serif;
-              --fb: "DM Sans", system-ui, sans-serif;
               --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
               position: relative; min-height: 100svh;
               display: flex; flex-direction: column;

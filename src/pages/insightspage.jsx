@@ -145,8 +145,10 @@ export default function InsightsPage() {
   return (
     <>
       <style>{`
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
         /* ── Tokens ── */
-        .gc-ip-root { font-family: "DM Sans", system-ui, sans-serif; }
+        .gc-ip-root { font-family: "montserrat", system-ui, sans-serif; }
 
         /* ── Shimmer ── */
         @keyframes gc-ip-shimmer { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
@@ -200,7 +202,7 @@ export default function InsightsPage() {
 
         /* ── Hero headline ── */
         .gc-ip-hero-h1 {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "montserrat", system-ui, sans-serif;
           font-size: clamp(42px, 6vw, 80px);
           font-weight: 300; line-height: 1.04;
           letter-spacing: -.02em; color: #fff;
