@@ -190,8 +190,8 @@ function SectionHeader() {
         Latest Insights
       </div>
       <h2 className="gc-ins-heading">
-        Stories from the field.<br />
-        <em>Lessons from practice.</em>
+        Stories From The Field.<br />
+        <em>Lessons From Practice.</em>
       </h2>
       <p className="gc-ins-subhead">
         From regenerative farm design to precision sensing and institutional partnerships 
@@ -286,7 +286,7 @@ export default function InsightsPreview() {
         }
         .gc-ins-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 9.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);
@@ -298,19 +298,19 @@ export default function InsightsPreview() {
         .gc-ins-heading {
           font-family: var(--fd);
           font-size: clamp(34px, 5.5vw, 68px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           color: var(--stone-800);
           letter-spacing: -.015em;
           margin: 0 0 clamp(16px, 2vw, 24px);
         }
         .gc-ins-heading em {
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 600;
           color: var(--g500);
         }
         .gc-ins-subhead {
           font-size: clamp(13.5px, 1.4vw, 16px);
-          font-weight: 300; line-height: 1.78;
-          color: var(--stone-500);
+          font-weight: 500; line-height: 1.78;
+          color: #000;
           max-width: 640px; margin: 0 auto;
         }
 
@@ -401,21 +401,21 @@ export default function InsightsPreview() {
           align-items: center; 
           gap: 5px; 
           font-size: 10.5px; 
-          font-weight: 400;
-          color: #9ca3af; 
+          font-weight: 500;
+          color: #000; 
         }
         .gc-ins-meta-dot { 
           width: 3px; 
           height: 3px; 
           border-radius: 50%; 
-          background: #d1d5db; 
+          background: #000; 
         }
         .gc-ins-title {
           font-family: var(--fd);
           font-size: 18px;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 1.3;
-          color: var(--stone-800);
+          color: #000;
           letter-spacing: -.01em;
           transition: color 0.2s ease;
         }
@@ -427,9 +427,9 @@ export default function InsightsPreview() {
         }
         .gc-ins-excerpt { 
           font-size: 13px; 
-          font-weight: 300;
+          font-weight: 500;
           line-height: 1.65;
-          color: #6b7280; 
+          color: #000; 
           flex: 1; 
         }
         .gc-ins-rule { 
@@ -468,13 +468,13 @@ export default function InsightsPreview() {
         }
         .gc-ins-author-name { 
           font-size: 11.5px; 
-          font-weight: 500; 
-          color: #374151; 
+          font-weight: 600; 
+          color: #000; 
         }
         .gc-ins-author-role { 
           font-size: 9px; 
-          font-weight: 400;
-          color: #9ca3af; 
+          font-weight: 600;
+          color: #000; 
         }
         .gc-ins-read-more {
           display: inline-flex; 
@@ -482,7 +482,7 @@ export default function InsightsPreview() {
           gap: 5px;
           font-family: var(--fb);
           font-size: 10px; 
-          font-weight: 600;
+          font-weight: 700;
           letter-spacing: 0.1em; 
           text-transform: uppercase;
           transition: gap 0.2s ease;
@@ -526,7 +526,7 @@ export default function InsightsPreview() {
           gap: 10px;
           font-family: var(--fb);
           font-size: 10px; 
-          font-weight: 600;
+          font-weight: 800;
           letter-spacing: 0.14em; 
           text-transform: uppercase;
           color: var(--g500);

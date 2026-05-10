@@ -171,7 +171,7 @@ const BADGES = [
   "1,000+ people trained",
 ];
 
-const WORDS = ["bankable", "insurable", "exportable", "scalable"];
+const WORDS = ["Secure", "Insurable", "Resilient", "Scalable"];
 
 const LOADER_DURATION = 6000; // ms — change to adjust load time
 
@@ -291,7 +291,7 @@ export default function HeroSection() {
             .gc-eyebrow.gc-vis { opacity: 1; }
             .gc-eyebrow-rule { display: block; width: 28px; height: 1px; background: var(--g400); flex-shrink: 0; }
             .gc-h1 {
-              font-family: var(--fd); font-size: clamp(42px,7vw,96px); font-weight: 300;
+              font-family: var(--fd); font-size: clamp(42px,7vw,96px); font-weight: 600;
               line-height: 1.03; color: #fff; margin-bottom: clamp(16px,2vw,24px);
               letter-spacing: -.02em; max-width: 14ch;
               opacity: 0; transform: translateY(24px);
@@ -299,7 +299,7 @@ export default function HeroSection() {
             }
             .gc-h1.gc-vis { opacity: 1; transform: translateY(0); }
             .gc-h1 em {
-              font-style: italic; font-weight: 300; color: var(--g400);
+              font-style: italic; font-weight: 600; color: var(--g400);
               display: inline-block; animation: gcWordFade .5s ease;
             }
             @keyframes gcWordFade {
@@ -308,7 +308,7 @@ export default function HeroSection() {
             }
             .gc-sub {
               font-size: clamp(13px,1.5vw,16px); font-weight: 300; line-height: 1.8;
-              color: rgba(255,255,255,.60); max-width: min(560px,90%);
+              color: white; max-width: min(560px,90%);
               margin-bottom: clamp(28px,4.5vw,48px);
               opacity: 0; transform: translateY(18px);
               transition: opacity .9s ease .42s, transform .9s ease .42s;
@@ -354,7 +354,7 @@ export default function HeroSection() {
             .gc-badge.gc-vis { opacity: 1; transform: translateY(0); }
             .gc-badge-row { display: flex; align-items: flex-start; gap: 10px; }
             .gc-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--g400); margin-top: 6px; flex-shrink: 0; }
-            .gc-badge-txt { font-size: 11px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.5; }
+            .gc-badge-txt { font-size: 11px; font-weight: 300; color: #FFF; line-height: 1.5; }
             .gc-vid-controls {
               position: absolute; bottom: clamp(110px,14vw,140px); right: clamp(24px,4vw,56px);
               z-index: 8; display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -395,7 +395,7 @@ export default function HeroSection() {
             .gc-stat-item { padding: clamp(16px,2.5vw,28px) clamp(16px,3vw,40px); border-right: 1px solid rgba(255,255,255,.07); }
             .gc-stat-item:last-child { border-right: none; }
             .gc-stat-num { display: block; font-family: var(--fd); font-size: clamp(24px,3.5vw,38px); font-weight: 300; color: #fff; line-height: 1; margin-bottom: 5px; letter-spacing: -.01em; }
-            .gc-stat-lbl { display: block; font-size: clamp(8px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.38); }
+            .gc-stat-lbl { display: block; font-size: clamp(8px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #FFF; }
             @media (max-width: 1024px) { .gc-badge { width: 100%; max-width: 100%; } .gc-scroll { display: none; } .gc-vid-controls { right: 20px; bottom: 100px; } }
             @media (max-width: 768px) {
               .gc-stats { grid-template-columns: repeat(2,1fr); }
@@ -435,8 +435,8 @@ export default function HeroSection() {
                 <span>Nigeria · West Africa · UK Partnership Corridor</span>
               </div>
               <h1 className={`gc-h1 ${v}`}>
-                Regenerative agriculture,<br />
-                made <em key={wordIndex}>{WORDS[wordIndex]}</em>.
+                Regenerative Agriculture,<br />
+                Made <em key={wordIndex}>{WORDS[wordIndex]}</em>.
               </h1>
               <p className={`gc-sub ${v}`}>
                 We design, build, and operate integrated farm systems

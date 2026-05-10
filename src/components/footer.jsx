@@ -202,8 +202,8 @@ export default function Footer() {
         .gc-footer-quote {
           font-family: var(--fd);
           font-size: clamp(15px,1.8vw,21px);
-          font-style: italic; font-weight: 300;
-          color: rgba(255,255,255,.4);
+          font-style: italic; font-weight: 500;
+          color: #FFF;
           line-height: 1.4;
           max-width: 640px;
         }
@@ -243,25 +243,12 @@ export default function Footer() {
           display: flex; align-items: center; gap: 12px;
           text-decoration: none; margin-bottom: clamp(16px,2.5vw,24px);
         }
-        .gc-ft-logo-mark {
-          width: 36px; height: 36px; border-radius: 50%;
-          background: var(--g500);
-          display: flex; align-items: center; justify-content: center;
-          flex-shrink: 0;
-          transition: transform .3s var(--ep);
-        }
-        .gc-ft-logo:hover .gc-ft-logo-mark { transform: rotate(-8deg) scale(1.08); }
-        .gc-ft-logo-text {
-          font-family: var(--fd);
-          font-size: 20px; font-weight: 600;
-          color: #fff; letter-spacing: .03em; line-height: 1;
-        }
         .gc-ft-logo-text span { color: var(--g400); font-weight: 300; }
 
         .gc-ft-tagline {
           font-size: clamp(12px,1.2vw,14px);
-          font-weight: 300; line-height: 1.78;
-          color: rgba(255,255,255,.38);
+          font-weight: 500; line-height: 1.78;
+          color: #FFF;
           margin-bottom: clamp(20px,2.5vw,28px);
           max-width: 280px;
         }
@@ -285,11 +272,11 @@ export default function Footer() {
           margin-bottom: 2px;
         }
         .gc-ft-office-role {
-          font-size: 10px; font-weight: 300;
-          color: rgba(255,255,255,.3); line-height: 1.4;
+          font-size: 10px; font-weight: 500;
+          color: #FFF; line-height: 1.4;
         }
         .gc-ft-office-sub {
-          font-size: 9px; font-weight: 400;
+          font-size: 9px; font-weight: 500;
           letter-spacing: .1em; text-transform: uppercase;
           color: var(--g400); margin-top: 2px;
         }
@@ -299,7 +286,7 @@ export default function Footer() {
         .gc-ft-contact-row {
           display: flex; align-items: center; gap: 8px;
           font-size: 11px; font-weight: 300;
-          color: rgba(255,255,255,.4);
+          color: #FFF;
           text-decoration: none;
           transition: color .2s;
         }
@@ -311,7 +298,7 @@ export default function Footer() {
         .gc-ft-col-heading {
           font-size: 9px; font-weight: 500;
           letter-spacing: .22em; text-transform: uppercase;
-          color: rgba(255,255,255,.25);
+          color: #FFF;
           margin-bottom: clamp(16px,2vw,22px);
           padding-bottom: 10px;
           border-bottom: 1px solid rgba(255,255,255,.05);
@@ -320,8 +307,8 @@ export default function Footer() {
         .gc-ft-link {
           display: inline-flex; align-items: center; gap: 6px;
           padding: 7px 0;
-          font-size: clamp(12px,1.1vw,13.5px); font-weight: 300;
-          color: rgba(255,255,255,.45);
+          font-size: clamp(12px,1.1vw,13.5px); font-weight: 500;
+          color: #FFF;
           text-decoration: none;
           border-bottom: 1px solid rgba(255,255,255,.03);
           transition: color .2s ease, padding-left .2s var(--ep);
@@ -349,7 +336,7 @@ export default function Footer() {
         .gc-ft-mid-heading {
           font-size: 9px; font-weight: 500;
           letter-spacing: .22em; text-transform: uppercase;
-          color: rgba(255,255,255,.25);
+          color: #FFF;
           margin-bottom: clamp(14px,1.8vw,20px);
         }
 
@@ -359,7 +346,7 @@ export default function Footer() {
           display: flex; align-items: center; justify-content: center;
           width: 36px; height: 36px; border-radius: 2px;
           border: 1px solid rgba(255,255,255,.08);
-          color: rgba(255,255,255,.35);
+          color: #FFF;
           text-decoration: none;
           transition: border-color .2s, color .2s, background .2s, transform .2s var(--ep);
         }
@@ -387,11 +374,11 @@ export default function Footer() {
         }
         .gc-ft-retail-label {
           font-size: 11px; font-weight: 500;
-          color: rgba(255,255,255,.6); line-height: 1.2;
+          color: #FFF; line-height: 1.2;
         }
         .gc-ft-retail-sub {
           font-size: 9.5px; font-weight: 300;
-          color: rgba(255,255,255,.3); margin-top: 2px;
+          color: #FFF; margin-top: 2px;
         }
         .gc-ft-retail-arrow {
           margin-left: auto; color: var(--g400); opacity: .5;
@@ -403,8 +390,8 @@ export default function Footer() {
         /* newsletter */
         .gc-ft-nl { display: flex; flex-direction: column; gap: 0; }
         .gc-ft-nl-label {
-          font-size: 10px; font-weight: 300;
-          color: rgba(255,255,255,.3); margin-bottom: 10px;
+          font-size: 10px; font-weight: 500;
+          color: #FFF; margin-bottom: 10px;
         }
         .gc-ft-nl-form {
           display: flex; gap: 0;
@@ -418,11 +405,11 @@ export default function Footer() {
           border: none; outline: none;
           padding: 11px 14px;
           font-family: var(--fb);
-          font-size: 12px; font-weight: 300;
-          color: rgba(255,255,255,.75);
+          font-size: 12px; font-weight: 500;
+          color: #FFF;
           min-width: 0;
         }
-        .gc-ft-nl-input::placeholder { color: rgba(255,255,255,.2); }
+        .gc-ft-nl-input::placeholder { color: #FFF; }
         .gc-ft-nl-input--err { background: rgba(224,122,95,.06); }
         .gc-ft-nl-btn {
           background: var(--g500); border: none; cursor: pointer;
@@ -451,14 +438,14 @@ export default function Footer() {
         .gc-ft-gov { display: flex; flex-direction: column; gap: 0; }
         .gc-ft-gov-link {
           display: block; padding: 6px 0;
-          font-size: 11px; font-weight: 300;
-          color: rgba(255,255,255,.3);
+          font-size: 11px; font-weight: 500;
+          color: #FFF;
           text-decoration: none;
           border-bottom: 1px solid rgba(255,255,255,.03);
           transition: color .2s;
         }
         .gc-ft-gov-link:last-child { border-bottom: none; }
-        .gc-ft-gov-link:hover { color: rgba(255,255,255,.65); }
+        .gc-ft-gov-link:hover { color: #FFF; }
 
         /* ── bottom bar ── */
         .gc-footer-bottom {
@@ -468,18 +455,18 @@ export default function Footer() {
         }
         .gc-ft-copyright {
           font-size: 11px; font-weight: 300;
-          color: rgba(255,255,255,.2);
+          color: #FFF;
           line-height: 1.6;
         }
-        .gc-ft-copyright strong { color: rgba(255,255,255,.35); font-weight: 400; }
+        .gc-ft-copyright strong { color: #FFF; font-weight: 400; }
         .gc-ft-bottom-links {
           display: flex; align-items: center; gap: clamp(14px,2vw,24px);
           flex-wrap: wrap;
         }
         .gc-ft-bottom-link {
-          font-size: 10px; font-weight: 300;
+          font-size: 10px; font-weight: 500;
           letter-spacing: .06em;
-          color: rgba(255,255,255,.2);
+          color: #FFF;
           text-decoration: none;
           transition: color .2s;
         }
@@ -500,9 +487,9 @@ export default function Footer() {
         }
         .gc-ft-cred {
           display: flex; align-items: center; gap: 8px;
-          font-size: 9.5px; font-weight: 400;
+          font-size: 9.5px; font-weight: 500;
           letter-spacing: .14em; text-transform: uppercase;
-          color: rgba(255,255,255,.2);
+          color: #FFF;
           white-space: nowrap;
         }
         .gc-ft-cred-dot {

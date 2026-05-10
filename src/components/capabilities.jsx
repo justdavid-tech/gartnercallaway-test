@@ -146,8 +146,8 @@ function SectionHeader() {
         Operational Capability
       </div>
       <h2 className="gc-cap-heading">
-        Precision infrastructure.<br />
-        <em>Deployed at scale.</em>
+        Precision Infrastructure.<br />
+        <em>Deployed At Scale.</em>
       </h2>
       <p className="gc-cap-subhead">
         From urban vertical farms to estate-wide sensor networks and integrated service architectures. ur capability stack delivers bankable, verifiable, and export-ready agricultural production.
@@ -229,7 +229,7 @@ export default function CapabilityStrip() {
         }
         .gc-cap-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 9.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);
@@ -241,19 +241,19 @@ export default function CapabilityStrip() {
         .gc-cap-heading {
           font-family: var(--fd);
           font-size: clamp(34px, 5.5vw, 68px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           color: var(--stone-800);
           letter-spacing: -.015em;
           margin: 0 0 clamp(16px, 2vw, 24px);
         }
         .gc-cap-heading em {
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 600;
           color: var(--g500);
         }
         .gc-cap-subhead {
           font-size: clamp(13.5px, 1.4vw, 16px);
-          font-weight: 300; line-height: 1.78;
-          color: var(--stone-500);
+          font-weight: 500; line-height: 1.78;
+          color: #000;
           max-width: 640px; margin: 0 auto;
         }
 
@@ -306,7 +306,7 @@ export default function CapabilityStrip() {
         .gc-cap-num {
           font-family: var(--fd);
           font-size: clamp(13px, 1.4vw, 15px);
-          font-weight: 400;
+          font-weight: 600;
           letter-spacing: .14em;
           color: var(--accent);
           line-height: 1;
@@ -324,10 +324,10 @@ export default function CapabilityStrip() {
           display: flex; align-items: center;
           gap: 8px;
           font-size: 10px;
-          font-weight: 400;
+          font-weight: 600;
           letter-spacing: .1em;
           text-transform: uppercase;
-          color: var(--stone-500);
+          color: #00000;
         }
         .gc-cap-location-dot {
           width: 4px; height: 4px;
@@ -348,7 +348,7 @@ export default function CapabilityStrip() {
         .gc-cap-title {
           font-family: var(--fd);
           font-size: clamp(24px, 2.6vw, 32px);
-          font-weight: 400; line-height: 1.15;
+          font-weight: 600; line-height: 1.15;
           color: var(--stone-800);
           margin: 0 0 clamp(12px, 1.5vw, 16px);
           letter-spacing: -.01em;
@@ -357,8 +357,8 @@ export default function CapabilityStrip() {
         /* ── description ── */
         .gc-cap-description {
           font-size: clamp(12.5px, 1.1vw, 14px);
-          font-weight: 300; line-height: 1.75;
-          color: var(--stone-500);
+          font-weight: 500; line-height: 1.75;
+          color: #000;
           margin: 0 0 clamp(16px, 2vw, 20px);
           flex: 1;
         }
@@ -407,10 +407,10 @@ export default function CapabilityStrip() {
         }
         .gc-cap-metric-label {
           font-size: 9px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: .14em;
           text-transform: uppercase;
-          color: var(--stone-500);
+          color: #000;
         }
 
         /* ── RESPONSIVE ── */

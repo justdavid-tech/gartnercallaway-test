@@ -90,7 +90,7 @@ export default function WhyNow() {
         }
         .gc-why-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 9.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);
@@ -102,13 +102,13 @@ export default function WhyNow() {
         .gc-why-heading {
           font-family: var(--fd);
           font-size: clamp(40px, 6vw, 76px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           color: #fff;
           letter-spacing: -.015em;
           margin: 0 0 clamp(20px, 3vw, 32px);
         }
         .gc-why-heading em {
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 600;
           color: var(--g400);
         }
 
@@ -123,9 +123,9 @@ export default function WhyNow() {
         /* ── body text ── */
         .gc-why-body {
           font-size: clamp(16px, 1.6vw, 19px);
-          font-weight: 300;
+          font-weight: 500;
           line-height: 1.75;
-          color: rgba(255,255,255,.65);
+          color: #FFF;
           margin-bottom: clamp(32px, 5vw, 48px);
         }
         .gc-why-body p {
@@ -149,16 +149,16 @@ export default function WhyNow() {
           font-family: var(--fd);
           font-size: clamp(20px, 2.2vw, 26px);
           font-style: italic;
-          font-weight: 300;
+          font-weight: 600;
           line-height: 1.45;
-          color: rgba(255,255,255,.9);
+          color: #FFF;
           margin: 0 0 16px;
         }
         .gc-why-quote cite {
           display: block;
           font-size: 10px;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: .18em;
           text-transform: uppercase;
           color: var(--g400);
@@ -169,7 +169,7 @@ export default function WhyNow() {
           font-size: clamp(16px, 1.6vw, 19px);
           font-weight: 400;
           line-height: 1.75;
-          color: rgba(255,255,255,.8);
+          color: #FFF;
           border-top: 1px solid rgba(255,255,255,.08);
           padding-top: clamp(32px, 5vw, 48px);
           margin-top: clamp(16px, 2vw, 24px);
@@ -235,8 +235,8 @@ export default function WhyNow() {
             The Evolution
           </div>
           <h2 className="gc-why-heading" id="why-heading">
-            Why now.<br />
-            <em>The next stage.</em>
+            Why Now.<br />
+            <em>The Next Stage.</em>
           </h2>
         </div>
 

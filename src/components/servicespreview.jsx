@@ -38,7 +38,7 @@ const SERVICES = [
     href: "/services/academy",
     oneliner: "Institutional capacity-building in modern and regenerative agriculture",
     description:
-      "Our certified online and on-site training platform has equipped 1,000+ farmers, youths, and women across Nigeria with precision agriculture skills — deployed by government programmes, donor agencies, and anchor agribusinesses.",
+      "Our certified online and on-site training platform has equipped 1,000+ farmers, youths, and women across Nigeria with precision agriculture skills deployed by government programmes, donor agencies, and anchor agribusinesses.",
     tags: ["Certified Programmes", "Online & On-site", "1,000+ Trained", "Institutional Delivery"],
     accent: "#FF0000", // red
   },
@@ -133,8 +133,8 @@ function Header() {
       </div>
       <div className="gc-svc-header-inner">
         <h2 className="gc-svc-heading">
-          Four service architectures.<br />
-          <em>One integrated capability.</em>
+          Four Service Architectures.<br />
+          <em>One Integrated Capability.</em>
         </h2>
         <p className="gc-svc-subhead">
           From farm design and construction to institutional verification and
@@ -222,19 +222,19 @@ export default function ServicesPreview() {
         .gc-svc-heading {
           font-family: var(--fd);
           font-size: clamp(32px,5vw,62px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           color: #fff;
           letter-spacing: -.015em;
           margin: 0;
         }
         .gc-svc-heading em {
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 600;
           color: var(--g400);
         }
         .gc-svc-subhead {
           font-size: clamp(13px,1.3vw,15.5px);
-          font-weight: 300; line-height: 1.82;
-          color: rgba(255,255,255,.5);
+          font-weight: 400; line-height: 1.82;
+          color: #FFF;
           margin: 0;
           padding-bottom: 6px;
         }
@@ -278,7 +278,7 @@ export default function ServicesPreview() {
         }
         .gc-svc-num {
           font-family: var(--fd);
-          font-size: 12px; font-weight: 400;
+          font-size: 12px; font-weight: 500;
           letter-spacing: .16em;
           color: var(--accent);
           line-height: 1; flex-shrink: 0;
@@ -291,7 +291,7 @@ export default function ServicesPreview() {
         .gc-svc-title {
           font-family: var(--fd);
           font-size: clamp(20px,2.2vw,27px);
-          font-weight: 400; line-height: 1.12;
+          font-weight: 600; line-height: 1.12;
           color: #fff;
           margin: clamp(10px,1.2vw,14px) clamp(18px,2.2vw,26px) 0;
           letter-spacing: -.01em;
@@ -299,16 +299,16 @@ export default function ServicesPreview() {
 
         .gc-svc-oneliner {
           font-size: clamp(11px,1vw,12.5px);
-          font-weight: 300; line-height: 1.65;
-          color: rgba(255,255,255,.45);
+          font-weight: 400; line-height: 1.65;
+          color: #FFF;
           margin: clamp(8px,1vw,12px) clamp(18px,2.2vw,26px) 0;
         }
 
         /* description - always visible, NO hover animation */
         .gc-svc-desc {
           font-size: clamp(11.5px,1vw,13px);
-          font-weight: 300; line-height: 1.78;
-          color: rgba(255,255,255,.35);
+          font-weight: 500; line-height: 1.78;
+          color: #FFFF;
           margin: clamp(10px,1.2vw,14px) clamp(18px,2.2vw,26px) 0;
         }
 
@@ -337,14 +337,14 @@ export default function ServicesPreview() {
         .gc-svc-cta-txt {
           font-size: 10px; font-weight: 500;
           letter-spacing: .14em; text-transform: uppercase;
-          color: rgba(255,255,255,.3);
+          color: #FFF;
         }
 
         .gc-svc-arrow {
           display: flex; align-items: center; justify-content: center;
           width: 32px; height: 32px; border-radius: 2px;
           border: 1px solid rgba(255,255,255,.1);
-          color: rgba(255,255,255,.3);
+          color: #FFF;
           flex-shrink: 0;
         }
 

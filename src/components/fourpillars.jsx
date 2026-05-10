@@ -149,8 +149,8 @@ function SectionHeader() {
         Value Proposition
       </div>
       <h2 className="gc-pillars-heading">
-        Four principles.<br />
-        One <em>operating system.</em>
+        Four Principles.<br />
+        One <em>Operating System.</em>
       </h2>
       <p className="gc-pillars-subhead">
         Every farm we design, every service we deliver, every report we issue
@@ -244,28 +244,24 @@ export default function FourPillars() {
         }
         .gc-pillars-eyebrow-line {
           display: block; width: 28px; height: 1px;
-<<<<<<< HEAD
           background: #FF0000; flex-shrink: 0;
-=======
-          background: var(--r400); flex-shrink: 0;
->>>>>>> c74e62832805ac203e201e619a100373de3f16e2
         }
         .gc-pillars-heading {
           font-family: var(--fd);
           font-size: clamp(34px, 5.5vw, 68px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           color: var(--stone-800);
           letter-spacing: -.015em;
           margin: 0 0 clamp(16px, 2vw, 24px);
         }
         .gc-pillars-heading em {
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 600;
           color: var(--g500);
         }
         .gc-pillars-subhead {
           font-size: clamp(13.5px, 1.4vw, 16px);
-          font-weight: 300; line-height: 1.78;
-          color: var(--stone-500);
+          font-weight: 500; line-height: 1.78;
+          color: #000;
           max-width: 560px; margin: 0 auto;
         }
 
@@ -313,7 +309,7 @@ export default function FourPillars() {
         .gc-pillar-num {
           font-family: var(--fd);
           font-size: clamp(13px, 1.4vw, 15px);
-          font-weight: 400;
+          font-weight: 600;
           letter-spacing: .14em;
           color: var(--accent);
           line-height: 1;
@@ -341,7 +337,7 @@ export default function FourPillars() {
         .gc-pillar-title {
           font-family: var(--fd);
           font-size: clamp(22px, 2.4vw, 30px);
-          font-weight: 400; line-height: 1.1;
+          font-weight: 500; line-height: 1.1;
           color: var(--stone-800);
           margin: 0 0 clamp(14px, 1.8vw, 20px);
           letter-spacing: -.01em;
@@ -350,8 +346,8 @@ export default function FourPillars() {
         /* ── body ── */
         .gc-pillar-body {
           font-size: clamp(12.5px, 1.1vw, 14px);
-          font-weight: 300; line-height: 1.82;
-          color: var(--stone-500);
+          font-weight: 500; line-height: 1.82;
+          color: #000;
           margin: 0;
           flex: 1;
         }
@@ -365,15 +361,15 @@ export default function FourPillars() {
         .gc-pillar-quote p {
           font-family: var(--fd);
           font-size: clamp(13px, 1.2vw, 15.5px);
-          font-style: italic; font-weight: 300;
+          font-style: italic; font-weight: 500;
           line-height: 1.65;
-          color: var(--stone-800);
+          color: #000;
           margin: 0 0 10px;
         }
         .gc-pillar-quote cite {
           display: block;
           font-size: 9.5px; font-style: normal;
-          font-weight: 500; letter-spacing: .18em;
+          font-weight: 700; letter-spacing: .18em;
           text-transform: uppercase;
           color: var(--accent);
         }
