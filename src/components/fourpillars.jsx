@@ -172,18 +172,14 @@ export default function FourPillars() {
           --g900: #0e1f14;
           --g800: #1a3321;
           --g500: #4a8a5b;
-<<<<<<< HEAD
           --g400: #FF0000;
-=======
-          --g400: #7fb38d;
->>>>>>> c74e62832805ac203e201e619a100373de3f16e2
           --g200: #e1f0e5;
           --r400: #e07a5f;
           --stone-100: #f4f4f2;
           --stone-500: #787870;
           --stone-800: #2c2c2a;
-          --fd: "Cormorant Garamond", Georgia, serif;
-          --fb: "DM Sans", system-ui, sans-serif;
+          // --fd: "Cormorant Garamond", Georgia, serif;
+          // --fb: "DM Sans", system-ui, sans-serif;
           --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
