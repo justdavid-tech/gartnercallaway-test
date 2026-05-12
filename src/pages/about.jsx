@@ -52,14 +52,14 @@ function AboutHero() {
       <div className="ab-grain" aria-hidden="true" />
 
       <div className="ab-hero-body">
-        <h1 className="ab-hero-h1" style={{
-          opacity: v?1:0, transform: v?"translateY(0)":"translateY(28px)",
-          transition:"opacity .9s ease .22s, transform .95s cubic-bezier(0.22,1,0.36,1) .22s",
-        }}>
-          We don't choose between<br />
-          nature and technology.<br />
-          <em>We engineer them to<br />work together.</em>
-        </h1>
+<h1 className="ab-hero-h1" style={{
+  opacity: v ? 1 : 0, 
+  transform: v ? "translateY(0)" : "translateY(28px)",
+  transition: "opacity .9s ease .22s, transform .95s cubic-bezier(0.22,1,0.36,1) .22s",
+}}>
+  Nature And Technology<br />
+  <em>Synchronized</em>
+</h1>
 
         <p className="ab-hero-sub" style={{
           opacity: v?1:0, transform: v?"translateY(0)":"translateY(20px)",
@@ -68,27 +68,28 @@ function AboutHero() {
           Gartner Callaway is an integrated agricultural production and services company headquartered in Lagos State, Nigeria, with an export-ready product portfolio serving markets across West Africa, the UK, and the EU.
         </p>
 
-        <div className="ab-hero-stats" style={{
-          opacity: v?1:0, transition:"opacity .8s ease .7s",
-        }}>
-          {[
-            { n:"200 ha", l:"Ogun State Estate" },
-            { n:"500 kW", l:"Solar Capacity" },
-            { n:"1,000+", l:"People Trained" },
-            { n:"30+",    l:"Organisations Advised" },
-          ].map((s,i) => (
-            <div key={i} className="ab-hero-stat">
-              <span className="ab-hero-stat-n">{s.n}</span>
-              <span className="ab-hero-stat-l">{s.l}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* scroll cue */}
       <div className="ab-scroll-cue" style={{ opacity: v?1:0, transition:"opacity .8s ease 1.3s" }} aria-hidden="true">
         <span className="ab-scroll-txt">Scroll</span>
         <div className="ab-scroll-line"/>
+      </div>
+
+      <div className="ab-hero-stats" style={{
+        opacity: v?1:0, transition:"opacity .8s ease .7s",
+      }}>
+        {[
+          { n:"200 ha", l:"Ogun State Estate" },
+          { n:"500 kW", l:"Solar Capacity" },
+          { n:"1,000+", l:"People Trained" },
+          { n:"30+",    l:"Organisations Advised" },
+        ].map((s,i) => (
+          <div key={i} className="ab-hero-stat">
+            <span className="ab-hero-stat-n">{s.n}</span>
+            <span className="ab-hero-stat-l">{s.l}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -111,8 +112,8 @@ function WhoWeAre() {
             Who We Are
           </div>
           <h2 id="who-heading" className="ab-who-h2">
-            One company.<br />
-            <em>The entire stack.</em>
+            One Company<br />
+            <em>The Entire Stack</em>
           </h2>
           {/* decorative photo inset */}
           <div className="ab-who-img-wrap" aria-hidden="true">
@@ -133,7 +134,7 @@ function WhoWeAre() {
             Gartner Callaway operates at the intersection of regenerative agriculture, precision technology, and institutional services. We design and build integrated farm systems. We verify farms for banks, insurers, and donors. We grow and export premium produce. We train the next generation.
           </p>
           <p className="ab-who-body">
-            Founded in 2017, we began by pioneering Africa's first automated hydroponic urban vertical farms across Lagos. We then engineered Nigeria's first restaurant-integrated indoor grow system before designing and developing our 200-hectare Ogun State hibiscus estate, now the operational proof point at the centre of every institutional engagement we take on.
+            Founded in 2017, we began by pioneering Africa's first automated hydroponic urban vertical farms across Lagos. We then engineered Nigeria's first restaurant-integrated indoor grow system before designing and developing our new integrated farm model, now the operational proof point at the centre of every institutional engagement we take on.
           </p>
           <p className="ab-who-body">
             Today, Gartner Callaway is the independent agricultural production, services, and education company that makes regenerative agriculture bankable, insurable, and exportable across southwest Nigeria, West Africa, and the UK partnership corridor.
@@ -201,7 +202,7 @@ function Timeline() {
             Our Evolution
           </div>
           <h2 id="timeline-heading" className="ab-section-h2 ab-section-h2--light">
-            Nine years of building.<br /><em>One operating thesis.</em>
+            Nine Years of Building<br /><em>One Operating Thesis</em>
           </h2>
         </div>
       </Reveal>
@@ -326,7 +327,7 @@ function FarmModel() {
               How We Farm
             </div>
             <h2 id="farm-heading" className="ab-section-h2">
-              The integrated<br /><em>farm model.</em>
+              The Integrated<br /><em>Farm Model</em>
             </h2>
             <p className="ab-farm-intro">
               Every farm Gartner Callaway designs operates as a closed-loop system. Six components water, trees, livestock, soil, energy, and data are woven together so that each one subsidises the others.
@@ -419,7 +420,7 @@ function WhoWeServe() {
           </div>
           <div className="ab-serve-header-grid">
             <h2 id="serve-heading" className="ab-section-h2">
-              Seven client types.<br /><em>One accountable partner.</em>
+              Seven Client Types<br /><em>One Accountable Partner</em>
             </h2>
             <p className="ab-serve-sub">
               Our institutional client base spans the full agricultural finance and development stack from commercial banks to export buyers. Each engagement is governed by written SOPs, milestone billing, and SLA-backed delivery.
@@ -520,7 +521,7 @@ const VALUES = [
   {
     num:"05",
     title:"Sovereignty Through Knowledge",
-    body:"Nations must master their own biodiversity. GC Academy exists to ensure that mastery is earned, not borrowed.",
+    body:"Nations must master their own biodiversity. Gartner Callaway exists to ensure that mastery is earned, not borrowed.",
     accent:"#4a8a5b",
   },
 ];
@@ -535,7 +536,7 @@ function Values() {
             Our Values
           </div>
           <h2 id="values-heading" className="ab-section-h2">
-            Five commitments.<br /><em>Not aspirations constraints.</em>
+            Five Commitments<br /><em>Not Aspirations Constraints</em>
           </h2>
         </div>
       </Reveal>
@@ -583,7 +584,7 @@ function Leadership() {
           Leadership
         </div>
         <h2 id="leader-heading" className="ab-section-h2 ab-section-h2--light">
-          The founder.
+          The Founder
         </h2>
       </Reveal>
 
@@ -666,8 +667,8 @@ function UniversalCTA() {
           Work With Us
         </div>
         <h2 id="cta-heading" className="ab-cta-h2">
-          Ready to transform your programme,<br />
-          <em>your portfolio, or your farm?</em>
+          Ready To Transform Your Programme<br />
+          <em>Your Portfolio Or Your Farm?</em>
         </h2>
         <p className="ab-cta-sub">
           We welcome conversations with banks, insurers, donor organisations, government programmes, agribusiness anchors, and investors operating across southwest Nigeria, West Africa, and our UK partnership corridor.
@@ -700,8 +701,8 @@ export default function AboutPage() {
           --g400: #7fb38d; --g200: #e1f0e5;
           --r400: #FF0000;
           --s100: #f4f4f2; --s500: #787870; --s800: #2c2c2a;
-          --fd: "Cormorant Garamond", Georgia, serif;
-          --fb: "DM Sans", system-ui, sans-serif;
+          // --fd: "Cormorant Garamond", Georgia, serif;
+          // --fb: "DM Sans", system-ui, sans-serif;
           --ep: cubic-bezier(0.34, 1.56, 0.64, 1);
           --es: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           font-family: var(--fb);
@@ -712,7 +713,7 @@ export default function AboutPage() {
         /* ── shared atoms ── */
         .ab-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 16.5px; font-weight: 500;
           letter-spacing: .22em; text-transform: uppercase;
           margin-bottom: clamp(14px,2vw,22px);
         }
@@ -729,11 +730,11 @@ export default function AboutPage() {
         .ab-section-h2 {
           font-family: var(--fd);
           font-size: clamp(30px,4.5vw,56px);
-          font-weight: 300; line-height: 1.08;
+          font-weight: 600; line-height: 1.08;
           letter-spacing: -.015em; color: var(--s800);
           margin-bottom: clamp(16px,2.5vw,28px);
         }
-        .ab-section-h2 em { font-style: italic; font-weight: 300; color: var(--g500); }
+        .ab-section-h2 em { font-style: italic; font-weight: 600; color: var(--g500); }
         .ab-section-h2--light { color: #fff; }
         .ab-section-h2--light em { color: var(--g400); }
 
@@ -746,10 +747,10 @@ export default function AboutPage() {
           margin: clamp(24px,3.5vw,36px) 0 0;
         }
         .ab-pullquote p {
-          font-family: var(--fd);
+          font-family: #000;
           font-size: clamp(15px,1.6vw,20px);
-          font-style: italic; font-weight: 300;
-          line-height: 1.6; color: var(--s800); margin-bottom: 10px;
+          font-style: italic; font-weight: 500;
+          line-height: 1.6; color: #000; margin-bottom: 10px;
         }
         .ab-pullquote cite {
           font-size: 9.5px; font-style: normal; font-weight: 500;
@@ -791,44 +792,38 @@ export default function AboutPage() {
         .ab-hero-h1 {
           font-family: var(--fd);
           font-size: clamp(34px,6vw,78px);
-          font-weight: 300; line-height: 1.06;
+          font-weight: 600; line-height: 1.06;
           color: #fff; letter-spacing: -.015em;
           margin-bottom: clamp(20px,2.5vw,28px);
         }
-        .ab-hero-h1 em { font-style: italic; color: var(--g400); font-weight: 300; }
+        .ab-hero-h1 em { font-style: italic; color: var(--g400); font-weight: 600; }
         .ab-hero-sub {
           font-size: clamp(13px,1.4vw,16px);
-          font-weight: 300; line-height: 1.78;
-          color: rgba(255,255,255,.6);
+          font-weight: 400; line-height: 1.78;
+          color: #FFF;
           max-width: min(580px,90%);
           margin-bottom: clamp(32px,5vw,52px);
         }
         .ab-hero-stats {
-          display: flex; flex-wrap: wrap; gap: 0;
-          border: 1px solid rgba(255,255,255,.08);
-          border-radius: 3px; overflow: hidden;
-          width: fit-content;
+          position: relative; z-index: 6; flex-shrink: 0;
+          display: grid; grid-template-columns: repeat(4,1fr);
+          border-top: 1px solid rgba(255,255,255,.07);
+          background: rgba(14,31,20,.90);
+          backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%);
         }
         .ab-hero-stat {
-          display: flex; flex-direction: column;
-          padding: clamp(14px,2vw,20px) clamp(18px,2.5vw,28px);
-          border-right: 1px solid rgba(255,255,255,.08);
+          padding: clamp(16px,2.5vw,28px) clamp(16px,3vw,40px); border-right: 1px solid rgba(255,255,255,.07); text-align: center;
         }
         .ab-hero-stat:last-child { border-right: none; }
         .ab-hero-stat-n {
-          font-family: var(--fd);
-          font-size: clamp(22px,3vw,32px);
-          font-weight: 300; color: #fff; line-height: 1;
-          margin-bottom: 4px;
+          display: block; font-family: var(--fd); font-size: clamp(24px,3.5vw,38px); font-weight: 300; color: #fff; line-height: 1; margin-bottom: 5px; letter-spacing: -.01em;
         }
         .ab-hero-stat-l {
-          font-size: 9px; font-weight: 400;
-          letter-spacing: .16em; text-transform: uppercase;
-          color: rgba(255,255,255,.35);
+          display: block; font-size: clamp(8px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #FFF;
         }
         /* scroll cue */
         .ab-scroll-cue {
-          position: absolute; right: clamp(24px,4vw,56px); bottom: clamp(80px,10vw,110px);
+          position: absolute; right: clamp(24px,4vw,56px); bottom: clamp(110px,14vw,140px);
           z-index: 6; display: flex; flex-direction: column; align-items: center; gap: 10px;
         }
         .ab-scroll-txt { font-size: 8.5px; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.3); writing-mode: vertical-rl; }
@@ -844,8 +839,8 @@ export default function AboutPage() {
           display: grid; grid-template-columns: 1fr 1.3fr;
           gap: clamp(40px,6vw,88px); align-items: start;
         }
-        .ab-who-h2 { font-family: var(--fd); font-size: clamp(28px,4vw,52px); font-weight: 300; line-height: 1.1; letter-spacing: -.015em; margin-bottom: clamp(24px,3vw,36px); }
-        .ab-who-h2 em { font-style: italic; color: var(--g500); font-weight: 300; }
+        .ab-who-h2 { font-family: var(--fd); font-size: clamp(28px,4vw,52px); font-weight: 600; line-height: 1.1; letter-spacing: -.015em; margin-bottom: clamp(24px,3vw,36px); }
+        .ab-who-h2 em { font-style: italic; color: var(--g500); font-weight: 600; }
         .ab-who-img-wrap {
           position: relative; border-radius: 3px; overflow: hidden;
           margin-top: clamp(24px,3vw,36px);
@@ -858,14 +853,14 @@ export default function AboutPage() {
           padding: 14px 18px;
           display: flex; align-items: center; justify-content: space-between;
         }
-        .ab-who-img-badge span { font-size: 11px; font-weight: 300; letter-spacing: .1em; color: rgba(255,255,255,.6); }
+        .ab-who-img-badge span { font-size: 11px; font-weight: 400; letter-spacing: .1em; color: #FFF; }
         .ab-who-lead {
-          font-size: clamp(15px,1.6vw,18px); font-weight: 300; line-height: 1.72;
-          color: var(--s800); margin-bottom: clamp(16px,2vw,22px);
+          font-size: clamp(15px,1.6vw,18px); font-weight: 400; line-height: 1.72;
+          color: #000; margin-bottom: clamp(16px,2vw,22px);
         }
         .ab-who-body {
-          font-size: clamp(13px,1.2vw,15px); font-weight: 300; line-height: 1.82;
-          color: var(--s500); margin-bottom: clamp(12px,1.5vw,18px);
+          font-size: clamp(13px,1.2vw,15px); font-weight: 400; line-height: 1.82;
+          color: #000; margin-bottom: clamp(12px,1.5vw,18px);
         }
         .ab-who-body:last-of-type { margin-bottom: 0; }
 
@@ -901,7 +896,7 @@ export default function AboutPage() {
           align-items: center; gap: 8px; padding-top: 4px;
         }
         .ab-tl-year {
-          font-family: var(--fd); font-size: 11px; font-weight: 400;
+          font-family: var(--fd); font-size: 12px; font-weight: 600;
           letter-spacing: .12em; color: var(--accent); white-space: nowrap;
         }
         .ab-tl-dot {
@@ -911,12 +906,12 @@ export default function AboutPage() {
         }
         .ab-tl-title {
           font-family: var(--fd); font-size: clamp(18px,2vw,24px);
-          font-weight: 400; color: #fff; line-height: 1.15;
+          font-weight: 500; color: #fff; line-height: 1.15;
           margin-bottom: 10px;
         }
         .ab-tl-body {
-          font-size: clamp(12px,1.1vw,14px); font-weight: 300;
-          line-height: 1.78; color: rgba(255,255,255,.5);
+          font-size: clamp(12px,1.1vw,14px); font-weight: 400;
+          line-height: 1.78; color: #fff;
           margin-bottom: 12px;
         }
         .ab-tl-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -938,8 +933,8 @@ export default function AboutPage() {
           gap: clamp(48px,7vw,96px); align-items: start;
         }
         .ab-farm-intro {
-          font-size: clamp(13px,1.3vw,15.5px); font-weight: 300; line-height: 1.8;
-          color: var(--s500); margin-bottom: clamp(28px,4vw,40px);
+          font-size: clamp(13px,1.3vw,15.5px); font-weight: 500; line-height: 1.8;
+          color: #000; margin-bottom: clamp(28px,4vw,40px);
         }
         .ab-farm-diagram {
           width: 100%; max-width: 280px;
@@ -960,7 +955,7 @@ export default function AboutPage() {
         }
         .ab-farm-point-title {
           font-family: var(--fd); font-size: clamp(16px,1.6vw,19px);
-          font-weight: 400; color: var(--s800); margin-bottom: 5px;
+          font-weight: 500; color: var(--s800); margin-bottom: 5px;
           display: flex; align-items: baseline; gap: 10px;
         }
         .ab-farm-point-num {
@@ -968,8 +963,9 @@ export default function AboutPage() {
           color: var(--r400); flex-shrink: 0;
         }
         .ab-farm-point-body {
-          font-size: clamp(12px,1.1vw,13.5px); font-weight: 300;
-          line-height: 1.75; color: var(--s500);
+          font-size: clamp(12px,1.1vw,13.5px); font-weight: 500;
+          color: #000;
+          line-height: 1.75; 
         }
 
         /* ══════════ WHO WE SERVE ══════════ */
@@ -982,8 +978,8 @@ export default function AboutPage() {
           gap: clamp(24px,4vw,64px); align-items: end;
         }
         .ab-serve-sub {
-          font-size: clamp(13px,1.3vw,15px); font-weight: 300;
-          line-height: 1.8; color: var(--s500);
+          font-size: clamp(13px,1.3vw,15px); font-weight: 500;
+          line-height: 1.8; color: #000;
           padding-bottom: 6px;
         }
         .ab-serve-table {
@@ -995,7 +991,7 @@ export default function AboutPage() {
           background: var(--g900);
           font-size: 9.5px; font-weight: 500;
           letter-spacing: .18em; text-transform: uppercase;
-          color: rgba(255,255,255,.4);
+          color: #fff;
         }
         .ab-serve-row-wrap { width: 100%; }
         .ab-serve-row {
@@ -1010,16 +1006,16 @@ export default function AboutPage() {
         .ab-serve-row:last-child { border-bottom: none; }
         .ab-serve-client {
           display: flex; align-items: center; gap: 10px;
-          font-family: var(--fd); font-size: clamp(14px,1.4vw,17px);
-          font-weight: 400; color: var(--s800);
+          font-family: var(--fd); font-size: clamp(15px,1.4vw,18px);
+          font-weight: 500; color: #000;
         }
         .ab-serve-client-dot {
           width: 6px; height: 6px; border-radius: 50%;
           background: var(--accent, var(--g500)); flex-shrink: 0;
         }
         .ab-serve-what {
-          font-size: clamp(12px,1.1vw,13.5px); font-weight: 300;
-          line-height: 1.6; color: var(--s500);
+          font-size: clamp(15px,1.1vw,13.5px); font-weight: 500;
+          line-height: 1.6; color: #000;
         }
         .ab-serve-arrow {
           color: var(--s500); opacity: .4;
@@ -1041,7 +1037,7 @@ export default function AboutPage() {
         .ab-mission-quote p {
           font-family: var(--fd);
           font-size: clamp(22px,3.5vw,46px);
-          font-weight: 300; font-style: italic;
+          font-weight: 060; font-style: italic;
           line-height: 1.25; color: #fff;
           letter-spacing: -.01em;
         }
@@ -1093,17 +1089,17 @@ export default function AboutPage() {
         .ab-value-card:hover::before { height: 100%; }
         .ab-value-card:hover { background: #fdfdfb; }
         .ab-value-top { display: flex; align-items: center; gap: 10px; margin-bottom: clamp(14px,2vw,20px); }
-        .ab-value-num { font-family: var(--fd); font-size: 12px; font-weight: 400; letter-spacing: .14em; color: var(--accent); }
+        .ab-value-num { font-family: var(--fd); font-size: 12px; font-weight: 500; letter-spacing: .14em; color: var(--accent); }
         .ab-value-rule { height: 1px; flex: 1; background: rgba(44,44,42,.08); transition: background .3s ease; }
         .ab-value-card:hover .ab-value-rule { background: var(--accent); opacity: .3; }
         .ab-value-title {
           font-family: var(--fd); font-size: clamp(17px,1.8vw,22px);
-          font-weight: 400; color: var(--s800); line-height: 1.15;
+          font-weight: 500; color: #000; line-height: 1.15;
           margin-bottom: clamp(10px,1.2vw,14px);
         }
         .ab-value-body {
-          font-size: clamp(11.5px,.95vw,13px); font-weight: 300;
-          line-height: 1.78; color: var(--s500);
+          font-size: clamp(11.5px,.95vw,13px); font-weight: 500;
+          line-height: 1.78; color: #000;
         }
 
         /* ══════════ LEADERSHIP ══════════ */
@@ -1128,17 +1124,17 @@ export default function AboutPage() {
           padding: 18px 20px;
           display: flex; flex-direction: column; gap: 4px;
         }
-        .ab-leader-name { font-family: var(--fd); font-size: 20px; font-weight: 400; color: #fff; }
-        .ab-leader-role { font-size: 10px; font-weight: 300; letter-spacing: .12em; color: rgba(255,255,255,.5); }
-        .ab-leader-site { font-size: 9.5px; font-weight: 400; letter-spacing: .1em; color: var(--g400); text-decoration: none; margin-top: 4px; transition: color .2s; }
+        .ab-leader-name { font-family: var(--fd); font-size: 20px; font-weight: 500; color: #fff; }
+        .ab-leader-role { font-size: 10px; font-weight: 500; letter-spacing: .12em; color: #fff; }
+        .ab-leader-site { font-size: 9.5px; font-weight: 500; letter-spacing: .1em; color: var(--g400); text-decoration: none; margin-top: 4px; transition: color .2s; }
         .ab-leader-site:hover { color: #fff; }
         .ab-leader-lead {
-          font-size: clamp(15px,1.6vw,18px); font-weight: 300; line-height: 1.72;
+          font-size: clamp(15px,1.6vw,18px); font-weight: 500; line-height: 1.72;
           color: #fff; margin-bottom: clamp(16px,2vw,22px);
         }
         .ab-leader-body {
-          font-size: clamp(12.5px,1.1vw,14px); font-weight: 300; line-height: 1.82;
-          color: rgba(255,255,255,.5); margin-bottom: clamp(12px,1.5vw,16px);
+          font-size: clamp(12.5px,1.1vw,14px); font-weight: 500; line-height: 1.82;
+          color: #fff; margin-bottom: clamp(12px,1.5vw,16px);
         }
         .ab-leader-milestones, .ab-leader-awards { margin-top: clamp(24px,3vw,32px); }
         .ab-leader-milestones-h {
@@ -1147,8 +1143,8 @@ export default function AboutPage() {
         }
         .ab-leader-list { padding-left: 0; list-style: none; }
         .ab-leader-list li {
-          font-size: clamp(12px,1.1vw,13.5px); font-weight: 300; line-height: 1.7;
-          color: rgba(255,255,255,.55); padding: 7px 0;
+          font-size: clamp(12px,1.1vw,13.5px); font-weight: 500; line-height: 1.7;
+          color: #fff; padding: 7px 0;
           border-bottom: 1px solid rgba(255,255,255,.05);
           padding-left: 14px; position: relative;
         }
@@ -1159,10 +1155,10 @@ export default function AboutPage() {
           padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.05);
         }
         .ab-award-year {
-          font-size: 10px; font-weight: 500; letter-spacing: .12em;
+          font-size: 12px; font-weight: 500; letter-spacing: .12em;
           color: var(--r400); flex-shrink: 0; width: 36px;
         }
-        .ab-award-name { font-size: clamp(11.5px,1vw,13px); font-weight: 300; color: rgba(255,255,255,.55); line-height: 1.5; }
+        .ab-award-name { font-size: clamp(11.5px,1vw,13px); font-weight: 500; color: #fff; line-height: 1.5; }
 
         /* ══════════ CTA BLOCK ══════════ */
         .ab-cta-section {
@@ -1188,14 +1184,14 @@ export default function AboutPage() {
         }
         .ab-cta-h2 {
           font-family: var(--fd); font-size: clamp(28px,4vw,54px);
-          font-weight: 300; line-height: 1.1; color: #fff;
+          font-weight: 600; line-height: 1.1; color: #fff;
           letter-spacing: -.015em;
           margin-bottom: clamp(16px,2.5vw,24px);
         }
-        .ab-cta-h2 em { font-style: italic; color: var(--g400); font-weight: 300; }
+        .ab-cta-h2 em { font-style: italic; color: var(--g400); font-weight: 600; }
         .ab-cta-sub {
-          font-size: clamp(13px,1.3vw,15px); font-weight: 300;
-          line-height: 1.8; color: rgba(255,255,255,.5);
+          font-size: clamp(13px,1.3vw,15px); font-weight: 500;
+          line-height: 1.8; color: #fff;
           max-width: 600px; margin: 0 auto clamp(36px,5vw,52px);
         }
         .ab-cta-btns { display: flex; align-items: center; justify-content: center; gap: clamp(10px,2vw,18px); flex-wrap: wrap; }
@@ -1264,9 +1260,10 @@ export default function AboutPage() {
           .ab-value-card:nth-child(3),
           .ab-value-card:nth-child(4),
           .ab-value-card:nth-child(5) { border-top: 1px solid rgba(44,44,42,.08); }
-          .ab-hero-stats { flex-direction: column; width: 100%; max-width: 280px; }
-          .ab-hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
-          .ab-hero-stat:last-child { border-bottom: none; }
+          .ab-hero-stats { grid-template-columns: repeat(2,1fr); width: 100%; max-width: none; }
+          .ab-hero-stat:nth-child(2) { border-right: none; }
+          .ab-hero-stat:nth-child(3), .ab-hero-stat:nth-child(4) { border-top: 1px solid rgba(255,255,255,.07); }
+          .ab-hero-stat:nth-child(4) { border-right: none; border-bottom: none; }
         }
         @media (max-width: 540px) {
           .ab-values-grid { grid-template-columns: 1fr; }

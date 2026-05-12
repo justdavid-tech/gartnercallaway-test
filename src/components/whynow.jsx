@@ -90,7 +90,7 @@ export default function WhyNow() {
         }
         .gc-why-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 600;
+          font-size: 16.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);
@@ -235,8 +235,8 @@ export default function WhyNow() {
             The Evolution
           </div>
           <h2 className="gc-why-heading" id="why-heading">
-            Why Now.<br />
-            <em>The Next Stage.</em>
+            Why Now<br />
+            <em>The Next Stage</em>
           </h2>
         </div>
 

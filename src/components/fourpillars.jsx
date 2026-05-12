@@ -149,8 +149,8 @@ function SectionHeader() {
         Value Proposition
       </div>
       <h2 className="gc-pillars-heading">
-        Four Principles.<br />
-        One <em>Operating System.</em>
+        Four Principles<br />
+        One <em>System</em>
       </h2>
       <p className="gc-pillars-subhead">
         Every farm we design, every service we deliver, every report we issue
@@ -233,21 +233,16 @@ export default function FourPillars() {
         }
         .gc-pillars-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 16.5px; font-weight: 500;
           letter-spacing: .22em; text-transform: uppercase;
-<<<<<<< HEAD
           color: #FF0000;
-=======
-          color: var(--r400);
->>>>>>> c74e62832805ac203e201e619a100373de3f16e2
           margin-bottom: clamp(16px, 2vw, 24px);
         }
         .gc-pillars-eyebrow-line {
           display: block; width: 28px; height: 1px;
           background: #FF0000; flex-shrink: 0;
         }
-        .gc-pillars-heading {
-          font-family: var(--fd);
+        .gc-pillars-heading {      font-family: var(--fd);
           font-size: clamp(34px, 5.5vw, 68px);
           font-weight: 600; line-height: 1.08;
           color: var(--stone-800);

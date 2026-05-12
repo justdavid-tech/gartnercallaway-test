@@ -369,22 +369,7 @@ export default function HeroSection() {
             }
             .gc-vid-btn:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.5); }
             .gc-vid-btn svg { color: rgba(255,255,255,.8); }
-            .gc-scroll {
-              position: absolute; left: clamp(24px,4vw,56px); bottom: clamp(110px,14vw,140px);
-              z-index: 8; display: flex; flex-direction: column; align-items: center; gap: 10px;
-              opacity: 0; transition: opacity .8s ease 1.2s;
-            }
-            .gc-scroll.gc-vis { opacity: 1; }
-            .gc-scroll-txt { font-size: 8.5px; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.3); writing-mode: vertical-rl; }
-            .gc-scroll-line {
-              width: 1px; height: 44px;
-              background: linear-gradient(to bottom, rgba(127,179,141,.6), transparent);
-              animation: sPulse 2s ease-in-out infinite;
-            }
-            @keyframes sPulse {
-              0%,100% { opacity:.4; transform:scaleY(1);   }
-              50%      { opacity:1;  transform:scaleY(.55); }
-            }
+            
             .gc-stats {
               position: relative; z-index: 6; flex-shrink: 0;
               display: grid; grid-template-columns: repeat(4,1fr);
@@ -392,7 +377,7 @@ export default function HeroSection() {
               background: rgba(14,31,20,.90);
               backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%);
             }
-            .gc-stat-item { padding: clamp(16px,2.5vw,28px) clamp(16px,3vw,40px); border-right: 1px solid rgba(255,255,255,.07); }
+            .gc-stat-item { padding: clamp(16px,2.5vw,28px) clamp(16px,3vw,40px); border-right: 1px solid rgba(255,255,255,.07); text-align: center; }
             .gc-stat-item:last-child { border-right: none; }
             .gc-stat-num { display: block; font-family: var(--fd); font-size: clamp(24px,3.5vw,38px); font-weight: 300; color: #fff; line-height: 1; margin-bottom: 5px; letter-spacing: -.01em; }
             .gc-stat-lbl { display: block; font-size: clamp(8px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #FFF; }
@@ -436,7 +421,7 @@ export default function HeroSection() {
               </div>
               <h1 className={`gc-h1 ${v}`}>
                 Regenerative Agriculture,<br />
-                Made <em key={wordIndex}>{WORDS[wordIndex]}</em>.
+                Made <em key={wordIndex}>{WORDS[wordIndex]}</em>
               </h1>
               <p className={`gc-sub ${v}`}>
                 We design, build, and operate integrated farm systems
@@ -480,11 +465,6 @@ export default function HeroSection() {
                   }
                 </svg>
               </button>
-            </div>
-
-            <div className="gc-scroll" style={{ opacity: loaded ? 1 : 0, transition: "opacity .8s ease 1.2s" }} aria-hidden="true">
-              <span className="gc-scroll-txt">Scroll</span>
-              <div className="gc-scroll-line" />
             </div>
 
             <div className="gc-stats" ref={statsRef} role="region" aria-label="Key statistics">

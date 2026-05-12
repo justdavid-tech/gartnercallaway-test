@@ -38,7 +38,7 @@ const SERVICES = [
     href: "/services/academy",
     oneliner: "Institutional capacity-building in modern and regenerative agriculture",
     description:
-      "Our certified online and on-site training platform has equipped 1,000+ farmers, youths, and women across Nigeria with precision agriculture skills deployed by government programmes, donor agencies, and anchor agribusinesses.",
+      "Our production facilities have equipped 1000+ farmers, youths, and women across Nigeria with precision agriculture skills deployed by private institutions, government programmes, donor agencies,anchor agribusinesses, elementary and higher educational institutions",
     tags: ["Certified Programmes", "Online & On-site", "1,000+ Trained", "Institutional Delivery"],
     accent: "#FF0000", // red
   },
@@ -133,8 +133,8 @@ function Header() {
       </div>
       <div className="gc-svc-header-inner">
         <h2 className="gc-svc-heading">
-          Four Service Architectures.<br />
-          <em>One Integrated Capability.</em>
+          Four Service Architectures<br />
+          <em>One Integrated Capability</em>
         </h2>
         <p className="gc-svc-subhead">
           From farm design and construction to institutional verification and
@@ -204,7 +204,7 @@ export default function ServicesPreview() {
         }
         .gc-svc-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 500;
+          font-size: 16.5px; font-weight: 500;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px,2vw,28px);

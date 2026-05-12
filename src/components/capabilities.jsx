@@ -146,11 +146,11 @@ function SectionHeader() {
         Operational Capability
       </div>
       <h2 className="gc-cap-heading">
-        Precision Infrastructure.<br />
-        <em>Deployed At Scale.</em>
+        Precision Infrastructure<br />
+        <em>Deployed At Scale</em>
       </h2>
       <p className="gc-cap-subhead">
-        From urban vertical farms to estate-wide sensor networks and integrated service architectures. ur capability stack delivers bankable, verifiable, and export-ready agricultural production.
+        From urban vertical farms to estate-wide sensor networks and integrated service architectures. Our capability stack delivers bankable, verifiable, and export-ready agricultural production.
       </p>
     </header>
   );
@@ -229,7 +229,7 @@ export default function CapabilityStrip() {
         }
         .gc-cap-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 600;
+          font-size: 16.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);

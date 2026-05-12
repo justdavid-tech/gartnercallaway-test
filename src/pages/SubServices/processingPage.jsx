@@ -138,13 +138,13 @@ function Hero() {
             <span className="text-[9.5px] font-medium tracking-[.22em] uppercase text-gc-green-400">Production & Processing</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-[1.05] mb-5"
+          <h1 className="text-5xl font-semibold sm:text-6xl lg:text-7xl font-display font-light text-white leading-[1.05] mb-5"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(24px)", transition: "opacity .9s ease .2s, transform .9s ease .2s" }}>
-            From soil to shelf,<br />
-            <em className="not-italic text-gc-green-400">at commercial scale.</em>
+            From Soil to Shelf<br />
+            <em className="italic text-gc-green-400">at Commercial Scale</em>
           </h1>
 
-          <p className="text-base sm:text-lg text-white/60 font-body leading-relaxed max-w-xl"
+          <p className="text-base sm:text-lg text-white font-body leading-relaxed max-w-xl"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)", transition: "opacity .9s ease .38s, transform .9s ease .38s" }}>
             GC grows, processes, packages, and delivers food, fibre, and feedstock 
             to buyers across Nigeria and international markets, traceable, certified, and consistent.
@@ -184,12 +184,12 @@ function WhatWeProduce() {
     <section id="what-we-produce" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="max-w-2xl mb-14">
-          <p className="eyebrow mb-4">What We Produce</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight">
-            Six commodity lines.<br />
-            <em className="not-italic text-gc-green-500">One integrated estate.</em>
+          <p className="eyebrow text-[16.5px] font-medium mb-4">What We Produce</p>
+          <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800 leading-tight">
+            Six Commodity Lines<br />
+            <em className="italic text-gc-green-500">One Integrated Estate</em>
           </h2>
-          <p className="mt-4 text-gc-stone-500 leading-relaxed">
+          <p className="mt-4 text-black leading-relaxed">
             Every crop on our estate is grown under a precision production system monitored, documented, and delivered to spec.
           </p>
         </Fade>
@@ -202,7 +202,7 @@ function WhatWeProduce() {
                 {item.icon}
               </div>
               <h3 className="font-display font-medium text-gc-stone-800 text-xl mb-2">{item.title}</h3>
-              <p className="text-sm text-gc-stone-500 leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-black leading-relaxed">{item.desc}</p>
             </Fade>
           ))}
         </div>
@@ -227,22 +227,22 @@ function ProductionSystem() {
               <p className="text-3xl font-display font-light mb-1">
                 <Counter target={3200} suffix=" ha" />
               </p>
-              <p className="text-xs text-white/55 uppercase tracking-widest">Under Production</p>
+              <p className="text-xs text-white uppercase tracking-widest">Under Production</p>
             </div>
           </Fade>
 
           <Fade>
-            <p className="eyebrow mb-4">The Production System</p>
-            <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight mb-6">
-              Precision inputs.<br />
-              <em className="not-italic text-gc-green-500">Monitored yield.</em>
+            <p className="eyebrow mb-4 text-[16.5px] font-medium">The Production System</p>
+            <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800 leading-tight mb-6">
+              Precision Inputs<br />
+              <em className="italic text-gc-green-500">Monitored Yield</em>
             </h2>
-            <p className="text-gc-stone-500 leading-relaxed mb-5">
+            <p className="text-black leading-relaxed mb-5">
               Every hectare on our estate is managed under a structured crop programme
               soil-tested before planting, drip-irrigated to schedule, and monitored via 
               CropX sensing throughout the season.
             </p>
-            <p className="text-gc-stone-500 leading-relaxed">
+            <p className="text-black leading-relaxed">
               This means buyers get consistent produce volumes, documented inputs, 
               and verified yield data not estimates. Our system is designed to be 
               bankable, insurable, and auditable at every stage.
@@ -260,10 +260,10 @@ function Processing() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Processing Capabilities</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Harvest is just<br />
-            <em className="not-italic text-gc-green-500">the beginning.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Processing Capabilities</p>
+          <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800">
+            Harvest is Just<br />
+            <em className="italic text-gc-green-500">the Beginning</em>
           </h2>
         </Fade>
 
@@ -274,8 +274,8 @@ function Processing() {
               <div className="w-11 h-11 rounded-xl bg-white group-hover:bg-gc-green-200 text-gc-green-500 flex items-center justify-center mb-5 transition-colors duration-300 shadow-sm">
                 {p.icon}
               </div>
-              <h3 className="font-display font-medium text-gc-stone-800 text-xl mb-2">{p.title}</h3>
-              <p className="text-sm text-gc-stone-500 leading-relaxed">{p.desc}</p>
+              <h3 className="font-display font-medium text-black text-xl mb-2">{p.title}</h3>
+              <p className="text-sm text-black leading-relaxed">{p.desc}</p>
             </Fade>
           ))}
         </div>
@@ -291,16 +291,16 @@ function Quality() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Fade>
-            <p className="eyebrow mb-4 text-gc-green-400">Quality & Traceability</p>
-            <h2 className="text-4xl sm:text-5xl font-display font-light text-white leading-tight mb-8">
-              Certified from field<br />
-              <em className="not-italic text-gc-green-400">to shelf.</em>
+            <p className="eyebrow mb-4 text-[16.5px] font-medium text-gc-green-400">Quality & Traceability</p>
+            <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-white leading-tight mb-8">
+              Certified from Field<br />
+              <em className="italic text-gc-green-400">to Shelf</em>
             </h2>
             <ul className="space-y-4">
               {QUALITY_STANDARDS.map((q) => (
                 <li key={q} className="flex items-start gap-3">
                   <CheckCircle size={17} className="text-gc-green-400 mt-0.5 shrink-0" />
-                  <span className="text-sm text-white/65 leading-relaxed">{q}</span>
+                  <span className="text-sm text-white leading-relaxed">{q}</span>
                 </li>
               ))}
             </ul>
@@ -308,7 +308,7 @@ function Quality() {
 
           <Fade delay={150} className="relative">
             <img
-              src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=80"
+              src="/assets/maize-quality.jpg"
               alt="Quality control"
               className="rounded-2xl w-full h-[440px] object-cover shadow-2xl opacity-80"
             />
@@ -331,7 +331,7 @@ function Stats() {
               <p className="text-5xl sm:text-6xl font-display font-light text-white mb-2">
                 <Counter target={s.value} suffix={s.suffix} />
               </p>
-              <p className="text-xs uppercase tracking-widest text-white/65 font-medium">{s.label}</p>
+              <p className="text-xs uppercase tracking-widest text-white font-medium">{s.label}</p>
             </Fade>
           ))}
         </div>
@@ -346,10 +346,10 @@ function Flow() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Farm to Market</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            One seamless<br />
-            <em className="not-italic text-gc-green-500">supply chain.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Farm to Market</p>
+          <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800">
+            One Seamless<br />
+            <em className="italic text-gc-green-500">Supply Chain</em>
           </h2>
         </Fade>
 
@@ -360,7 +360,7 @@ function Flow() {
                 <div className="w-8 h-8 rounded-full bg-gc-green-500 text-white text-xs font-semibold flex items-center justify-center mx-auto mb-3">
                   {i + 1}
                 </div>
-                <p className="font-display font-medium text-gc-stone-800 text-lg mb-1">{step.label}</p>
+                <p className="font-display font-medium text-black text-lg mb-1">{step.label}</p>
                 <p className="text-xs text-gc-stone-400">{step.sub}</p>
               </div>
               {i < FLOW.length - 1 && (
@@ -380,10 +380,10 @@ function WhoBuys() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Who Buys From GC</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Built for every<br />
-            <em className="not-italic text-gc-green-500">serious buyer.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Who Buys From GC</p>
+          <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800">
+            Built for Every<br />
+            <em className="italic text-gc-green-500">Serious Buyer</em>
           </h2>
         </Fade>
 
@@ -395,8 +395,8 @@ function WhoBuys() {
                 {b.icon}
               </div>
               <div>
-                <h3 className="font-display font-medium text-gc-stone-800 text-lg mb-1">{b.title}</h3>
-                <p className="text-xs text-gc-stone-500 leading-relaxed">{b.desc}</p>
+                <h3 className="font-display font-medium text-black text-lg mb-1">{b.title}</h3>
+                <p className="text-xs text-black leading-relaxed">{b.desc}</p>
               </div>
             </Fade>
           ))}
@@ -412,9 +412,9 @@ function CaseStudy() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Case Study</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Production in <em className="not-italic text-gc-green-500">action.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Case Study</p>
+          <h2 className="text-4xl font-semibold sm:text-5xl font-display font-light text-gc-stone-800">
+            Production in <em className="italic text-gc-green-500">Action</em>
           </h2>
         </Fade>
 
@@ -441,7 +441,7 @@ function CaseStudy() {
               <div className="space-y-5 mb-8">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">The Challenge</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed">
                     A feed manufacturer needed 4,000 tonnes of dry maize at 13.5% moisture,
                     consistent across the full order, delivered over 6 weeks, with phytosanitary 
                     documentation for their food safety audit.
@@ -449,7 +449,7 @@ function CaseStudy() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">What GC Did</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed">
                     We planted 800 ha of hybrid maize under precision irrigation, managed 
                     inputs to NAFDAC standards, mechanically harvested, solar-dried to spec, 
                     and delivered in phytosanitary-certified 50kg bags over 5 weeks.
@@ -457,7 +457,7 @@ function CaseStudy() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">The Outcome</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed">
                     4,200 tonnes delivered, 5% above contracted volume. Zero rejected loads. 
                     The buyer placed a 3-year offtake agreement at the end of the season.
                   </p>
@@ -488,10 +488,9 @@ function CTA() {
             <MessageCircle size={13} className="text-gc-green-400" />
             <span className="text-[10px] font-medium tracking-widest uppercase text-gc-green-400">Ready to source?</span>
           </div>
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-tight mb-6">
+          <h2 className="text-5xl font-semibold sm:text-6xl lg:text-7xl font-display font-light text-white leading-tight mb-6">
             Ready to source<br />
-            <em className="not-italic"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.55)", color: "transparent" }}>
+            <em className="italic text-gc-green-400">
               from GC?
             </em>
           </h2>

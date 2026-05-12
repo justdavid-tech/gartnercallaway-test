@@ -228,7 +228,7 @@ export default function ArticlePage() {
         .gc-art-title {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(36px, 5.5vw, 72px);
-          font-weight: 300; line-height: 1.05;
+          font-weight: 600; line-height: 1.05;
           letter-spacing: -.02em; color: #fff;
           margin-bottom: 28px; max-width: 16ch;
         }
@@ -292,7 +292,7 @@ export default function ArticlePage() {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(18px, 2.2vw, 22px);
           font-weight: 300; font-style: italic;
-          line-height: 1.75; color: #4a5568;
+          line-height: 1.75; color: #000;
           border-left: 2px solid #4a8a5b;
           padding-left: 24px;
           margin-bottom: 48px;
@@ -303,14 +303,14 @@ export default function ArticlePage() {
         .gc-art-h2 {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(26px, 3vw, 36px); font-weight: 300; font-style: italic;
-          color: #1a3321; margin: 3rem 0 1.2rem;
+          color: #000; margin: 3rem 0 1.2rem;
           border-left: 2px solid #7fb38d; padding-left: 20px;
           line-height: 1.2;
         }
         .gc-art-h3 {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(20px, 2.2vw, 26px); font-weight: 400;
-          color: #1a3321; margin: 2.5rem 0 .9rem;
+          color: #1; margin: 2.5rem 0 .9rem;
           letter-spacing: -.01em;
         }
         .gc-art-h4 {
@@ -355,10 +355,10 @@ export default function ArticlePage() {
         }
         .gc-art-author-name {
           font-family: "Cormorant Garamond", Georgia, serif;
-          font-size: 22px; font-weight: 300; color: #1a3321; margin-bottom: 2px;
+          font-size: 22px; font-weight: 300; color: #000; margin-bottom: 2px;
         }
-        .gc-art-author-role { font-size: 11px; color: #4a8a5b; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
-        .gc-art-author-org  { font-size: 12px; color: #9CA3AF; margin-top: 4px; }
+        .gc-art-author-role { font-size: 11px; color: #4a8a5b; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+        .gc-art-author-org  { font-size: 12px; color: #000; margin-top: 4px; }
 
         /* ── Share bottom ── */
         .gc-art-share-wrap {
@@ -505,7 +505,7 @@ export default function ArticlePage() {
                 {/* Portable Text */}
                 {post.body
                   ? <PortableText value={post.body} components={ptComponents} />
-                  : <p className="gc-art-p" style={{ color: '#9CA3AF', fontStyle: 'italic' }}>No content available.</p>
+                  : <p className="gc-art-p" style={{ color: '#000', fontStyle: 'italic' }}>No content available.</p>
                 }
 
                 <div className="gc-art-divider" />

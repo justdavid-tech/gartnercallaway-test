@@ -217,21 +217,20 @@ function Hero() {
 
                     {/* Headline */}
                     <h1
-                        className="text-4xl sm:text-7xl lg:text-7xl font-display font-light text-white leading-[1.05] mb-8"
+                        className="text-4xl sm:text-7xl font-semibold lg:text-7xl font-display font-light text-white leading-[1.05] mb-8"
                         style={{
                             opacity: vis ? 1 : 0,
                             transform: vis ? "translateY(0)" : "translateY(20px)",
                             transition: "all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s"
                         }}
                     >
-                        Regeneratively produced.<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gc-green-400 to-emerald-200">Sensor-verified.</span><br />
-                        Export-ready.
+                        Regeneratively Produced<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gc-green-400 to-emerald-200 italic">Sensor-Verified</span>
                     </h1>
 
                     {/* Description */}
                     <p
-                        className="text-lg sm:text-xl text-white/60 font-body leading-relaxed max-w-2xl mb-10"
+                        className="text-lg sm:text-xl text-white font-body leading-relaxed max-w-2xl mb-10"
                         style={{
                             opacity: vis ? 1 : 0,
                             transform: vis ? "translateY(0)" : "translateY(20px)",
@@ -273,12 +272,12 @@ function ProductGrid() {
         <section className="py-24 bg-white">
             <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <div className="eyebrow mb-4">Our Portfolio</div>
-                    <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 mb-4">
-                        Eight product categories.<br />
-                        <em className="text-gc-green-500 not-italic">One integrated system.</em>
+                    <div className="eyebrow mb-4 text-[16.5px]">Our Portfolio</div>
+                    <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800 mb-4">
+                        Product Categories<br />
+                        <em className="text-gc-green-500 text-xl italic">One Integrated System</em>
                     </h2>
-                    <p className="text-gc-stone-500 max-w-2xl mx-auto">
+                    <p className="text-black max-w-2xl mx-auto">
                         Every product is regeneratively grown, sensor-verified, solar-processed,
                         and backed by farm-to-export traceability.
                     </p>
@@ -328,8 +327,8 @@ function ProductCard({ product, index }) {
                 <h3 className="text-xl font-display font-medium text-gc-stone-800 mb-1">
                     {product.name}
                 </h3>
-                <p className="text-xs text-gc-green-500 font-mono mb-3">{product.variety}</p>
-                <p className="text-sm text-gc-stone-500 leading-relaxed mb-4">
+                <p className="text-xs text-black font-mono mb-3">{product.variety}</p>
+                <p className="text-sm text-black leading-relaxed mb-4">
                     {product.description}
                 </p>
                 <button className="text-xs font-semibold uppercase tracking-wide text-gc-green-500 hover:text-gc-green-600 transition-colors flex items-center gap-2">
@@ -348,10 +347,10 @@ function WhyDifferent() {
         <section className="py-24 bg-gc-stone-100">
             <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <div className="eyebrow mb-4">Why Our Produce Is Different</div>
-                    <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 mb-4">
-                        Five commitments.<br />
-                        <em className="text-gc-green-500 not-italic">Zero compromise.</em>
+                    <div className="eyebrow mb-4 text-[16.5px]">Why Our Produce Is Different</div>
+                    <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800 mb-4">
+                        Five Commitments<br />
+                        <em className="text-gc-green-500 italic">Zero Compromise</em>
                     </h2>
                 </div>
 
@@ -382,10 +381,10 @@ function PillarCard({ pillar, index }) {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gc-green-100 text-gc-green-500 mb-4">
                 {pillar.icon}
             </div>
-            <h3 className="text-lg font-display font-medium text-gc-stone-800 mb-3">
+            <h3 className="text-lg font-display font-medium text-black mb-3">
                 {pillar.title}
             </h3>
-            <p className="text-sm text-gc-stone-500 leading-relaxed">
+            <p className="text-sm text-black leading-relaxed">
                 {pillar.description}
             </p>
         </div>
@@ -400,10 +399,10 @@ function EngagementModels() {
         <section className="py-24 bg-white">
             <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <div className="eyebrow mb-4">How To Work With Us</div>
-                    <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 mb-4">
-                        Four commercial models.<br />
-                        <em className="text-gc-green-500 not-italic">One accountable partner.</em>
+                    <div className="eyebrow mb-4 text-[16.5px]">How To Work With Us</div>
+                    <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800 mb-4">
+                        Four Commercial Models<br />
+                        <em className="text-gc-green-500 italic">One Accountable Partner</em>
                     </h2>
                 </div>
 
@@ -434,16 +433,16 @@ function EngagementCard({ model, index }) {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gc-green-100 text-gc-green-500 mb-4">
                 {model.icon}
             </div>
-            <h3 className="text-lg font-display font-medium text-gc-stone-800 mb-2">
+            <h3 className="text-lg font-display font-medium text-black mb-2">
                 {model.title}
             </h3>
-            <p className="text-sm text-gc-stone-500 leading-relaxed mb-4">
+            <p className="text-sm text-black leading-relaxed mb-4">
                 {model.description}
             </p>
             <div className="border-t border-gc-stone-100 pt-4 space-y-2">
-                <p className="text-xs text-gc-stone-500"><span className="font-semibold">MOQ:</span> {model.moq}</p>
-                <p className="text-xs text-gc-stone-500"><span className="font-semibold">Lead time:</span> {model.leadTime}</p>
-                <p className="text-xs text-gc-green-500">{model.pricing}</p>
+                <p className="text-xs text-black"><span className="font-semibold">MOQ:</span> {model.moq}</p>
+                <p className="text-xs text-black"><span className="font-semibold">Lead time:</span> {model.leadTime}</p>
+                <p className="text-xs text-black">{model.pricing}</p>
             </div>
         </div>
     );
@@ -457,10 +456,10 @@ function SisterBrands() {
         <section className="py-16 bg-gc-green-900">
             <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gc-green-400 mb-2">
+                    <p className="font-semibold uppercase tracking-[0.22em] text-gc-green-400 mb-2">
                         Part of a bigger ecosystem
                     </p>
-                    <h2 className="text-2xl font-display font-light text-white">
+                    <h2 className="text-2xl font-display font-semibold font-light text-white">
                         Our sister brands and partners
                     </h2>
                 </div>
@@ -507,22 +506,22 @@ function WholesaleEnquiry() {
                         }}
                     >
                         <Truck size={16} className="text-gc-green-500" />
-                        <span className="text-xs font-medium text-gc-green-600 tracking-wide">Ready to partner</span>
+                        <span className="text-[16.5px] font-medium text-gc-green-600 tracking-wide">Ready to partner</span>
                     </div>
 
                     <h2
-                        className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 mb-6"
+                        className="text-4xl sm:text-5xl font-semibold  font-display font-light text-black mb-6"
                         style={{
                             opacity: vis ? 1 : 0,
                             transform: vis ? "translateY(0)" : "translateY(20px)",
                             transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s"
                         }}
                     >
-                        Ready to transform your supply chain?
+                        Ready to Transform your Supply Chain?
                     </h2>
 
                     <p
-                        className="text-lg text-gc-stone-500 mb-8 max-w-2xl mx-auto"
+                        className="text-lg text-black mb-8 max-w-2xl mx-auto"
                         style={{
                             opacity: vis ? 1 : 0,
                             transform: vis ? "translateY(0)" : "translateY(20px)",
@@ -544,12 +543,9 @@ function WholesaleEnquiry() {
                         <button className="bg-gc-green-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm hover:bg-gc-green-600 transition-all duration-300 hover:shadow-lg">
                             Submit Enquiry
                         </button>
-                        <button className="border-2 border-gc-green-500 text-gc-green-500 px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm hover:bg-gc-green-50 transition-all duration-300">
-                            Download Product Brochure
-                        </button>
                     </div>
 
-                    <p className="text-xs text-gc-stone-400 mt-8">
+                    <p className="text-xs text-black mt-8">
                         Our team responds to all wholesale enquiries within 24 hours.
                     </p>
                 </div>

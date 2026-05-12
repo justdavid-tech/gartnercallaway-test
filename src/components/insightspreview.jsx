@@ -190,8 +190,8 @@ function SectionHeader() {
         Latest Insights
       </div>
       <h2 className="gc-ins-heading">
-        Stories From The Field.<br />
-        <em>Lessons From Practice.</em>
+        Stories From The Field<br />
+        <em>Lessons From Practice</em>
       </h2>
       <p className="gc-ins-subhead">
         From regenerative farm design to precision sensing and institutional partnerships 
@@ -286,7 +286,7 @@ export default function InsightsPreview() {
         }
         .gc-ins-eyebrow {
           display: inline-flex; align-items: center; gap: 10px;
-          font-size: 9.5px; font-weight: 600;
+          font-size: 16.5px; font-weight: 600;
           letter-spacing: .22em; text-transform: uppercase;
           color: var(--r400);
           margin-bottom: clamp(16px, 2vw, 24px);

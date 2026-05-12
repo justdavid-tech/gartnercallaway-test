@@ -204,7 +204,7 @@ export default function InsightsPage() {
         .gc-ip-hero-h1 {
           font-family: "montserrat", system-ui, sans-serif;
           font-size: clamp(42px, 6vw, 80px);
-          font-weight: 300; line-height: 1.04;
+          font-weight: 600; line-height: 1.04;
           letter-spacing: -.02em; color: #fff;
           margin-bottom: 18px; max-width: 14ch;
         }
@@ -213,7 +213,7 @@ export default function InsightsPage() {
         /* ── Hero sub ── */
         .gc-ip-hero-sub {
           font-size: clamp(13px,1.4vw,16px); font-weight: 300; line-height: 1.78;
-          color: rgba(255,255,255,.55); max-width: 500px;
+          color: white; max-width: 500px;
         }
 
         /* ── Filter bar ── */
@@ -237,7 +237,7 @@ export default function InsightsPage() {
           font-size: 9px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
           padding: 7px 16px; border-radius: 2px;
           border: 1px solid #e8e8e6; background: #fff;
-          color: #787870; cursor: pointer; white-space: nowrap;
+          color: #000; cursor: pointer; white-space: nowrap;
           transition: background .2s, color .2s, border-color .2s;
         }
         .gc-ip-tab:hover   { background: #f4f4f2; color: #1a3321; border-color: #d0d0ce; }
@@ -274,7 +274,7 @@ export default function InsightsPage() {
         /* ── Results count ── */
         .gc-ip-count {
           font-size: 9px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
-          color: #b0b0a8; margin-bottom: 28px;
+          color: #000; margin-bottom: 28px;
           display: flex; align-items: center; gap: 8px;
         }
         .gc-ip-count-rule { flex: 1; height: 1px; background: #e0e0de; }
@@ -318,7 +318,7 @@ export default function InsightsPage() {
           position: absolute; top: 12px; right: 12px;
           display: inline-flex; align-items: center; gap: 4px;
           font-size: 9px; letter-spacing: .1em;
-          color: rgba(255,255,255,.6);
+          color: #fff;
           background: rgba(14,31,20,.55); backdrop-filter: blur(6px);
           padding: 3px 8px; border-radius: 2px;
         }
@@ -326,18 +326,18 @@ export default function InsightsPage() {
         /* ── Card body ── */
         .gc-ip-body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 
-        .gc-ip-date { font-size: 10px; color: #b0b0a8; letter-spacing: .1em; }
+        .gc-ip-date { font-size: 10px; color: #000; letter-spacing: .1em; }
 
         .gc-ip-title {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(18px, 2vw, 22px); font-weight: 300;
-          line-height: 1.25; color: #1a3321;
+          line-height: 1.25; color: #000;
           letter-spacing: -.01em;
           transition: color .2s;
         }
         .gc-ip-card:hover .gc-ip-title { color: #4a8a5b; }
 
-        .gc-ip-excerpt { font-size: 13px; color: #787870; line-height: 1.7; flex: 1; }
+        .gc-ip-excerpt { font-size: 13px; color: #000; line-height: 1.7; flex: 1; }
 
         .gc-ip-rule { height: 1px; background: linear-gradient(90deg, #e8e8e6, transparent); margin-top: 4px; }
 
@@ -355,12 +355,12 @@ export default function InsightsPage() {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: 16px; font-weight: 300; flex-shrink: 0;
         }
-        .gc-ip-author-name { font-size: 11px; font-weight: 500; color: #2c2c2a; }
-        .gc-ip-author-role { font-size: 9.5px; color: #b0b0a8; }
+        .gc-ip-author-name { font-size: 11px; font-weight: 500; color: #000; }
+        .gc-ip-author-role { font-size: 9.5px; color: #000; }
 
         .gc-ip-read-more {
           display: inline-flex; align-items: center; gap: 5px;
-          font-size: 9px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+          font-size: 9px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
           color: #4a8a5b; transition: gap .2s, color .2s;
         }
         .gc-ip-card:hover .gc-ip-read-more { gap: 8px; color: #1a3321; }
@@ -416,13 +416,13 @@ export default function InsightsPage() {
             </div>
 
             <h1 className="gc-ip-hero-h1">
-              Knowledge from<br />
-              the <em>field.</em>
+              Knowledge From<br />
+              the <em>Field</em>
             </h1>
 
             <p className="gc-ip-hero-sub">
               Regenerative agriculture insights, precision farming guides,
-              case studies, and industry news — from the team building
+              case studies, and industry news from the team building
               Nigeria's most integrated farm systems.
             </p>
           </div>

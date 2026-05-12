@@ -137,14 +137,14 @@ function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light font-montserrat text-white leading-[1.05] mb-5"
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-semibold font-montserrat text-white leading-[1.05] mb-5"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(24px)", transition: "opacity .9s ease .2s, transform .9s ease .2s" }}>
-            Field services built<br />
-            <em className="not-italic text-gc-green-400">for institutions.</em>
+            Field Services Built<br />
+            <em className="italic font-display font-semibold text-gc-green-500">for Institutions</em>
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-lg text-white/60 font-body leading-relaxed max-w-xl"
+          <p className="text-base sm:text-lg text-white font-body leading-relaxed max-w-xl"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)", transition: "opacity .9s ease .38s, transform .9s ease .38s" }}>
             From government agencies to university campuses, GC deploys precision agriculture 
             programmes directly into your institution's land and operations.
@@ -168,7 +168,7 @@ function Hero() {
 
   <a
     href="#who-we-serve"
-    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/60 text-white/80 hover:text-white font-medium text-[11px] sm:text-xs uppercase tracking-widest px-6 sm:px-7 py-3.5 rounded-sm transition-all duration-300 text-center"
+    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/60 text-white hover:text-white font-medium text-[11px] sm:text-xs uppercase tracking-widest px-6 sm:px-7 py-3.5 rounded-sm transition-all duration-300 text-center"
   >
     Who We Serve
   </a>
@@ -185,12 +185,12 @@ function WhoWeServe() {
     <section id="who-we-serve" className="py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="max-w-2xl mb-14">
-          <p className="eyebrow mb-4">Who We Serve</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight">
-            Agriculture delivered<br />
-            <em className="not-italic text-gc-green-500">where it matters most.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Who We Serve</p>
+          <h2 className="text-4xl sm:text-5xl font-display font-semibold font-light text-gc-stone-800 leading-tight">
+            Agriculture Delivered<br />
+            <em className="italic font-display text-gc-green-500">Where it Matters Most</em>
           </h2>
-          <p className="mt-4 text-gc-stone-500 leading-relaxed">
+          <p className="mt-4 text-black leading-relaxed">
             GC works directly with institutions that need reliable, professionally managed 
             agricultural programmes, not just consultants, but field teams that show up and deliver.
           </p>
@@ -203,8 +203,8 @@ function WhoWeServe() {
               <div className="w-12 h-12 rounded-xl bg-gc-green-200 text-gc-green-500 flex items-center justify-center mb-4 group-hover:bg-gc-green-500 group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>
-              <h3 className="font-display font-medium text-gc-stone-800 text-lg mb-2 leading-snug">{item.title}</h3>
-              <p className="text-xs text-gc-stone-500 leading-relaxed">{item.desc}</p>
+              <h3 className="font-display font-medium text-black text-lg mb-2 leading-snug">{item.title}</h3>
+              <p className="text-xs text-black leading-relaxed">{item.desc}</p>
             </Fade>
           ))}
         </div>
@@ -219,10 +219,10 @@ function Services() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">What We Deliver</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Six services.<br />
-            <em className="not-italic text-gc-green-500">One integrated programme.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">What We Deliver</p>
+          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800">
+            Six Services<br />
+            <em className="italic text-gc-green-500">One Integrated Programme</em>
           </h2>
         </Fade>
 
@@ -233,8 +233,8 @@ function Services() {
               <div className="w-12 h-12 rounded-xl bg-gc-green-200 text-gc-green-500 flex items-center justify-center mb-5 group-hover:bg-gc-green-500 group-hover:text-white transition-colors duration-300">
                 {s.icon}
               </div>
-              <h3 className="font-display font-medium text-gc-stone-800 text-xl mb-3">{s.title}</h3>
-              <p className="text-sm text-gc-stone-500 leading-relaxed">{s.desc}</p>
+              <h3 className="font-display font-medium text-black text-xl mb-3">{s.title}</h3>
+              <p className="text-sm text-black leading-relaxed">{s.desc}</p>
             </Fade>
           ))}
         </div>
@@ -250,16 +250,16 @@ function WhyGC() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Fade>
-            <p className="eyebrow mb-4">Why Institutions Choose GC</p>
-            <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight mb-8">
-              Precision delivery.<br />
-              <em className="not-italic text-gc-green-500">Documented outcomes.</em>
+            <p className="eyebrow mb-4 text-[16.5px] font-medium">Why Institutions Choose GC</p>
+            <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800 leading-tight mb-8">
+              Precision Delivery<br />
+              <em className="italic text-gc-green-500">Documented Outcomes</em>
             </h2>
             <ul className="space-y-4">
               {DIFFERENTIATORS.map((d) => (
                 <li key={d} className="flex items-start gap-3">
                   <CheckCircle size={17} className="text-gc-green-500 mt-0.5 shrink-0" />
-                  <span className="text-sm text-gc-stone-600 leading-relaxed">{d}</span>
+                  <span className="text-sm text-black leading-relaxed">{d}</span>
                 </li>
               ))}
             </ul>
@@ -267,11 +267,11 @@ function WhyGC() {
 
           <Fade delay={150} className="relative">
             <img
-              src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=80"
+              src="/assets/precision.jpg"
               alt="Field team at work"
               className="rounded-2xl w-full h-[460px] object-cover shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-6 bg-gc-green-900 text-white rounded-2xl p-6 shadow-xl">
+            <div className="absolute -bottom-6 -right-3 bg-gc-green-900 text-white rounded-2xl p-6 shadow-xl">
               <p className="text-3xl font-display font-light mb-1">
                 <Counter target={34} suffix="+" />
               </p>
@@ -290,10 +290,10 @@ function Process() {
     <section className="py-24 bg-gc-green-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-16">
-          <p className="eyebrow mb-4 text-gc-green-400">The Engagement Model</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-white">
-            Three steps to a<br />
-            <em className="not-italic text-gc-green-400">running programme.</em>
+          <p className="eyebrow mb-4 text-gc-green-400 text-[16.5px] font-medium">The Engagement Model</p>
+          <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-white">
+            Three Steps to a<br />
+            <em className="italic text-gc-green-400">Running Programme</em>
           </h2>
         </Fade>
 
@@ -308,7 +308,7 @@ function Process() {
                 {p.step}
               </div>
               <h3 className="font-display font-light text-white text-2xl mb-3">{p.title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{p.desc}</p>
+              <p className="text-sm text-white leading-relaxed">{p.desc}</p>
             </Fade>
           ))}
         </div>
@@ -328,7 +328,7 @@ function Stats() {
               <p className="text-5xl sm:text-6xl font-display font-light text-white mb-2">
                 <Counter target={s.value} suffix={s.suffix} />
               </p>
-              <p className="text-xs uppercase tracking-widest text-white/65 font-medium">{s.label}</p>
+              <p className="text-xs uppercase tracking-widest text-white font-medium">{s.label}</p>
             </Fade>
           ))}
         </div>
@@ -343,9 +343,9 @@ function CaseStudy() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Case Study</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            In the <em className="not-italic text-gc-green-500">field.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-medium">Case Study</p>
+          <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800">
+            In The <em className="italic text-gc-green-500">Field</em>
           </h2>
         </Fade>
 
@@ -371,23 +371,23 @@ function CaseStudy() {
 
               <div className="space-y-5 mb-8">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">The Challenge</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">The Challenge</p>
+                  <p className="text-sm text-black leading-relaxed">
                     82 hectares of university land sitting idle for 6 years. No staff with agricultural expertise. 
                     A directive from the NUC to activate the farm for student training within 18 months.
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">What GC Did</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">What GC Did</p>
+                  <p className="text-sm text-black leading-relaxed">
                     GC conducted a full soil assessment, designed a 3-crop rotation system, installed drip 
                     irrigation across 40 ha, trained 12 university staff, and deployed a resident agronomist 
                     for the first 12 months.
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gc-stone-400 mb-1">The Outcome</p>
-                  <p className="text-sm text-gc-stone-500 leading-relaxed">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">The Outcome</p>
+                  <p className="text-sm text-black leading-relaxed">
                     Farm operational in 7 months. First harvest generated ₦18M in produce revenue. 
                     Now feeds 4,200 students daily and hosts 300+ agric students per semester.
                   </p>
@@ -418,11 +418,10 @@ function CTA() {
             <MessageCircle size={13} className="text-gc-green-400" />
             <span className="text-[10px] font-medium tracking-widest uppercase text-gc-green-400">Ready to begin?</span>
           </div>
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-tight mb-6">
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-semibold font-display font-light text-white leading-tight mb-6">
             Bring GC to<br />
-            <em className="not-italic"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.55)", color: "transparent" }}>
-              your institution.
+            <em className="italic font-display font-semibold text-gc-green-400 font-light">
+              Your Institution
             </em>
           </h2>
           <p className="max-w-lg mx-auto text-white/55 text-lg leading-relaxed mb-10">

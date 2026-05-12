@@ -218,16 +218,16 @@ function Hero() {
             <span className="text-[9.5px] font-medium tracking-[.22em] uppercase text-gc-green-400">Farm Design & Build</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-[1.05] mb-5"
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold font-display font-light text-white leading-[1.05] mb-5"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(24px)", transition: "opacity .9s ease .2s, transform .9s ease .2s" }}>
-            Engineering farms<br />
-            <em className="not-italic text-gc-green-400">that perform.</em>
+            Engineering Farms<br />
+            <em className="italic text-gc-green-400 font-semibold">That Perform</em>
           </h1>
 
-          <p className="text-base sm:text-lg text-white/60 font-body leading-relaxed max-w-xl"
+          <p className="text-base sm:text-lg text-white font-body leading-relaxed max-w-xl"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)", transition: "opacity .9s ease .38s, transform .9s ease .38s" }}>
-            GC designs, engineers, and builds complete farm systems — from irrigation and 
-            greenhouses to processing and storage — delivered to export-ready standards.
+            GC designs, engineers, and builds complete farm systems from irrigation and 
+            greenhouses to processing and storage delivered to export-ready standards.
           </p>
 
         <div
@@ -264,15 +264,15 @@ function Overview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Fade>
-            <p className="eyebrow mb-4">What We Do</p>
-            <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight mb-6">
-              Integrated farm systems,<br />
-              <em className="not-italic text-gc-green-500">engineered end-to-end.</em>
+            <p className="eyebrow mb-4 font-semibold text-[16.5px]">What We Do</p>
+            <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800 leading-tight mb-6">
+              Integrated Farm Systems<br />
+              <em className="italic text-gc-green-500 font-semibold">Engineered End-to-End</em>
             </h2>
-            <p className="text-gc-stone-500 leading-relaxed mb-4">
+            <p className="text-black leading-relaxed mb-4">
               Gartner Callaway doesn't just consult, we design, procure, build, and commission complete farm systems from the ground up. Every project is delivered by our in-house engineering team to bankable, insurable, and export-ready standards.
             </p>
-            <p className="text-gc-stone-500 leading-relaxed">
+            <p className="text-black leading-relaxed">
               Whether you're establishing a greenfield farm, retrofitting an existing operation, or scaling an institutional agriculture programme, we bring the precision, engineering depth, and agricultural science to make it viable at commercial scale.
             </p>
           </Fade>
@@ -287,7 +287,7 @@ function Overview() {
               <p className="text-3xl font-display font-light mb-1">
                 <Counter target={48} suffix="+" />
               </p>
-              <p className="text-xs text-white/60 uppercase tracking-widest">Farm Systems Delivered</p>
+              <p className="text-xs text-white uppercase tracking-widest">Farm Systems Delivered</p>
             </div>
           </Fade>
         </div>
@@ -302,10 +302,10 @@ function Services() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-16">
-          <p className="eyebrow mb-4">What We Design & Build</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Six systems.<br />
-            <em className="not-italic text-gc-green-500">One integrated farm.</em>
+          <p className="eyebrow mb-4 font-semibold text-[16.5px]">What We Design & Build</p>
+          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800">
+            Six Systems<br />
+            <em className="italic text-gc-green-500 font-semibold">One Integrated Farm</em>
           </h2>
         </Fade>
 
@@ -316,8 +316,8 @@ function Services() {
               <div className="w-14 h-14 rounded-xl bg-gc-green-200 text-gc-green-500 flex items-center justify-center mb-5 group-hover:bg-gc-green-500 group-hover:text-white transition-colors duration-300">
                 {s.icon}
               </div>
-              <h3 className="font-display font-medium text-gc-stone-800 text-xl mb-3">{s.title}</h3>
-              <p className="text-sm text-gc-stone-500 leading-relaxed">{s.desc}</p>
+              <h3 className="font-display font-semibold text-gc-stone-800 text-xl mb-3">{s.title}</h3>
+              <p className="text-sm text-black leading-relaxed">{s.desc}</p>
             </Fade>
           ))}
         </div>
@@ -332,10 +332,10 @@ function Process() {
     <section id="process" className="py-24 bg-gc-green-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-16">
-          <p className="eyebrow mb-4 text-gc-green-400">Our Process</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-white">
-            From bare land to<br />
-            <em className="not-italic text-gc-green-400">operating farm.</em>
+          <p className="eyebrow mb-4 font-semibold text-[16.5px] text-gc-green-400">Our Process</p>
+          <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-white">
+            From Bare Land<br />
+            <em className="italic font-semibold text-gc-green-400">Operating Farm</em>
           </h2>
         </Fade>
 
@@ -348,9 +348,9 @@ function Process() {
               <Fade key={p.step} delay={i * 100}
                 className={`lg:grid lg:grid-cols-2 lg:gap-16 items-center ${i % 2 === 0 ? "" : "lg:direction-rtl"}`}>
                 <div className={`mb-6 lg:mb-0 ${i % 2 !== 0 ? "lg:order-2 lg:text-right" : ""}`}>
-                  <span className="text-7xl font-display font-light text-white/10 leading-none">{p.step}</span>
+                  <span className="text-7xl font-display font-light text-white/70 leading-none">{p.step}</span>
                   <h3 className="text-2xl font-display font-light text-white mt-2 mb-3">{p.title}</h3>
-                  <p className="text-gc-stone-500 leading-relaxed text-sm">{p.desc}</p>
+                  <p className="text-gc-stone-500 text-white leading-relaxed text-sm">{p.desc}</p>
                 </div>
                 <div className={`hidden lg:flex items-center ${i % 2 !== 0 ? "lg:order-1 justify-end" : "justify-start"}`}>
                   <div className="w-4 h-4 rounded-full bg-gc-green-500 border-4 border-gc-green-900 ring-1 ring-gc-green-500" />
@@ -375,7 +375,7 @@ function Stats() {
               <p className="text-5xl sm:text-6xl font-display font-light text-white mb-2">
                 <Counter target={s.value} suffix={s.suffix} />
               </p>
-              <p className="text-xs uppercase tracking-widest text-white/70 font-medium">{s.label}</p>
+              <p className="text-xs uppercase tracking-widest text-white font-medium">{s.label}</p>
             </Fade>
           ))}
         </div>
@@ -392,7 +392,7 @@ function WhyGC() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Fade delay={100} className="relative order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=80"
+              src="/assets/prodtpage.jpg"
               alt="Precision agriculture"
               className="rounded-2xl w-full h-[480px] object-cover shadow-2xl"
             />
@@ -400,21 +400,21 @@ function WhyGC() {
               <p className="text-3xl font-display font-light text-gc-green-500 mb-1">
                 <Counter target={98} suffix="%" />
               </p>
-              <p className="text-xs text-gc-stone-500 uppercase tracking-widest">Client Retention</p>
+              <p className="text-xs text-black uppercase tracking-widest">Client Retention</p>
             </div>
           </Fade>
 
           <Fade className="order-1 lg:order-2">
-            <p className="eyebrow mb-4">Why Gartner Callaway</p>
-            <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800 leading-tight mb-8">
-              Built different.<br />
-              <em className="not-italic text-gc-green-500">By design.</em>
+            <p className="eyebrow mb-4 font-bold text-[16.5px]">Why Gartner Callaway</p>
+            <h2 className="text-4xl sm:text-5xl font-display font-semibold font-light text-gc-stone-800 leading-tight mb-8">
+              Built Different<br />
+              <em className="italic text-gc-green-500">By Design</em>
             </h2>
             <ul className="space-y-4">
               {DIFFERENTIATORS.map((d) => (
                 <li key={d} className="flex items-start gap-3">
                   <CheckCircle size={18} className="text-gc-green-500 mt-0.5 shrink-0" />
-                  <span className="text-gc-stone-600 text-sm leading-relaxed">{d}</span>
+                  <span className="text-black text-sm leading-relaxed">{d}</span>
                 </li>
               ))}
             </ul>
@@ -431,9 +431,9 @@ function Gallery() {
     <section className="py-24 bg-gc-stone-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4">Project Showcase</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-light text-gc-stone-800">
-            Farms we've <em className="not-italic text-gc-green-500">built.</em>
+          <p className="eyebrow mb-4 text-[16.5px] font-bold">Project Showcase</p>
+          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800">
+            Farms We've <em className="italic text-gc-green-500">Built</em>
           </h2>
         </Fade>
 
@@ -464,14 +464,14 @@ function CTA() {
         style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #4a8a5b 0%, transparent 60%), radial-gradient(circle at 80% 50%, #e07a5f 0%, transparent 60%)" }} />
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Fade>
-          <p className="eyebrow mb-6 text-gc-green-400">Ready to Build?</p>
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light text-white leading-tight mb-6">
-            Your farm starts<br />
-            <em className="not-italic" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.6)", color: "transparent" }}>
-              with a conversation.
+          <p className="eyebrow mb-6 text-gc-green-400 text-[16.5px]">Ready to Build?</p>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-semibold font-light text-white leading-tight mb-6">
+            Your Farm Starts<br />
+            <em className="italic font-display font-semibold text-gc-green-500">
+              With a Conversation
             </em>
           </h2>
-          <p className="max-w-xl mx-auto text-white/60 text-lg leading-relaxed mb-10">
+          <p className="max-w-xl mx-auto text-white text-lg leading-relaxed mb-10">
             Tell us about your land, your crop, and your vision. Our engineering team will take it from there.
           </p>
           <Link to="/contact"

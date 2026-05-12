@@ -14,6 +14,7 @@ import ArticlePage from './pages/articlepage'
 import FarmDesignPage from './pages/SubServices/productionpage'
 import InstitutionalPage from './pages/SubServices/institutional'
 import ProductionProcessingPage from './pages/SubServices/processingPage'
+import GCAcademy from './pages/SubServices/academy'
 
 // Loader
 import Loader from './components/loader'
@@ -30,6 +31,7 @@ function App() {
         <Route path="/SubServices/productionpage" element={<FarmDesignPage />} />
         <Route path="/SubServices/institutional" element={<InstitutionalPage />} />
         <Route path="/SubServices/processingPage" element={<ProductionProcessingPage />} />
+        <Route path="/SubServices/academy" element={<GCAcademy />} />
 
         {/* Loader */}
         <Route path="/loader" element={<Loader />} />
