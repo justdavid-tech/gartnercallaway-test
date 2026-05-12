@@ -4,7 +4,7 @@ import { Routes, Route  } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
 import ProductionPage from './pages/production'
-// import Contact from './pages/contact'
+import ContactPage from './pages/contact'
 
 // Insights Page
 import InsightsPage from './pages/insightspage'
@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/production" element={<ProductionPage />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<ContactPage />} />
 
         {/* SubServices Page */}
         <Route path="/SubServices/productionpage" element={<FarmDesignPage />} />
