@@ -135,8 +135,8 @@ function Hero() {
 
         <Fade delay={100}>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-light font-semibold text-white leading-[1.1] mb-5">
-            Let's connect<br />
-            <em className="italic text-gc-green-400">Start a conversation</em>
+            Let's Connect<br />
+            <em className="italic text-gc-green-400">Start a Conversation</em>
           </h1>
         </Fade>
 
