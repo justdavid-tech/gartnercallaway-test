@@ -2,17 +2,25 @@ import React from "react";
 import "../index.css";
 
 const topImages = [
-  "/assets/farm (1).jpg",
-  "/assets/farm (2).jpg",
-  "/assets/farm (3).jpg",
-  "/assets/farm (4).jpg",
+  "/assets/interaction (1).jpeg",
+  "/assets/interaction (2).jpeg",
+  "/assets/interaction (3).jpeg",
+  "/assets/interaction (4).jpeg",
+  "/assets/interaction (5).jpeg",
+  "/assets/interaction (6).jpeg",
+  "/assets/interaction (7).jpeg",
+  "/assets/interaction (8).jpeg",
 ];
 
 const bottomImages = [
-  "/assets/farm (5).jpg",
-  "/assets/farm (6).jpg",
-  "/assets/farm (7).jpg",
-  "/assets/farm (8).jpg",
+  "/assets/production (1).jpeg",
+  "/assets/production (2).jpeg",
+  "/assets/production (3).jpeg",
+  "/assets/production (4).jpeg",
+  "/assets/production (5).jpeg",
+  "/assets/production (6).jpeg",
+  "/assets/production (7).jpeg",
+  "/assets/production (8).jpeg",
 ];
 
 export default function AutoSlider() {

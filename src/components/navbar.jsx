@@ -27,8 +27,8 @@ const NAV = [
   {
     name: "Insights", disabled: true,
     sub: [
-      { name: "Articles", href: "/insights", hint: "Field notes" },
-      { name: "Videos", href: "/videos", hint: "Interviews" },
+      { name: "Articles", href: "/insights", hint: "Insights" },
+      { name: "Media", href: "/videos", hint: "Public Relations" },
     ]
   },
   { name: "Contact", href: "/contact" },
@@ -241,14 +241,14 @@ export default function Navbar() {
         .gc-drop-name {
           font-size: 12.5px; font-weight: 400;
           letter-spacing: 0.04em;
-          color: rgba(255,255,255,0.8);
+          color: #fff;
           transition: color 0.18s ease;
         }
         .gc-drop-item:hover .gc-drop-name { color: #fff; }
         .gc-drop-hint {
           font-size: 10px; font-weight: 300;
           letter-spacing: 0.12em; text-transform: uppercase;
-          color: var(--gc-green-400); opacity: 0.6;
+          color: #fff; opacity: 0.6;
           white-space: nowrap;
         }
 
@@ -364,7 +364,7 @@ export default function Navbar() {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(32px, 8vw, 48px);
           font-weight: 300; line-height: 1;
-          color: rgba(255,255,255,0.85);
+          color: #fff;
           letter-spacing: -0.01em;
           transition: color 0.2s ease;
         }
@@ -387,12 +387,12 @@ export default function Navbar() {
         .gc-col-heading {
           font-size: 9px; font-weight: 500;
           letter-spacing: 0.22em; text-transform: uppercase;
-          color: var(--gc-green-400); margin-bottom: 14px;
+          color: #fff; margin-bottom: 14px;
         }
         .gc-col-link {
           display: block; padding: 6px 0;
           font-size: 13px; font-weight: 300;
-          color: rgba(255,255,255,0.5);
+          color: #fff;
           text-decoration: none;
           transition: color 0.18s ease;
           border-bottom: 1px solid rgba(255,255,255,0.04);
@@ -423,7 +423,7 @@ export default function Navbar() {
         .gc-menu-stat-lbl {
           font-size: 9px; font-weight: 400;
           letter-spacing: 0.16em; text-transform: uppercase;
-          color: rgba(255,255,255,0.3);
+          color: #fff;
         }
 
         /* menu CTA */
@@ -654,14 +654,8 @@ export default function Navbar() {
                         href={item.href}
                         className="gc-col-link"
                         onClick={handleMenuClose}
-                        style={{
-                          padding: "14px 0",
-                          display: "block",
-                          fontSize: "15px",
-                          color: "var(--gc-green-400)",
-                        }}
                       >
-                        View All {item.name}
+                        
                       </a>
                     </div>
                   </>

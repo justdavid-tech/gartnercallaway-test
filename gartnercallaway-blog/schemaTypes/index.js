@@ -1,2 +1,4 @@
 import post from './post'
-export const schemaTypes = [post]
+import media from './media'
+
+export const schemaTypes = [post, media]

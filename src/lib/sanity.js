@@ -46,6 +46,20 @@ const POST_FIELDS = `
   author { name, role, photo }
 `;
 
+// ── Media Query (Images & Videos) ──────────────────────────────────────────
+export const GET_ALL_MEDIA_QUERY = `
+  *[_type == "media"] | order(publishedAt desc) {
+    _id,
+    title,
+    type,
+    image { asset, alt, hotspot },
+    videoUrl,
+    category,
+    description,
+    publishedAt
+  }
+`;
+
 // ── Homepage preview: latest 3 articles ─────────────────────────────────────
 export const LATEST_POSTS_QUERY = `
   *[_type == "post"] | order(publishedAt desc) [0..2] {
@@ -105,4 +119,8 @@ export async function getPostBySlug(slug) {
 
 export async function getFeaturedPost() {
   return sanityClient.fetch(FEATURED_POST_QUERY);
+}
+
+export async function getAllMedia() {
+  return sanityClient.fetch(GET_ALL_MEDIA_QUERY);
 }

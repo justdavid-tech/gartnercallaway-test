@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Play, ArrowRight, Share2, X, Check } from "lucide-react";
+import { Play, ArrowRight, Share2, X, Check, Camera, Maximize2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getAllMedia, urlFor } from "../lib/sanity";
 
 /* ─────────────────────────────────────────────
    Animation Hook
@@ -55,7 +56,7 @@ function Fade({ children, delay = 0, className = "" }) {
 /* ─────────────────────────────────────────────
    Video Data
 ───────────────────────────────────────────── */
-const VIDEOS = [
+const HARDCODED_VIDEOS = [
   {
     id: "d_hU4F375rc",
     title: "Why I left Oil and Gas Sector For Farming",
@@ -118,6 +119,14 @@ const VIDEOS = [
   }
 ];
 
+/* ── Helpers ── */
+function getYouTubeId(url) {
+  if (!url) return null;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+}
+
 /* ─────────────────────────────────────────────
    Hero Section
 ───────────────────────────────────────────── */
@@ -170,10 +179,10 @@ function Hero() {
             </a>
 
             <Link
-              to="/contact"
+              to="#images"
               className="inline-flex items-center gap-2 border border-white/20 hover:border-white/60 text-white hover:text-white font-medium text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all duration-300"
             >
-              Contact Us
+              View Images
             </Link>
           </div>
         </Fade>
@@ -183,9 +192,84 @@ function Hero() {
 }
 
 /* ─────────────────────────────────────────────
+   Image Grid
+───────────────────────────────────────────── */
+function ImageGrid({ images }) {
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  if (!images?.length) return null;
+
+  return (
+    <section id="images" className="relative py-24 bg-white overflow-hidden">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <Fade className="text-center mb-16">
+          <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-500 mb-4">
+            Visual Gallery
+          </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-black leading-tight">
+            Moments In
+            <br />
+            <em className="italic text-gc-green-400">Agriculture.</em>
+          </h2>
+        </Fade>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {images.map((img, index) => (
+            <Fade key={img._id} delay={index * 50} className="group cursor-pointer" onClick={() => setSelectedImg(img)}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-xl bg-black/20">
+                <img 
+                  src={urlFor(img.image).width(800).url()} 
+                  alt={img.image?.alt || img.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Maximize2 className="text-white w-8 h-8" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="text-[10px] uppercase tracking-widest text-gc-green-400 font-bold mb-1 block">
+                    {img.category || "Gallery"}
+                  </span>
+                  <h3 className="text-white text-lg font-medium">{img.title}</h3>
+                </div>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {selectedImg && (
+        <div 
+          className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors">
+            <X size={32} />
+          </button>
+          <div className="max-w-5xl w-full max-h-[85vh] relative" onClick={e => e.stopPropagation()}>
+            <img 
+              src={urlFor(selectedImg.image).width(1600).url()} 
+              alt={selectedImg.title}
+              className="w-full h-full object-contain rounded-lg shadow-2xl"
+            />
+            <div className="mt-6 text-center">
+              <h3 className="text-white text-2xl font-display font-light">{selectedImg.title}</h3>
+              {selectedImg.description && <p className="text-white/60 mt-2 max-w-2xl mx-auto">{selectedImg.description}</p>}
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
    Video Grid
 ───────────────────────────────────────────── */
-function VideoGrid({ onShare }) {
+function VideoGrid({ videos, onShare }) {
+  if (!videos?.length) return null;
+
   return (
     <section
       id="videos"
@@ -219,9 +303,9 @@ function VideoGrid({ onShare }) {
         {/* Video Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-          {VIDEOS.map((video, index) => (
+          {videos.map((video, index) => (
             <Fade
-              key={video.id + index}
+              key={(video.id || video._id) + index}
               delay={index * 80}
               className="group"
             >
@@ -230,8 +314,9 @@ function VideoGrid({ onShare }) {
                 {/* Video */}
                 <div className="relative w-full pt-[56.25%] overflow-hidden">
                   <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
+                    src={`https://www.youtube.com/embed/${video.id || getYouTubeId(video.videoUrl)}?rel=0`}
                     title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
@@ -247,7 +332,7 @@ function VideoGrid({ onShare }) {
                     </span>
 
                     <button
-                      onClick={() => onShare(video.id)}
+                      onClick={() => onShare(video.id || getYouTubeId(video.videoUrl))}
                       className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white hover:text-gc-green-400 transition-all duration-300"
                       title="Share Video"
                     >
@@ -346,9 +431,34 @@ function CTA() {
    Main Page
 ───────────────────────────────────────────── */
 export default function VideosPage() {
+  const [images, setImages] = useState([]);
+  const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [shareVideo, setShareVideo] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const mediaItems = await getAllMedia();
+        
+        // Filter images
+        const sanityImages = mediaItems.filter(m => m.type === 'image');
+        setImages(sanityImages);
+
+        // Filter and merge videos
+        const sanityVideos = mediaItems.filter(m => m.type === 'video');
+        setVideos([...sanityVideos, ...HARDCODED_VIDEOS]);
+      } catch (err) {
+        console.error("Sanity fetch error:", err);
+        setVideos(HARDCODED_VIDEOS);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
 
   const handleCopyLink = (videoId) => {
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
@@ -360,7 +470,18 @@ export default function VideosPage() {
   return (
     <>
       <Hero />
-      <VideoGrid onShare={setShareVideo} />
+      
+      {loading ? (
+        <div className="py-20 flex justify-center items-center bg-[#294b33]">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gc-green-400"></div>
+        </div>
+      ) : (
+        <>
+          <ImageGrid images={images} />
+          <VideoGrid videos={videos} onShare={setShareVideo} />
+        </>
+      )}
+
       <CTA />
 
       {/* Share Modal */}
