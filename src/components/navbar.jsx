@@ -25,13 +25,11 @@ const NAV = [
   },
   { name: "Production", href: "/production" },
   {
-    name: "Insights", href: "/insights",
-    // No need for sub pages for insights...
-    // sub: [
-    //   { name: "Case Studies", href: "/insights/case-studies", hint: "Real outcomes" },
-    //   { name: "Articles", href: "/insights/articles", hint: "Field notes" },
-    //   { name: "Press", href: "/insights/press", hint: "Coverage" },
-    // ]
+    name: "Insights", disabled: true,
+    sub: [
+      { name: "Articles", href: "/insights", hint: "Field notes" },
+      { name: "Videos", href: "/videos", hint: "Interviews" },
+    ]
   },
   { name: "Contact", href: "/contact" },
 ];

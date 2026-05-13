@@ -16,6 +16,19 @@ import InstitutionalPage from './pages/SubServices/institutional'
 import ProductionProcessingPage from './pages/SubServices/processingPage'
 import GCAcademy from './pages/SubServices/academy'
 
+// Governance Page
+import GovernancePage from './pages/governance/policies'
+import Board from './pages/governance/board'
+import SocialResponsibility from './pages/governance/socialResponsibility'
+
+// Terms and Conditions
+import Termsofuse from './pages/legal/termsofuse'
+
+// Privacy Policy
+import Privacypolicy from './pages/legal/privacyPolicy'
+
+import VideosPage from "./pages/videos";
+
 // Loader
 import Loader from './components/loader'
 function App() {
@@ -33,12 +46,26 @@ function App() {
         <Route path="/SubServices/processingPage" element={<ProductionProcessingPage />} />
         <Route path="/SubServices/academy" element={<GCAcademy />} />
 
+        {/* Governance Page */}
+        <Route path="/governance/policies" element={<GovernancePage />} />
+        <Route path="/governance/board" element={<Board />} />
+        <Route path="/governance/social-responsibility" element={<SocialResponsibility />} />
+
+        {/* Terms and Conditions */}
+        <Route path="/legal/terms-of-use" element={<Termsofuse />} />
+
+        {/* Privacy Policy */}
+        <Route path="/legal/privacy-policy" element={<Privacypolicy />} />
+
         {/* Loader */}
         <Route path="/loader" element={<Loader />} />
 
         {/* Insights Page */}
         <Route path="/insights" element={<InsightsPage />} />
         <Route path="/insights/:slug" element={<ArticlePage />} />
+
+        {/* Youtube Videos */}
+        <Route path="/videos" element={<VideosPage />} />
       </Routes>
     </>
   )

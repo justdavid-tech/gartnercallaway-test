@@ -1,0 +1,429 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Play, ArrowRight, Share2, X, Check } from "lucide-react";
+import { Link } from "react-router-dom";
+
+/* ─────────────────────────────────────────────
+   Animation Hook
+───────────────────────────────────────────── */
+function useInView(threshold = 0.15) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold }
+    );
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, visible];
+}
+
+/* ─────────────────────────────────────────────
+   Fade Animation
+───────────────────────────────────────────── */
+function Fade({ children, delay = 0, className = "" }) {
+  const [ref, visible] = useInView();
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(35px)",
+        transition: `all 0.8s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Video Data
+───────────────────────────────────────────── */
+const VIDEOS = [
+  {
+    id: "d_hU4F375rc",
+    title: "Why I left Oil and Gas Sector For Farming",
+    category: "Hydroponics",
+  },
+  {
+    id: "jSBBhkDA78Q",
+    title: "Growing Food With Hydroponics",
+    category: "Food Innovation",
+  },
+  {
+    id: "Y5Zi55FiRGQ",
+    title: "Financial Literacy Initiative",
+    category: "Community Impact",
+  },
+  {
+    id: "ncIS_y82GaE",
+    title: "Young Nigerian Adopts Hydroponics Methods In Lekki",
+    category: "Hydroponics",
+  },
+  {
+    id: "k3vXbTKOg0c",
+    title: "Young Nigerian Adopts Hydroponics Methods In Lekki Part 2",
+    category: "Hydroponics",
+  },
+  {
+    id: "q2potVGV6a4",
+    title: "Young Nigerian Adopts Hydroponics Methods In Lekki Part 3",
+    category: "Hydroponics",
+  },
+    {
+    id: "zaWjtoV2-O0",
+    title: "Focus on Hydroponics Part 3",
+    category: "Hydroponics",
+  },
+    {
+    id: "0FKkjTCu948",
+    title: "Growing Food with Hydroponics in Nigeria",
+    category: "Hydroponics",
+  },
+    {
+    id: "Rx9s34yH784",
+    title: "Financial Literacy Talk for Small Holders Farmers",
+    category: "Financy",
+  },
+    {
+    id: "XBuq1iEv2no",
+    title: "A View Of What Hydroponice Farming Looks Like",
+    category: "Hydroponics",
+  },
+    {
+    id: "9mmD3OyIw30",
+    title: "AIICO Documentary",
+    category: "Partnership",
+  },
+    {
+    id: "8jFeiqotAAQ",
+    title: "Union Bank Documentary",
+    category: "Partnership",
+  }
+];
+
+/* ─────────────────────────────────────────────
+   Hero Section
+───────────────────────────────────────────── */
+function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-gc-green-900 py-32 sm:py-40">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&q=80"
+          alt="Agriculture"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-gc-green-900/70 to-gc-green-900" />
+
+      {/* Glow */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gc-green-400/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl" />
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <Fade>
+          <p className="uppercase tracking-[0.3em] text-xs font-semibold text-gc-green-400 mb-6">
+            Media & Documentaries
+          </p>
+
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-display font-semibold text-white leading-[1.05] tracking-tight mb-6">
+            Stories Through
+            <br />
+            <em className="italic text-gc-green-400">
+              Moving Visuals.
+            </em>
+          </h1>
+
+          <p className="max-w-3xl mx-auto text-white text-lg sm:text-xl leading-relaxed">
+            Explore Gartner Callaway documentaries, agricultural innovations,
+            hydroponic systems, sustainability initiatives, and impact-driven
+            stories shaping the future of African agriculture.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+            <a
+              href="#videos"
+              className="inline-flex items-center gap-2 bg-gc-green-400 hover:bg-gc-green-500 text-gc-green-900 hover:text-white font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all duration-300 hover:gap-3"
+            >
+              Watch Videos
+              <ArrowRight size={15} />
+            </a>
+
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/60 text-white hover:text-white font-medium text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </Fade>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Video Grid
+───────────────────────────────────────────── */
+function VideoGrid({ onShare }) {
+  return (
+    <section
+      id="videos"
+      className="relative py-24 bg-[#294b33] overflow-hidden"
+    >
+      {/* Background Texture */}
+      <div className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        }}
+      />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <Fade className="text-center mb-16">
+          <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-400 mb-4">
+            Featured Library
+          </p>
+
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold text-white leading-tight">
+            Watch Our Latest
+            <br />
+            <em className="italic text-gc-green-400">
+              Documentaries & Insights.
+            </em>
+          </h2>
+        </Fade>
+
+        {/* Video Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          {VIDEOS.map((video, index) => (
+            <Fade
+              key={video.id + index}
+              delay={index * 80}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm shadow-2xl">
+
+                {/* Video */}
+                <div className="relative w-full pt-[56.25%] overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 bg-gradient-to-b from-white/[0.03] to-transparent">
+
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-gc-green-400 font-semibold">
+                      <Play size={12} />
+                      {video.category}
+                    </span>
+
+                    <button
+                      onClick={() => onShare(video.id)}
+                      className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white hover:text-gc-green-400 transition-all duration-300"
+                      title="Share Video"
+                    >
+                      <Share2 size={16} />
+                    </button>
+                  </div>
+
+                  <h3 className="text-white text-2xl font-display font-medium leading-snug group-hover:text-gc-green-400 transition-colors duration-300">
+                    {video.title}
+                  </h3>
+
+                </div>
+              </div>
+            </Fade>
+          ))}
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Toast Notification Component
+───────────────────────────────────────────── */
+function Toast({ message, onClose }) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[200] animate-in fade-in slide-in-from-bottom-5 duration-300">
+      <div className="flex items-center gap-2 bg-gc-green-400 text-gc-green-900 px-4 py-3 rounded-lg shadow-lg">
+        <Check size={18} />
+        <span className="text-sm font-medium">{message}</span>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   CTA Section
+───────────────────────────────────────────── */
+function CTA() {
+  return (
+    <section className="py-28 bg-gc-green-900 relative overflow-hidden">
+
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 50%, #4a8a5b 0%, transparent 60%), radial-gradient(circle at 80% 50%, #ffffff 0%, transparent 60%)",
+        }}
+      />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <Fade>
+          <p className="uppercase tracking-[0.3em] text-[15.5px] font-semibold text-gc-green-400 mb-6">
+            Work With Gartner Callaway
+          </p>
+
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-semibold text-white leading-tight mb-6">
+            Building the future
+            <br />
+            <em
+              className="italic text-gc-green-400">
+              of agriculture
+            </em>
+          </h2>
+
+          <p className="max-w-2xl mx-auto text-white text-lg leading-relaxed mb-10">
+            From hydroponics and sustainability systems to institutional
+            agricultural development, Gartner Callaway continues to engineer
+            scalable solutions for modern farming.
+          </p>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-gc-green-400 hover:bg-gc-green-500 text-white hover:text-white font-semibold text-xs uppercase tracking-widest px-10 py-4 rounded-sm transition-all duration-300 hover:gap-4"
+          >
+            Start a Conversation
+            <ArrowRight size={16} />
+          </Link>
+        </Fade>
+
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Main Page
+───────────────────────────────────────────── */
+export default function VideosPage() {
+  const [shareVideo, setShareVideo] = useState(null);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  const handleCopyLink = (videoId) => {
+    const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    navigator.clipboard.writeText(videoUrl);
+    setToastMessage("Link copied to clipboard!");
+    setShowToast(true);
+  };
+
+  return (
+    <>
+      <Hero />
+      <VideoGrid onShare={setShareVideo} />
+      <CTA />
+
+      {/* Share Modal */}
+      {shareVideo && (
+        <div
+          onClick={() => setShareVideo(null)}
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center px-4 transition-all duration-300"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-md bg-[#111827] border border-white/10 rounded-2xl p-8 relative shadow-2xl"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setShareVideo(null)}
+              className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
+              aria-label="Close modal"
+            >
+              <X size={20} />
+            </button>
+
+            <h3 className="text-white text-2xl font-display font-light mb-6">
+              Share <span className="text-gc-green-400">Video</span>
+            </h3>
+
+            <div className="bg-black/40 border border-white/10 rounded-xl px-4 py-4 text-sm text-white/50 break-all mb-8 font-mono">
+              {`https://www.youtube.com/watch?v=${shareVideo}`}
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <a
+                href={`https://wa.me/?text=https://www.youtube.com/watch?v=${shareVideo}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-green-600/10 hover:bg-green-600 border border-green-600/20 hover:border-green-600 text-green-500 hover:text-white text-xs uppercase tracking-widest font-semibold transition-all duration-300"
+              >
+                WhatsApp
+              </a>
+
+              <a
+                href={`https://twitter.com/intent/tweet?url=https://www.youtube.com/watch?v=${shareVideo}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white border border-white/10 hover:border-white text-white/70 hover:text-black text-xs uppercase tracking-widest font-semibold transition-all duration-300"
+              >
+                X (Twitter)
+              </a>
+
+              <button
+                onClick={() => handleCopyLink(shareVideo)}
+                className="col-span-2 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gc-green-400/10 hover:bg-gc-green-400 border border-gc-green-400/20 hover:border-gc-green-400 text-gc-green-400 hover:text-gc-green-900 text-xs uppercase tracking-widest font-semibold transition-all duration-300"
+              >
+                Copy Direct Link
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Toast Notification */}
+      {showToast && (
+        <Toast message={toastMessage} onClose={() => setShowToast(false)} />
+      )}
+    </>
+  );
+}
