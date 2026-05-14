@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Play, ArrowRight, Share2, X, Check, Camera, Maximize2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getAllMedia, urlFor } from "../lib/sanity";
+import AutoSlider from "../components/newslider";
 
 /* ─────────────────────────────────────────────
    Animation Hook
@@ -56,7 +57,7 @@ function Fade({ children, delay = 0, className = "" }) {
 /* ─────────────────────────────────────────────
    Video Data
 ───────────────────────────────────────────── */
-/* 
+
 const HARDCODED_VIDEOS = [
   {
     id: "d_hU4F375rc",
@@ -88,39 +89,39 @@ const HARDCODED_VIDEOS = [
     title: "Young Nigerian Adopts Hydroponics Methods In Lekki Part 3",
     category: "Hydroponics",
   },
-    {
+  {
     id: "zaWjtoV2-O0",
     title: "Focus on Hydroponics Part 3",
     category: "Hydroponics",
   },
-    {
+  {
     id: "0FKkjTCu948",
     title: "Growing Food with Hydroponics in Nigeria",
     category: "Hydroponics",
   },
-    {
+  {
     id: "Rx9s34yH784",
     title: "Financial Literacy Talk for Small Holders Farmers",
     category: "Financy",
   },
-    {
+  {
     id: "XBuq1iEv2no",
     title: "A View Of What Hydroponice Farming Looks Like",
     category: "Hydroponics",
   },
-    {
+  {
     id: "9mmD3OyIw30",
     title: "AIICO Documentary",
     category: "Partnership",
   },
-    {
+  {
     id: "8jFeiqotAAQ",
     title: "Union Bank Documentary",
     category: "Partnership",
   }
 ];
-*/
-const HARDCODED_VIDEOS = [];
+
+
 
 /* ── Helpers ── */
 function getYouTubeId(url) {
@@ -205,23 +206,28 @@ function ImageGrid({ images }) {
   return (
     <section id="images" className="relative py-24 bg-white overflow-hidden">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <Fade className="text-center mb-16">
           {/* <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-500 mb-4">
             Visual Gallery
           </p> */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-black leading-tight">
-            Visual
-            <em className="italic text-gc-green-400">  Gallery</em>
+            Public
+            <em className="italic text-gc-green-400">  Relations</em>
           </h2>
         </Fade>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <AutoSlider images={images} />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, index) => (
             <Fade key={img._id} delay={index * 50} className="group cursor-pointer" onClick={() => setSelectedImg(img)}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-xl bg-black/20">
-                <img 
-                  src={urlFor(img.image).width(800).url()} 
+                <img
+                  src={urlFor(img.image).width(800).url()}
                   alt={img.image?.alt || img.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -237,12 +243,12 @@ function ImageGrid({ images }) {
               </div>
             </Fade>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Lightbox */}
       {selectedImg && (
-        <div 
+        <div
           className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4"
           onClick={() => setSelectedImg(null)}
         >
@@ -250,8 +256,8 @@ function ImageGrid({ images }) {
             <X size={32} />
           </button>
           <div className="max-w-5xl w-full max-h-[85vh] relative" onClick={e => e.stopPropagation()}>
-            <img 
-              src={urlFor(selectedImg.image).width(1600).url()} 
+            <img
+              src={urlFor(selectedImg.image).width(1600).url()}
               alt={selectedImg.title}
               className="w-full h-full object-contain rounded-lg shadow-2xl"
             />
@@ -286,7 +292,7 @@ function VideoGrid({ videos, onShare }) {
       />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <Fade className="text-center mb-16">
           <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-400 mb-4">
@@ -445,7 +451,7 @@ export default function VideosPage() {
   const fetchYouTubeVideos = async (pageToken = "") => {
     const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
     const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
-    
+
     console.log("[YouTube VideosPage Debug] API Key exists:", !!apiKey);
     console.log("[YouTube VideosPage Debug] Channel ID:", channelId);
 
@@ -460,7 +466,7 @@ export default function VideosPage() {
       const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=6&playlistId=${uploadsPlaylistId}&key=${apiKey.trim()}${pageToken ? `&pageToken=${pageToken}` : ""}`;
       const res = await fetch(url);
       const data = await res.json();
-      
+
       if (data.error) {
         console.error("[YouTube VideosPage Debug] API Error:", data.error);
         return { items: [], nextToken: null };
@@ -486,25 +492,25 @@ export default function VideosPage() {
     async function fetchData() {
       try {
         const mediaItems = await getAllMedia();
-        
+
         // Filter images
         const sanityImages = mediaItems.filter(m => m.type === 'image');
         setImages(sanityImages);
 
         // Filter sanity videos
         const sanityVideos = mediaItems.filter(m => m.type === 'video');
-        
+
         // Fetch first page of YouTube videos
         const { items: ytItems, nextToken } = await fetchYouTubeVideos();
         setYtNextPageToken(nextToken);
 
         // Merge all sources
         const combinedVideos = [...sanityVideos, ...ytItems, ...HARDCODED_VIDEOS];
-        
+
         // Remove duplicates and keep latest first
         const uniqueVideos = [];
         const seenIds = new Set();
-        
+
         combinedVideos.forEach(v => {
           const vidId = v.id || getYouTubeId(v.videoUrl);
           if (vidId && !seenIds.has(vidId)) {
@@ -527,9 +533,9 @@ export default function VideosPage() {
   const handleLoadMore = async () => {
     if (!ytNextPageToken || loadingMore) return;
     setLoadingMore(true);
-    
+
     const { items, nextToken } = await fetchYouTubeVideos(ytNextPageToken);
-    
+
     setVideos(prev => {
       const combined = [...prev, ...items];
       const unique = [];
@@ -543,7 +549,7 @@ export default function VideosPage() {
       });
       return unique;
     });
-    
+
     setYtNextPageToken(nextToken);
     setLoadingMore(false);
   };
@@ -558,7 +564,7 @@ export default function VideosPage() {
   return (
     <>
       <Hero />
-      
+
       {loading ? (
         <div className="py-20 flex justify-center items-center bg-[#294b33]">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gc-green-400"></div>
@@ -566,11 +572,11 @@ export default function VideosPage() {
       ) : (
         <>
           <ImageGrid images={images} />
-          
+
           {/* Wrapped VideoGrid to include pagination button */}
           <div className="bg-[#294b33] pb-24">
             <VideoGrid videos={videos} onShare={setShareVideo} />
-            
+
             {ytNextPageToken && (
               <div className="container mx-auto px-4 flex justify-center mt-12">
                 <button

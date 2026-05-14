@@ -142,7 +142,7 @@ export default function Navbar() {
     padding 0.35s var(--ease-smooth),
     box-shadow 0.35s ease;
 
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "Montserrat", system-ui, sans-serif;
 }
         .gc-bar-inner {
           display: flex; align-items: center; justify-content: space-between;
@@ -255,7 +255,7 @@ export default function Navbar() {
         /* ── CTA button ── */
         .gc-cta-btn {
           display: inline-flex; align-items: center; gap: 7px;
-          font-family: "DM Sans", sans-serif;
+          font-family: "Montserrat", sans-serif;
           font-size: 11px; font-weight: 500;
           letter-spacing: 0.13em; text-transform: uppercase;
           color: var(--gc-green-900);
@@ -361,7 +361,7 @@ export default function Navbar() {
         }
         .gc-mobile-menu.is-open .gc-mob-link { opacity: 1; transform: translateX(0); }
         .gc-mob-link-name {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: clamp(32px, 8vw, 48px);
           font-weight: 300; line-height: 1;
           color: #fff;
@@ -416,7 +416,7 @@ export default function Navbar() {
         .gc-menu-stat:last-child { border-right: none; }
         .gc-menu-stat-val {
           display: block;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 24px; font-weight: 300;
           color: #fff; line-height: 1; margin-bottom: 4px;
         }
@@ -437,7 +437,7 @@ export default function Navbar() {
         }
         .gc-mobile-menu.is-open .gc-menu-cta-row { opacity: 1; }
         .gc-menu-tagline {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 12px; font-weight: 300; font-style: italic;
           color: rgba(255,255,255,0.3);
           max-width: 180px; line-height: 1.5;
