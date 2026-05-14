@@ -23,6 +23,7 @@ const COLS = [
     heading: "Resources",
     links: [
       { label: "Insights",               href: "/insights" },
+      { label: "Stores",               href: "/store" },
     ],
   },
 ];

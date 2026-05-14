@@ -163,7 +163,7 @@ export default function ArticlePage() {
     <>
       <style>{`
         /* ── Fonts ── */
-        .gc-art-root { font-family: "DM Sans", system-ui, sans-serif; }
+        .gc-art-root { font-family: "Montserrat", system-ui, sans-serif; }
 
         /* ── Skeleton ── */
         @keyframes gc-shimmer { 0% { background-position:200% 0; } 100% { background-position:-200% 0; } }
@@ -226,7 +226,7 @@ export default function ArticlePage() {
 
         /* ── Headline ── */
         .gc-art-title {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: clamp(36px, 5.5vw, 72px);
           font-weight: 600; line-height: 1.05;
           letter-spacing: -.02em; color: #fff;
@@ -250,7 +250,7 @@ export default function ArticlePage() {
           width: 38px; height: 38px; border-radius: 50%;
           background: #4a8a5b; color: #fff;
           display: flex; align-items: center; justify-content: center;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 18px; font-weight: 300;
           border: 1.5px solid rgba(127,179,141,.4);
           flex-shrink: 0;
@@ -289,9 +289,9 @@ export default function ArticlePage() {
 
         /* ── Excerpt lead ── */
         .gc-art-excerpt {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: clamp(18px, 2.2vw, 22px);
-          font-weight: 300; font-style: italic;
+          font-weight: 500; font-style: italic;
           line-height: 1.75; color: #000;
           border-left: 2px solid #4a8a5b;
           padding-left: 24px;
@@ -299,7 +299,7 @@ export default function ArticlePage() {
         }
 
         /* ── Portable text ── */
-        .gc-art-p  { font-size: 17px; line-height: 1.9; color: #374151; margin-bottom: 1.6rem; }
+        .gc-art-p  { font-size: 17px; font-weight: 500; line-height: 1.9; color: #000; margin-bottom: 1.6rem; }
         .gc-art-h2 {
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: clamp(26px, 3vw, 36px); font-weight: 300; font-style: italic;
@@ -308,29 +308,29 @@ export default function ArticlePage() {
           line-height: 1.2;
         }
         .gc-art-h3 {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: clamp(20px, 2.2vw, 26px); font-weight: 400;
           color: #1; margin: 2.5rem 0 .9rem;
           letter-spacing: -.01em;
         }
         .gc-art-h4 {
           font-size: 15px; font-weight: 600; text-transform: uppercase;
-          letter-spacing: .12em; color: #4a8a5b; margin: 2rem 0 .6rem;
+          letter-spacing: .12em; color: #000; margin: 2rem 0 .6rem;
         }
         .gc-art-bq {
           border-left: 2px solid #4a8a5b;
           background: #f7faf8;
           padding: 22px 28px; margin: 2.5rem 0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-style: italic; font-size: 20px; font-weight: 300;
-          color: #2c2c2a; line-height: 1.75;
+          color: #000; line-height: 1.75;
         }
-        .gc-art-strong { font-weight: 600; color: #1a3321; }
-        .gc-art-link { color: #4a8a5b; text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
-        .gc-art-link:hover { color: #1a3321; }
+        .gc-art-strong { font-weight: 600; color: #000; }
+        .gc-art-link { color: #101fe6ff; text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
+        .gc-art-link:hover { color: #242c9cff; }
         .gc-art-figure { margin: 3rem 0; }
         .gc-art-img { width: 100%; height: auto; display: block; border-radius: 4px; }
-        .gc-art-caption { text-align: center; font-size: 12px; color: #9CA3AF; margin-top: 10px; font-style: italic; }
+        .gc-art-caption { text-align: center; font-size: 12px; color: #000; margin-top: 10px; font-style: italic; }
 
         /* ── Divider ── */
         .gc-art-divider { width: 40px; height: 1px; background: #7fb38d; margin: 48px 0; }
@@ -350,15 +350,15 @@ export default function ArticlePage() {
           width: 60px; height: 60px; border-radius: 50%;
           background: #1a3321; color: #7fb38d;
           display: flex; align-items: center; justify-content: center;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 26px; font-weight: 300; flex-shrink: 0;
         }
         .gc-art-author-name {
-          font-family: "Cormorant Garamond", Georgia, serif;
-          font-size: 22px; font-weight: 300; color: #000; margin-bottom: 2px;
+          font-family: "Montserrat", Georgia, serif;
+          font-size: 22px; font-weight: 500; color: #000; margin-bottom: 2px;
         }
-        .gc-art-author-role { font-size: 11px; color: #4a8a5b; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-        .gc-art-author-org  { font-size: 12px; color: #000; margin-top: 4px; }
+        .gc-art-author-role { font-size: 15px; color: #4a8a5b; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+        .gc-art-author-org  { font-size: 15px; color: #000; margin-top: 4px; }
 
         /* ── Share bottom ── */
         .gc-art-share-wrap {
@@ -368,7 +368,7 @@ export default function ArticlePage() {
           text-align: center; background: #f9f9f8;
         }
         .gc-art-share-label {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 22px; font-weight: 300; color: #1a3321;
         }
         .gc-art-share-sub { font-size: 13px; color: #9CA3AF; }
@@ -400,7 +400,7 @@ export default function ArticlePage() {
           background: #f4f4f2;
         }
         .gc-art-error-title {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 40px; font-weight: 300; color: #1a3321;
         }
       `}</style>

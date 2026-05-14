@@ -19,12 +19,6 @@ const EJS = {
 /* ─── Data ───────────────────────────────────────────────── */
 const CONTACT_INFO = [
   {
-    icon: <MapPin size={22} />,
-    title: "Head Office",
-    details: ["Gartner Callaway Farms", "Km 28, Lagos-Ibadan Expressway", "Ogun State, Nigeria"],
-    action: { label: "Get Directions", href: "#" },
-  },
-  {
     icon: <Building size={22} />,
     title: "Lagos Office",
     details: ["54A Earls Court Road Ikate", "Lekki", "Lagos State, Nigeria"],
@@ -398,7 +392,7 @@ export default function ContactPage() {
       {/* Info Cards */}
       <section className="py-20 bg-gc-stone-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
             {CONTACT_INFO.map((card, i) => (
               <InfoCard key={card.title} card={card} delay={i * 80} />
             ))}

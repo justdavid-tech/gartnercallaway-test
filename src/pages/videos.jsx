@@ -56,6 +56,7 @@ function Fade({ children, delay = 0, className = "" }) {
 /* ─────────────────────────────────────────────
    Video Data
 ───────────────────────────────────────────── */
+/* 
 const HARDCODED_VIDEOS = [
   {
     id: "d_hU4F375rc",
@@ -118,6 +119,8 @@ const HARDCODED_VIDEOS = [
     category: "Partnership",
   }
 ];
+*/
+const HARDCODED_VIDEOS = [];
 
 /* ── Helpers ── */
 function getYouTubeId(url) {
@@ -204,13 +207,12 @@ function ImageGrid({ images }) {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         
         <Fade className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-500 mb-4">
+          {/* <p className="uppercase tracking-[0.3em] text-[14.5px] font-semibold text-gc-green-500 mb-4">
             Visual Gallery
-          </p>
+          </p> */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-black leading-tight">
-            Moments In
-            <br />
-            <em className="italic text-gc-green-400">Agriculture.</em>
+            Visual
+            <em className="italic text-gc-green-400">  Gallery</em>
           </h2>
         </Fade>
 
@@ -434,9 +436,37 @@ export default function VideosPage() {
   const [images, setImages] = useState([]);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [ytNextPageToken, setYtNextPageToken] = useState(null);
   const [shareVideo, setShareVideo] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
+
+  const fetchYouTubeVideos = async (pageToken = "") => {
+    const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+    const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
+    if (!apiKey || !channelId) return { items: [], nextToken: null };
+
+    try {
+      const uploadsPlaylistId = channelId.trim().replace(/^UC/, 'UU');
+      // Using 6 per page for a nice 2-column or 3-column grid
+      const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=6&playlistId=${uploadsPlaylistId}&key=${apiKey.trim()}${pageToken ? `&pageToken=${pageToken}` : ""}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      const items = (data.items || []).map(item => ({
+        id: item.snippet.resourceId.videoId,
+        title: item.snippet.title,
+        category: "YouTube Upload",
+        publishedAt: item.snippet.publishedAt
+      }));
+
+      return { items, nextToken: data.nextPageToken || null };
+    } catch (err) {
+      console.error("YouTube API fetch error:", err);
+      return { items: [], nextToken: null };
+    }
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -447,9 +477,29 @@ export default function VideosPage() {
         const sanityImages = mediaItems.filter(m => m.type === 'image');
         setImages(sanityImages);
 
-        // Filter and merge videos
+        // Filter sanity videos
         const sanityVideos = mediaItems.filter(m => m.type === 'video');
-        setVideos([...sanityVideos, ...HARDCODED_VIDEOS]);
+        
+        // Fetch first page of YouTube videos
+        const { items: ytItems, nextToken } = await fetchYouTubeVideos();
+        setYtNextPageToken(nextToken);
+
+        // Merge all sources
+        const combinedVideos = [...sanityVideos, ...ytItems, ...HARDCODED_VIDEOS];
+        
+        // Remove duplicates and keep latest first
+        const uniqueVideos = [];
+        const seenIds = new Set();
+        
+        combinedVideos.forEach(v => {
+          const vidId = v.id || getYouTubeId(v.videoUrl);
+          if (vidId && !seenIds.has(vidId)) {
+            uniqueVideos.push(v);
+            seenIds.add(vidId);
+          }
+        });
+
+        setVideos(uniqueVideos);
       } catch (err) {
         console.error("Sanity fetch error:", err);
         setVideos(HARDCODED_VIDEOS);
@@ -459,6 +509,30 @@ export default function VideosPage() {
     }
     fetchData();
   }, []);
+
+  const handleLoadMore = async () => {
+    if (!ytNextPageToken || loadingMore) return;
+    setLoadingMore(true);
+    
+    const { items, nextToken } = await fetchYouTubeVideos(ytNextPageToken);
+    
+    setVideos(prev => {
+      const combined = [...prev, ...items];
+      const unique = [];
+      const seen = new Set();
+      combined.forEach(v => {
+        const id = v.id || getYouTubeId(v.videoUrl);
+        if (id && !seen.has(id)) {
+          unique.push(v);
+          seen.add(id);
+        }
+      });
+      return unique;
+    });
+    
+    setYtNextPageToken(nextToken);
+    setLoadingMore(false);
+  };
 
   const handleCopyLink = (videoId) => {
     const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
@@ -478,11 +552,35 @@ export default function VideosPage() {
       ) : (
         <>
           <ImageGrid images={images} />
-          <VideoGrid videos={videos} onShare={setShareVideo} />
+          
+          {/* Wrapped VideoGrid to include pagination button */}
+          <div className="bg-[#294b33] pb-24">
+            <VideoGrid videos={videos} onShare={setShareVideo} />
+            
+            {ytNextPageToken && (
+              <div className="container mx-auto px-4 flex justify-center mt-12">
+                <button
+                  onClick={handleLoadMore}
+                  disabled={loadingMore}
+                  className="inline-flex items-center gap-3 border border-gc-green-400/30 hover:border-gc-green-400 text-gc-green-400 hover:text-white font-semibold text-xs uppercase tracking-[0.2em] px-12 py-5 rounded-sm transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
+                >
+                  {loadingMore ? (
+                    <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-current"></div>
+                  ) : (
+                    <>
+                      Load More Videos
+                      <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
         </>
       )}
 
       <CTA />
+
 
       {/* Share Modal */}
       {shareVideo && (
