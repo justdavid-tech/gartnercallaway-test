@@ -329,7 +329,7 @@ export default function InsightsPage() {
         .gc-ip-date { font-size: 10px; color: #000; letter-spacing: .1em; }
 
         .gc-ip-title {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: clamp(18px, 2vw, 22px); font-weight: 300;
           line-height: 1.25; color: #000;
           letter-spacing: -.01em;
@@ -352,7 +352,7 @@ export default function InsightsPage() {
           width: 32px; height: 32px; border-radius: 50%;
           background: #1a3321; color: #7fb38d;
           display: flex; align-items: center; justify-content: center;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 16px; font-weight: 300; flex-shrink: 0;
         }
         .gc-ip-author-name { font-size: 11px; font-weight: 500; color: #000; }
@@ -371,7 +371,7 @@ export default function InsightsPage() {
           border: 1px solid #e8e8e6; background: #fff; border-radius: 4px;
         }
         .gc-ip-state-title {
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: "Montserrat", Georgia, serif;
           font-size: 36px; font-weight: 300; color: #1a3321; margin-bottom: 10px;
         }
         .gc-ip-state-sub { font-size: 13px; color: #b0b0a8; }
