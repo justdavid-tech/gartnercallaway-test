@@ -330,7 +330,7 @@ export default function InsightsPage() {
 
         .gc-ip-title {
           font-family: "Montserrat", Georgia, serif;
-          font-size: clamp(18px, 2vw, 22px); font-weight: 300;
+          font-size: clamp(18px, 2vw, 22px); font-weight: 500;
           line-height: 1.25; color: #000;
           letter-spacing: -.01em;
           transition: color .2s;
