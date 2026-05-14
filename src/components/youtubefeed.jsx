@@ -256,7 +256,7 @@ export default function YouTubeFeed() {
         .gc-yt-heading em {
           font-style: italic;
           color: #7fb38d;
-          font-weight: 400;
+          font-weight: 600;
         }
         .gc-yt-yt-link {
           display: inline-flex;
@@ -361,7 +361,7 @@ export default function YouTubeFeed() {
         .gc-yt-poster-stats {
           font-size: 13px;
           font-weight: 500;
-          color: rgba(255,255,255,0.8);
+          color: #fff;
           display: flex;
           align-items: center;
           gap: 8px;
@@ -632,4 +632,4 @@ export default function YouTubeFeed() {
       </section>
     </>
   );
-}
+}
