@@ -445,7 +445,14 @@ export default function VideosPage() {
   const fetchYouTubeVideos = async (pageToken = "") => {
     const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
     const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
-    if (!apiKey || !channelId) return { items: [], nextToken: null };
+    
+    console.log("[YouTube VideosPage Debug] API Key exists:", !!apiKey);
+    console.log("[YouTube VideosPage Debug] Channel ID:", channelId);
+
+    if (!apiKey || !channelId) {
+      console.warn("[YouTube VideosPage Debug] Missing credentials.");
+      return { items: [], nextToken: null };
+    }
 
     try {
       const uploadsPlaylistId = channelId.trim().replace(/^UC/, 'UU');
@@ -454,6 +461,13 @@ export default function VideosPage() {
       const res = await fetch(url);
       const data = await res.json();
       
+      if (data.error) {
+        console.error("[YouTube VideosPage Debug] API Error:", data.error);
+        return { items: [], nextToken: null };
+      }
+
+      console.log("[YouTube VideosPage Debug] Received items:", data.items?.length);
+
       const items = (data.items || []).map(item => ({
         id: item.snippet.resourceId.videoId,
         title: item.snippet.title,
@@ -463,7 +477,7 @@ export default function VideosPage() {
 
       return { items, nextToken: data.nextPageToken || null };
     } catch (err) {
-      console.error("YouTube API fetch error:", err);
+      console.error("[YouTube VideosPage Debug] Fetch Error:", err);
       return { items: [], nextToken: null };
     }
   };

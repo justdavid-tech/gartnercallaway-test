@@ -5,6 +5,7 @@ import ServicesPreview from "../components/servicespreview"
 import CapabilityStrip from "../components/capabilities"
 import WhyNow from "../components/whynow"
 import InsightsPreview from "../components/insightspreview"
+import YoutubeSection from "../components/youtubefeed"
 // Floating actions
 import FloatingActions from "../components/floatingactions"
 import Loader from "../components/loader"
@@ -18,6 +19,7 @@ function Home() {
             <ServicesPreview />
             <CapabilityStrip />
             <WhyNow />
+            <YoutubeSection />
             <InsightsPreview />
             <FloatingActions />
             <Loader />

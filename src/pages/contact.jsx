@@ -52,7 +52,7 @@ const FacebookIcon = ({ size }) => <svg width={size} height={size} viewBox="0 0 
 const SOCIALS = [
   // { label: "LinkedIn",  icon: <LinkedinIcon  size={18} />, href: "#" },
   // { label: "Twitter",   icon: <TwitterIcon   size={18} />, href: "#" },
-  { label: "Instagram", icon: <InstagramIcon size={18} />, href: "#" }
+  { label: "Instagram", icon: <InstagramIcon size={18} />, href: "https://www.instagram.com/gartnercallaway?utm_source=qr&igsh=cWgzMTJyNTEyZWpv" }
   // { label: "Facebook",  icon: <FacebookIcon  size={18} />, href: "#" },
 ];
 
