@@ -152,7 +152,9 @@ export default function YouTubeFeed() {
         if (searchData.error) throw new Error(searchData.error.message);
         if (!searchData.items?.length) throw new Error("No videos found on this channel yet.");
 
-        const ids = searchData.items.map(i => i.id.videoId).join(",");
+        const validItems = searchData.items.filter(i => i.id && i.id.videoId);
+        if (!validItems.length) throw new Error("No valid video IDs found.");
+        const ids = validItems.map(i => i.id.videoId).join(",");
 
         // 2. Get full video details (stats + thumbnails)
         const vidRes  = await fetch(

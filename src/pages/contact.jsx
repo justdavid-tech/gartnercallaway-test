@@ -11,9 +11,9 @@ import {
    Get them at: https://dashboard.emailjs.com
 ──────────────────────────────────────────────────────────── */
 const EJS = {
-  SERVICE_ID:  "your_service_id",
-  TEMPLATE_ID: "your_template_id",
-  PUBLIC_KEY:  "your_public_key",
+  SERVICE_ID:  "service_fxrvdip",
+  TEMPLATE_ID: "template_1crg5rk",
+  PUBLIC_KEY:  "ewyEMRYrOVYMoi-Na",
 };
 
 /* ─── Data ───────────────────────────────────────────────── */
@@ -184,7 +184,9 @@ function ContactForm() {
 
     try {
       const result = await emailjs.send(EJS.SERVICE_ID, EJS.TEMPLATE_ID, {
+        name:       form.name,
         from_name:  form.name,
+        email:      form.email,
         from_email: form.email,
         phone:      form.phone,
         department: form.department,
@@ -210,22 +212,45 @@ function ContactForm() {
       <h3 className="text-2xl font-display font-light text-black mb-1">Send us a message</h3>
       <p className="text-sm text-black mb-6">We'll respond within 24 hours.</p>
 
-      {status === "success" && (
-        <div className="mb-6 flex items-start gap-3 rounded-xl bg-green-50 border border-green-200 p-4">
-          <CheckCircle size={18} className="text-green-600 mt-0.5 shrink-0" />
-          <div>
-            <p className="font-medium text-green-800 text-sm">Message sent!</p>
-            <p className="text-xs text-green-700 mt-0.5">Thank you for reaching out. We'll be in touch shortly.</p>
-          </div>
-        </div>
-      )}
-
-      {status === "error" && (
-        <div className="mb-6 flex items-start gap-3 rounded-xl bg-red-50 border border-red-200 p-4">
-          <AlertCircle size={18} className="text-red-600 mt-0.5 shrink-0" />
-          <div>
-            <p className="font-medium text-red-800 text-sm">Failed to send</p>
-            <p className="text-xs text-red-700 mt-0.5">{errorMsg}</p>
+      {/* Status Modal Overlay */}
+      {(status === "success" || status === "error") && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-300">
+          <div 
+            className="bg-white rounded-2xl p-8 max-w-sm w-full shadow-2xl transform transition-all duration-300"
+            role="dialog"
+          >
+            <div className="flex flex-col items-center text-center">
+              {status === "success" ? (
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle size={32} className="text-green-600" />
+                </div>
+              ) : (
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                  <AlertCircle size={32} className="text-red-600" />
+                </div>
+              )}
+              
+              <h4 className="text-2xl font-display font-medium text-black mb-2">
+                {status === "success" ? "Message Sent!" : "Failed to Send"}
+              </h4>
+              
+              <p className="text-sm text-gc-stone-500 mb-8 leading-relaxed">
+                {status === "success" 
+                  ? "Thank you for reaching out. Our team will review your enquiry and get back to you within 24 hours."
+                  : errorMsg || "Could not send your message. Please try again or call us directly."}
+              </p>
+              
+              <button 
+                onClick={() => setStatus("idle")}
+                className={`w-full py-3.5 px-6 rounded-xl font-semibold uppercase tracking-widest text-sm text-white transition-colors duration-300 ${
+                  status === "success" 
+                    ? "bg-gc-green-500 hover:bg-gc-green-900" 
+                    : "bg-red-500 hover:bg-red-600"
+                }`}
+              >
+                {status === "success" ? "Continue" : "Try Again"}
+              </button>
+            </div>
           </div>
         </div>
       )}
