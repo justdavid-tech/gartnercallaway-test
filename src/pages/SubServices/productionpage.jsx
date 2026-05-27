@@ -82,9 +82,9 @@ const DIFFERENTIATORS = [
 ];
 
 const STATS = [
-  { value: 48, suffix: "+", label: "Farm Systems Built" },
-  { value: 12, suffix: "+", label: "States Covered" },
-  { value: 3200, suffix: "ha", label: "Hectares Designed" },
+  { value: 30, suffix: "+", label: "Farm Systems Built" },
+  { value: 4, suffix: "+", label: "States Covered" },
+  { value: 250, suffix: "ha", label: "Hectares Designed" },
   { value: 98, suffix: "%", label: "Client Retention" },
 ];
 
@@ -425,36 +425,6 @@ function WhyGC() {
   );
 }
 
-/* Project Gallery */
-function Gallery() {
-  return (
-    <section className="py-24 bg-gc-stone-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4 text-[16.5px] font-bold">Project Showcase</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800">
-            Farms We've <em className="italic text-gc-green-500">Built</em>
-          </h2>
-        </Fade>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {PROJECTS.map((p, i) => (
-            <Fade key={p.title} delay={i * 70}
-              className="group relative rounded-2xl overflow-hidden h-64 cursor-pointer">
-              <img src={p.img} alt={p.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-gc-green-900/90 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <p className="text-[10px] uppercase tracking-widest text-gc-green-400 mb-1">{p.tag}</p>
-                <h3 className="font-display font-light text-white text-lg leading-snug">{p.title}</h3>
-              </div>
-            </Fade>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* CTA */
 function CTA() {
@@ -494,7 +464,6 @@ export default function ProductionPage() {
       <Process />
       <Stats />
       <WhyGC />
-      <Gallery />
       <CTA />
     </>
   );

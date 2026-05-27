@@ -125,32 +125,13 @@ function Loader({ visible }) {
   );
 }
 
-/* ─── Animated Counter ───────────────────────────────────── */
-function useCounter(target, duration = 1800, start = false) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime = null;
-    const step = (ts) => {
-      if (!startTime) startTime = ts;
-      const p = Math.min((ts - startTime) / duration, 1);
-      setValue(Math.floor((1 - Math.pow(1 - p, 3)) * target));
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [target, duration, start]);
-  return value;
-}
-
-function Stat({ value, suffix, label, delay, animate }) {
-  const count = useCounter(value, 1800, animate);
+function Stat({ label, delay, animate }) {
   return (
     <div className="gc-stat-item" style={{
       opacity: animate ? 1 : 0,
       transform: animate ? "translateY(0)" : "translateY(16px)",
       transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
     }}>
-      <span className="gc-stat-num">{count}{suffix}</span>
       <span className="gc-stat-lbl">{label}</span>
     </div>
   );
@@ -158,14 +139,14 @@ function Stat({ value, suffix, label, delay, animate }) {
 
 /* ─── Data ───────────────────────────────────────────────── */
 const STATS = [
-  { value: 200, suffix: " ha", label: "Ogun State Estate",  delay: 0   },
-  { value: 500, suffix: " kW", label: "Solar Capacity",     delay: 100 },
-  { value: 30,  suffix: "%",   label: "Yield Improvement",  delay: 200 },
-  { value: 50,  suffix: "%",   label: "Water Reduction",    delay: 300 },
+  { label: "Ogun State Estate",  delay: 0   },
+  { label: "Solar Capacity",     delay: 100 },
+  { label: "Yield Improvement",  delay: 200 },
+  { label: "Water Reduction",    delay: 300 },
 ];
 
 const BADGES = [
-  "CropX precision sensing across 200 ha",
+  "Precision sensing",
   "Bank-ready & insurer-ready reports",
   "UK & EU export qualified",
   "1,000+ people trained",
@@ -380,7 +361,7 @@ export default function HeroSection() {
             .gc-stat-item { padding: clamp(16px,2.5vw,28px) clamp(16px,3vw,40px); border-right: 1px solid rgba(255,255,255,.07); text-align: center; }
             .gc-stat-item:last-child { border-right: none; }
             .gc-stat-num { display: block; font-family: var(--fd); font-size: clamp(24px,3.5vw,38px); font-weight: 300; color: #fff; line-height: 1; margin-bottom: 5px; letter-spacing: -.01em; }
-            .gc-stat-lbl { display: block; font-size: clamp(8px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #FFF; }
+            .gc-stat-lbl { display: block; font-size: clamp(10px,.95vw,10px); font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #FFF; }
             @media (max-width: 1024px) { .gc-badge { width: 100%; max-width: 100%; } .gc-scroll { display: none; } .gc-vid-controls { right: 20px; bottom: 100px; } }
             @media (max-width: 768px) {
               .gc-stats { grid-template-columns: repeat(2,1fr); }

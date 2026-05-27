@@ -80,14 +80,13 @@ function AboutHero() {
         opacity: v?1:0, transition:"opacity .8s ease .7s",
       }}>
         {[
-          { n:"200 ha", l:"Ogun State Estate" },
-          { n:"500 kW", l:"Solar Capacity" },
-          { n:"1,000+", l:"People Trained" },
-          { n:"30+",    l:"Organisations Advised" },
-        ].map((s,i) => (
+          "Ogun State Estate",
+          "Solar Capacity",
+          "People Trained",
+          "Organisations Advised",
+        ].map((label, i) => (
           <div key={i} className="ab-hero-stat">
-            <span className="ab-hero-stat-n">{s.n}</span>
-            <span className="ab-hero-stat-l">{s.l}</span>
+            <span className="ab-hero-stat-l">{label}</span>
           </div>
         ))}
       </div>
@@ -118,7 +117,7 @@ function WhoWeAre() {
           {/* decorative photo inset */}
           <div className="ab-who-img-wrap" aria-hidden="true">
             <img
-              src="/assets/office-exterior.jpg"
+              src="/assets/production (3).jpeg"
               alt=""
               loading="lazy"
             />
@@ -165,14 +164,14 @@ const TIMELINE = [
   {
     year: "2018–2020",
     title: "Production Engineering at Scale",
-    body: "Launched Nigeria's first upscale garden centres the 'Green Zones'. Scaled ornamental and cut-flower production. Awarded the Entrepreneur Africa Prize for Innovation (2018).",
+    body: "Launched Nigeria's first upscale garden centres the 'Green Zones'. Scaled ornamental and cut-flower production. Awarded the Entrepreneur Africa Prize for Innovation (2018). We embarked on various precision production projects using soil and nethouses - full commercial open field cultivation of cut-flowers - all to test yield and market dynamics.",
     tags: ["Green Zones", "Cut flowers", "Innovation Prize 2018"],
     accent: "#FF0000",
   },
   {
     year: "2020–2023",
-    title: "Commercial Estate Build-Out",
-    body: "Designed and built the 200-hectare Ogun State hibiscus estate with pivot irrigation, 500 kW solar facility, and documented 30% yield improvement over conventional farms.",
+    title: "Commercial Structure Build-Out",
+    body: "Designed and built a new urban farm and retail store as part of our forward integration strategy.",
     tags: ["200 ha estate", "500 kW solar", "30% yield uplift"],
     accent: "#4a8a5b",
   },
@@ -300,7 +299,7 @@ const FARM_POINTS = [
       </svg>
     ),
     title:"Solar infrastructure powers operations",
-    body:"500 kW of on-estate solar powers pumps, presses, dryers, and cold storage, minimal fossil fuel dependency.",
+    body:"Solar powers pumps, presses, dryers, and cold storage, minimal fossil fuel dependency.",
   },
   {
     num:"06",

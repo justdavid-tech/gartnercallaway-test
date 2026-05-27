@@ -174,13 +174,7 @@ const ENGAGEMENT_MODELS = [
     }
 ];
 
-/* ─── Sister Brands ─────────────────────────────────────────── */
-const SISTER_BRANDS = [
-  { name: "Shaishen", description: "Premium botanical extracts" },
-  { name: "Lambert Willis", description: "Agri-finance & advisory" },
-  { name: "CropX Nigeria", description: "Precision sensing" },
-  { name: "GC Academy", description: "Agricultural training" }
-];
+
 
 /* ─── Hero Section ──────────────────────────────────────────── */
 function Hero() {
@@ -448,42 +442,22 @@ function EngagementCard({ model, index }) {
     );
 }
 
-/* ─── Sister Brands Strip ───────────────────────────────────── */
-function SisterBrands() {
+/* ─── Quote Strip ───────────────────────────────────── */
+function QuoteStrip() {
     const [ref, vis] = useInView(0.3);
 
     return (
-        <section className="py-16 bg-gc-green-900">
-            <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <p className="font-semibold uppercase tracking-[0.22em] text-gc-green-400 mb-2">
-                        Part of a bigger ecosystem
-                    </p>
-                    <h2 className="text-2xl font-display font-semibold font-light text-white">
-                        Our sister brands and partners
-                    </h2>
-                </div>
-
-                <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-                    {SISTER_BRANDS.map((brand, idx) => (
-                        <div
-                            key={brand.name}
-                            className="text-center group cursor-pointer"
-                            style={{
-                                opacity: vis ? 1 : 0,
-                                transform: vis ? "translateY(0)" : "translateY(20px)",
-                                transition: `opacity 0.6s ease ${idx * 100}ms, transform 0.7s ease ${idx * 100}ms`
-                            }}
-                        >
-                            <p className="text-white font-display text-lg font-medium mb-1">
-                                {brand.name}
-                            </p>
-                            <p className="text-xs text-gc-green-400">
-                                {brand.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+        <section className="py-24 bg-gc-green-900">
+            <div ref={ref} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center"
+                 style={{
+                    opacity: vis ? 1 : 0,
+                    transform: vis ? "translateY(0)" : "translateY(20px)",
+                    transition: "opacity 0.8s ease, transform 0.8s ease"
+                 }}>
+                <blockquote className="text-3xl sm:text-4xl lg:text-5xl font-display font-light text-white leading-tight">
+                    "We do not farm by intuition and we do not build by guesswork.
+Every system we deliver is measurable, defensible, and export-ready."
+                </blockquote>
             </div>
         </section>
     );
@@ -562,7 +536,7 @@ export default function ProductionPage() {
             <ProductGrid />
             <WhyDifferent />
             <EngagementModels />
-            <SisterBrands />
+            <QuoteStrip />
             <WholesaleEnquiry />
         </>
     );

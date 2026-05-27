@@ -19,7 +19,7 @@ const NAV = [
     sub: [
       { name: "Farm Design & Build", href: "/SubServices/productionpage", hint: "Blueprint" },
       { name: "Institutional Field Services", href: "/SubServices/institutional", hint: "Bank-ready" },
-      { name: "Production & Processing", href: "/SubServices/processingPage", hint: "200 ha estate" },
+      // { name: "Production & Processing", href: "/SubServices/processingPage", hint: "200 ha estate" },
       { name: "GC Academy", href: "/SubServices/academy", hint: "1,000+ trained" },
     ]
   },

@@ -16,7 +16,7 @@ const CAPABILITIES = [
     ),
     description: "Hydroponic towers and climate-controlled growing systems producing premium leafy greens, herbs, and microgreens 365 days a year independent of rainfall and soil degradation, delivering consistent quality to Lagos's premium hospitality and retail sectors.",
     technologies: ["Hydroponics", "Climate Control", "LED Optimization", "Year-round Production"],
-    metrics: { value: "2,500", unit: "kg/month", label: "Leafy Greens Capacity" },
+    metrics: { label: "Leafy Greens Capacity" },
     accent: "#4a8a5b",
   },
   {
@@ -33,7 +33,7 @@ const CAPABILITIES = [
     ),
     description: "Real-time soil moisture, temperature, electrical conductivity, and salinity monitoring across 200+ hectares. Every data point is timestamped, GPS-referenced, cloud-archived, and accessible via dashboard enabling precision irrigation, fertigation, and yield prediction.",
     technologies: ["Soil Moisture", "Temperature", "Electrical Conductivity", "Salinity"],
-    metrics: { value: "200+", unit: "ha", label: "Monitored Farmland" },
+    metrics: { label: "Monitored Farmland" },
     accent: "#FF0000",
   },
   {
@@ -51,7 +51,7 @@ const CAPABILITIES = [
     ),
     description: "Ten institutional service lines spanning pre-loan verification, in-season monitoring, harvest confirmation, claims investigation, audit reporting, capacity building, irrigation management, soil mapping, crop modelling, and ESG compliance delivered through four integrated service architectures: Farm Design & Build, Institutional Field Services, Production & Processing, and GC Academy.",
     technologies: ["10 Service Lines", "4 Architectures", "Full Stack", "Institutional Grade"],
-    metrics: { value: "10+4", unit: "", label: "Integrated Capabilities" },
+    metrics: { label: "Integrated Capabilities" },
     accent: "#4a8a5b",
   },
 ];
@@ -118,10 +118,6 @@ function CapabilityCard({ capability, index }) {
 
       {/* metric card */}
       <div className="gc-cap-metric">
-        <div className="gc-cap-metric-value">
-          {capability.metrics.value}
-          {capability.metrics.unit && <span className="gc-cap-metric-unit">{capability.metrics.unit}</span>}
-        </div>
         <div className="gc-cap-metric-label">{capability.metrics.label}</div>
       </div>
     </article>
@@ -406,7 +402,7 @@ export default function CapabilityStrip() {
           font-weight: 300;
         }
         .gc-cap-metric-label {
-          font-size: 9px;
+          font-size: 15px;
           font-weight: 600;
           letter-spacing: .14em;
           text-transform: uppercase;

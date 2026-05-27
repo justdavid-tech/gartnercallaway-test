@@ -271,12 +271,6 @@ function WhyGC() {
               alt="Field team at work"
               className="rounded-2xl w-full h-[460px] object-cover shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-3 bg-gc-green-900 text-white rounded-2xl p-6 shadow-xl">
-              <p className="text-3xl font-display font-light mb-1">
-                <Counter target={34} suffix="+" />
-              </p>
-              <p className="text-xs text-white/55 uppercase tracking-widest">Institutions Served</p>
-            </div>
           </Fade>
         </div>
       </div>
@@ -317,94 +311,6 @@ function Process() {
   );
 }
 
-/* ─── Stats ──────────────────────────────────────────────── */
-function Stats() {
-  return (
-    <section className="py-20 bg-gc-green-500">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          {STATS.map((s, i) => (
-            <Fade key={s.label} delay={i * 80}>
-              <p className="text-5xl sm:text-6xl font-display font-light text-white mb-2">
-                <Counter target={s.value} suffix={s.suffix} />
-              </p>
-              <p className="text-xs uppercase tracking-widest text-white font-medium">{s.label}</p>
-            </Fade>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Case Study ─────────────────────────────────────────── */
-function CaseStudy() {
-  return (
-    <section className="py-24 bg-gc-stone-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Fade className="text-center mb-14">
-          <p className="eyebrow mb-4 text-[16.5px] font-medium">Case Study</p>
-          <h2 className="text-4xl sm:text-5xl font-semibold font-display font-light text-gc-stone-800">
-            In The <em className="italic text-gc-green-500">Field</em>
-          </h2>
-        </Fade>
-
-        <Fade className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gc-stone-100">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="h-64 lg:h-auto relative">
-              <img
-                src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=80"
-                alt="University teaching farm"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gc-green-900/60 to-transparent" />
-              <span className="absolute bottom-5 left-5 text-[10px] font-semibold uppercase tracking-widest text-gc-green-400 bg-gc-green-900/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                University Teaching Farm
-              </span>
-            </div>
-
-            <div className="p-8 md:p-12 flex flex-col justify-center">
-              <p className="eyebrow mb-3">Federal University, North-Central Nigeria</p>
-              <h3 className="text-3xl font-display font-light text-gc-stone-800 mb-6 leading-snug">
-                From abandoned land to<br />a self-funding teaching farm.
-              </h3>
-
-              <div className="space-y-5 mb-8">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">The Challenge</p>
-                  <p className="text-sm text-black leading-relaxed">
-                    82 hectares of university land sitting idle for 6 years. No staff with agricultural expertise. 
-                    A directive from the NUC to activate the farm for student training within 18 months.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">What GC Did</p>
-                  <p className="text-sm text-black leading-relaxed">
-                    GC conducted a full soil assessment, designed a 3-crop rotation system, installed drip 
-                    irrigation across 40 ha, trained 12 university staff, and deployed a resident agronomist 
-                    for the first 12 months.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-black mb-1">The Outcome</p>
-                  <p className="text-sm text-black leading-relaxed">
-                    Farm operational in 7 months. First harvest generated ₦18M in produce revenue. 
-                    Now feeds 4,200 students daily and hosts 300+ agric students per semester.
-                  </p>
-                </div>
-              </div>
-
-              <Link to="/contact"
-                className="inline-flex items-center gap-2 text-gc-green-500 hover:text-gc-green-900 font-semibold text-xs uppercase tracking-widest transition-colors group">
-                Start a similar programme <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </Fade>
-      </div>
-    </section>
-  );
-}
 
 /* ─── CTA ────────────────────────────────────────────────── */
 function CTA() {
@@ -447,8 +353,6 @@ export default function InstitutionalPage() {
       <Services />
       <WhyGC />
       <Process />
-      <Stats />
-      <CaseStudy />
       <CTA />
     </>
   );
