@@ -35,10 +35,10 @@ function useInView(threshold = 0.15) {
 /* ─── Product Categories ────────────────────────────────────── */
 const PRODUCT_CATEGORIES = [
     {
-        name: "Hibiscus",
+        name: "Economic Trees",
         variety: "Hibiscus Sabdariffa",
         description: "Premium deep-red calyces with high anthocyanin content, organic-certified, and traceable from seed to export.",
-        image: "/assets/farm (5).jpg",
+        image: "/assets/economic-tree.jpeg",
         tags: ["Organic", "High Anthocyanin", "Export Grade"],
         accent: "#4a8a5b"
     },
@@ -111,7 +111,7 @@ const WHY_PILLARS = [
     {
         icon: <Droplets size={32} />,
         title: "Sensor-Verified",
-        description: "CropX soil sensors track moisture, temperature, EC, and salinity in real time. Every batch is timestamped and GPS-referenced.",
+        description: "Soil sensors track moisture, temperature, EC, and salinity in real time. Every batch is timestamped and GPS-referenced.",
         accent: "#4a8a5b"
     },
     {

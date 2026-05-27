@@ -5,7 +5,7 @@ const CAPABILITIES = [
   {
     num: "01",
     title: "Vertical Farming",
-    location: "Urban Farms · Lekki, Lagos, Nigeria",
+    location: "Urban Farms",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <rect x="6" y="8" width="16" height="14" rx="1" stroke="currentColor" strokeWidth="1.2"/>
@@ -21,7 +21,7 @@ const CAPABILITIES = [
   },
   {
     num: "02",
-    title: "CropX Precision Sensing",
+    title: "Precision Sensing",
     location: "Across the Operation",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">

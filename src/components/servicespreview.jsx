@@ -22,16 +22,16 @@ const SERVICES = [
     tags: ["Pre-loan Verification", "In-season Monitoring", "Claims Investigation", "Audit Reports"],
     accent: "#FF0000", // red
   },
-  {
-    num: "03",
-    title: "Production &\nProcessing",
-    href: "/SubServices/processingPage",
-    oneliner: "Traceable, export-ready produce from our integrated regenerative estate",
-    description:
-      "From hibiscus calyces and cut flowers to premium herbs, vegetables, and coco coir, every product is regeneratively grown, sensor-verified, solar-processed, and export-qualified for UK and EU markets.",
-    tags: ["Hibiscus & Botanicals", "Cut Flowers", "Premium Vegetables", "UK/EU Export"],
-    accent: "#4a8a5b", // green
-  },
+  // {
+  //   num: "03",
+  //   title: "Production &\nProcessing",
+  //   href: "/SubServices/processingPage",
+  //   oneliner: "Traceable, export-ready produce from our integrated regenerative estate",
+  //   description:
+  //     "From hibiscus calyces and cut flowers to premium herbs, vegetables, and coco coir, every product is regeneratively grown, sensor-verified, solar-processed, and export-qualified for UK and EU markets.",
+  //   tags: ["Hibiscus & Botanicals", "Cut Flowers", "Premium Vegetables", "UK/EU Export"],
+  //   accent: "#4a8a5b", // green
+  // },
   {
     num: "04",
     title: "GC Academy",
@@ -40,7 +40,7 @@ const SERVICES = [
     description:
       "Our production facilities have equipped 1000+ farmers, youths, and women across Nigeria with precision agriculture skills deployed by private institutions, government programmes, donor agencies,anchor agribusinesses, elementary and higher educational institutions",
     tags: ["Certified Programmes", "Online & On-site", "1,000+ Trained", "Institutional Delivery"],
-    accent: "#FF0000", // red
+    accent: "#4a8a5b", 
   },
 ];
 
@@ -242,7 +242,7 @@ export default function ServicesPreview() {
         /* ── card grid ── */
         .gc-svc-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 0;
           border: 1px solid rgba(255,255,255,.06);
           border-radius: 4px;

@@ -240,7 +240,7 @@ function ProductionSystem() {
             <p className="text-black leading-relaxed mb-5">
               Every hectare on our estate is managed under a structured crop programme
               soil-tested before planting, drip-irrigated to schedule, and monitored via 
-              CropX sensing throughout the season.
+              sensing throughout the season.
             </p>
             <p className="text-black leading-relaxed">
               This means buyers get consistent produce volumes, documented inputs, 

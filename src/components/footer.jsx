@@ -658,7 +658,7 @@ export default function Footer() {
           {[
             "200 ha Ogun State Estate",
             "500 kW Solar Facility",
-            "CropX Precision Sensing",
+            "Precision Sensing",
             "1,000+ Trained",
             "UK & EU Export Qualified",
             "Bank · Insurer · Donor Ready",

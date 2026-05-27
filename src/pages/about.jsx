@@ -65,7 +65,7 @@ function AboutHero() {
           opacity: v?1:0, transform: v?"translateY(0)":"translateY(20px)",
           transition:"opacity .85s ease .48s, transform .9s cubic-bezier(0.22,1,0.36,1) .48s",
         }}>
-          Gartner Callaway is an integrated agricultural production and services company headquartered in Lagos State, Nigeria, with an export-ready product portfolio serving markets across West Africa, the UK, and the EU.
+          Gartner Callaway is an integrated agricultural production and services company headquartered in Lagos State, Nigeria, with an export-ready portfolio.
         </p>
 
       </div>
@@ -178,8 +178,8 @@ const TIMELINE = [
   {
     year: "2024",
     title: "Regenerative Integration",
-    body: "Rebuilt the estate as an agroforestry model. Deployed CropX precision sensing across the full hectarage. All outputs made bank-ready, insurer-ready, and donor-defensible.",
-    tags: ["CropX sensing", "Agroforestry", "Institutional-grade data"],
+    body: "Rebuilt the estate as an agroforestry model. Deployed precision sensing across the full hectarage. All outputs made bank-ready, insurer-ready, and donor-defensible.",
+    tags: ["Precision sensing", "Agroforestry", "Institutional-grade data"],
     accent: "#FF0000",
   },
   {
@@ -251,7 +251,7 @@ const FARM_POINTS = [
       </svg>
     ),
     title:"Drip irrigation & fertigation",
-    body:"CropX sensor-scheduled delivery water and nutrients drop by drop, with every cycle logged and cloud-archived.",
+    body:"Sensor-scheduled delivery water and nutrients drop by drop, with every cycle logged and cloud-archived.",
   },
   {
     num:"02",
@@ -352,7 +352,7 @@ function FarmModel() {
                   { angle: 30, label:"Energy",   sub:"500 kW Solar" },
                   { angle: 90, label:"Soil",     sub:"Biomass Cycle" },
                   { angle:150, label:"Livestock",sub:"Pest + N cycle" },
-                  { angle:210, label:"Data",     sub:"CropX Sensors" },
+                  { angle:210, label:"Data",     sub:"Sensors" },
                 ].map(({angle,label,sub},i)=>{
                   const r=angle*Math.PI/180;
                   const x=140+95*Math.cos(r), y=140+95*Math.sin(r);
@@ -599,7 +599,7 @@ function Leadership() {
             {/* name plate */}
             <div className="ab-leader-nameplate">
               <span className="ab-leader-name">Yomi Williams</span>
-              <span className="ab-leader-role">Founder & Principal Engineer</span>
+              <span className="ab-leader-role">Founder & Principal Partner</span>
               <a href="https://yomiwilliams.com" className="ab-leader-site" target="_blank" rel="noopener noreferrer">
                 yomiwilliams.com ↗
               </a>
