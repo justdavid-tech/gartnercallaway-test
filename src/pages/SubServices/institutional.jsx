@@ -287,7 +287,7 @@ const QA = [
 function Hero() {
   const [ref, vis] = useInView(0.1);
   return (
-    <section className="relative h-[120vh] sm:h-[100vh] min-h-[600px] pt-32 sm:pt-24 md:pt-10 flex items-center bg-gc-green-900 overflow-hidden">
+    <section className="relative h-[110vh] sm:h-[100vh] min-h-[600px] pt-32 sm:pt-14 md:pt-10 flex items-center bg-gc-green-900 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
