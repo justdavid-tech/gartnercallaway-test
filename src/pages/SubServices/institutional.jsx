@@ -157,7 +157,7 @@ const STATS = [
   { value: 10,  suffix: "+",   label: "Years Operational"  },
   { value: 30,  suffix: "ac",  label: "Reference Estate"   },
   { value: 5,   suffix: "",    label: "Service Divisions"  },
-  { value: 15,  suffix: "+",   label: "Service Lines"      },
+  { value: 8,  suffix: "+",   label: "Service Lines"      },
 ];
 
 const PROCESS = [
@@ -509,7 +509,7 @@ function EstateStrip() {
           <div className="grid grid-cols-2 gap-4">
             {[
               { value: "500kW",  label: "Solar Infrastructure" },
-              { value: "15",     label: "Revenue Streams"      },
+              { value: "8+",     label: "Revenue Streams"      },
               { value: "Sensor", label: "Precision Sensing"    },
               { value: "Zero",   label: "External Inputs"      },
             ].map((s) => (
