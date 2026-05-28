@@ -71,16 +71,16 @@ const WHO_WE_SERVE = [
   {
     icon: <Shield size={26} />,
     title: "Insurance Companies",
-    desc: "Independent pre-policy risk assessment, bi-monthly field monitoring, and objective claims investigation for NAIC, IGI, Sanlam, AIICO, and Leadway portfolios.",
+    desc: "Independent pre-policy risk assessment, bi-monthly field monitoring, and objective claims investigation.",
   },
   {
     icon: <Users size={26} />,
     title: "Donor Organisations",
-    desc: "End-to-end programme implementation for IFAD, GIZ, USAID, Gates Foundation, and AfDB, baseline assessment, full crop management, M&E reporting, and demonstration farm hosting.",
+    desc: "End-to-end implementation for baseline assessment, full crop management, M&E reporting, and demonstration farm hosting.",
   },
   {
     icon: <Landmark size={26} />,
-    title: "Government ADPs & NIRSAL",
+    title: "Government ADPs",
     desc: "Dry-season programme delivery across entire farm clusters, pre-season assessment, full irrigation, fertigation, pest management, and compliance documentation.",
   },
   {
@@ -178,12 +178,12 @@ const TIMELINE = [
     desc: "Entrepreneur Africa Prize for Innovation. Co-developed Nigeria's first upscale multipurpose garden centres (Green Zones). Established large-scale ornamental flower cultivation from the ground up.",
   },
   {
-    year: "2020–23",
+    year: "2023–26",
     label: "Scale",
     desc: "Founder and CEO designed and developed a 200-hectare precision farm in Ogun State: centralised pivot irrigation, 500kW solar facility, mechanised tractors, oil press infrastructure, solar drying. Documented 30% yield improvement through production-engineering research.",
   },
   {
-    year: "2024",
+    year: "2026",
     label: "Integration",
     desc: "Rebuilt estate as a fully integrated agroforestry model. Precision soil sensing layered across the entire operation. Regenerative system made data-defensible end-to-end: bank-ready, insurer-ready, donor-ready.",
   },
@@ -191,41 +191,6 @@ const TIMELINE = [
     year: "2026",
     label: "Institutional",
     desc: "Opened estate, equipment fleet, sensor infrastructure, education platform, and farm management software to institutional clients across southwest Nigeria. Launched five service divisions serving banks, insurers, donors, government ADPs, and industrial processors.",
-  },
-];
-
-const PACKAGES = [
-  {
-    id: "A",
-    title: "Agricultural Lending Support",
-    soldTo: "Commercial banks, MFIs, Bank of Agriculture",
-    covers: "Pre-loan soil verification · GPS mapping · in-season portfolio monitoring · farmer GAP training · harvest yield verification",
-    value: "₦100m – ₦200m",
-    valueSub: "per bank / year",
-  },
-  {
-    id: "B",
-    title: "Insurance Field Services",
-    soldTo: "NAIC, IGI, Sanlam, AIICO, Leadway",
-    covers: "Pre-policy risk assessment · bi-monthly monitoring · independent claims investigation · regional exclusivity retainer",
-    value: "₦50m – ₦100m",
-    valueSub: "per insurer / year",
-  },
-  {
-    id: "C",
-    title: "Donor Programme Implementation",
-    soldTo: "IFAD, GIZ, USAID, Gates Foundation, AfDB",
-    covers: "Baseline soil assessment · irrigation · full crop management · farmer training · M&E reporting · demonstration farm hosting",
-    value: "$100k – $500k+",
-    valueSub: "per programme",
-  },
-  {
-    id: "D",
-    title: "Dry-Season Programme",
-    soldTo: "State ADPs, NIRSAL, anchor borrowers",
-    covers: "Pre-season assessment · full irrigation · fertigation · pest management · compliance documentation across entire farm cluster",
-    value: "₦150k – ₦250k",
-    valueSub: "per hectare",
   },
 ];
 
@@ -322,7 +287,7 @@ function Hero() {
           </h1>
 
           {/* Subtext */}
-          <p className="text-base sm:text-lg text-white/80 font-body leading-relaxed max-w-xl"
+          <p className="text-base sm:text-lg text-white font-body leading-relaxed max-w-xl"
             style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)", transition: "opacity .9s ease .38s, transform .9s ease .38s" }}>
             We are not a desk-based advisory firm. We are a working agricultural operation, 
             backed by a live 30-acre reference estate in Ogun State that any client can visit, 
@@ -371,7 +336,7 @@ function Hero() {
         style={{ opacity: vis ? 1 : 0, transition: "opacity 1s ease 1s" }}
       >
         <MapPin size={14} className="text-gc-green-400 shrink-0" />
-        <span className="text-[10px] text-white/60 uppercase tracking-widest">Reference Estate · Ogun State · Open for Client Visits</span>
+        <span className="text-[10px] text-white uppercase tracking-widest">Reference Estate · Ogun State · Open for Client Visits</span>
       </div>
     </section>
   );
@@ -444,22 +409,6 @@ function Services() {
             </Fade>
           ))}
         </div>
-
-        {/* Contract ranges callout */}
-        <Fade delay={100} className="mt-12 bg-gc-green-900 rounded-2xl p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-          {[
-            { label: "Field Services",        range: "₦12m – ₦100m",   sub: "per institutional contract"  },
-            { label: "Backward Integration",  range: "₦100m – ₦400m",  sub: "programme management fee"    },
-            { label: "Vertical Systems",      range: "₦25m – ₦120m",   sub: "installation programme"      },
-            { label: "Donor Programmes",      range: "$100k – $500k+",  sub: "per programme"               },
-          ].map((c) => (
-            <div key={c.label}>
-              <div className="text-[10px] uppercase tracking-widest text-gc-green-400 font-semibold mb-1">{c.label}</div>
-              <div className="text-xl font-bold text-white leading-tight">{c.range}</div>
-              <div className="text-[10px] text-white/50 mt-1">{c.sub}</div>
-            </div>
-          ))}
-        </Fade>
       </div>
     </section>
   );
@@ -598,7 +547,7 @@ function CTA() {
             Tell us your institutional challenge. We will prepare a tailored service proposal 
             within five business days, scoped, priced, and referenced against comparable engagements.
           </p>
-          <p className="max-w-md mx-auto text-white/35 text-sm leading-relaxed mb-10 italic">
+          <p className="max-w-md mx-auto text-white text-sm leading-relaxed mb-10 italic">
             Or visit the Ogun State estate first. Walk the rows, inspect the equipment, meet the team. 
             No advance preparation required.
           </p>
@@ -612,7 +561,7 @@ function CTA() {
               Visit the Estate
             </a>
           </div>
-          <p className="mt-10 text-white/25 text-xs italic max-w-sm mx-auto">
+          <p className="mt-10 text-white text-xs italic max-w-sm mx-auto">
             "True resilience for African agriculture lies not in choosing between the past and the future, 
             but in a thoughtful amalgamation of both." — Yomi Williams, Founder
           </p>
@@ -649,7 +598,7 @@ function Timeline() {
                     <div className="relative z-10 shrink-0 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-0">
                       <div className="w-25 h-25 rounded-full bg-gc-green-500 border-4 border-gc-green-900 flex flex-col items-center justify-center shadow-lg">
                         <span className="text-[9px] font-bold text-white leading-none tracking-wider uppercase">{item.label}</span>
-                        <span className="text-[8px] text-white/70 leading-none mt-0.5">{item.year}</span>
+                        <span className="text-[8px] text-white leading-none mt-0.5">{item.year}</span>
                       </div>
                     </div>
 
@@ -664,56 +613,6 @@ function Timeline() {
               );
             })}
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Packages ───────────────────────────────────────────── */
-function Packages() {
-  return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Fade className="max-w-2xl mb-14">
-          <p className="eyebrow mb-4 text-[16.5px] font-medium">The Four Institutional Service Packages</p>
-          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-gc-stone-800 leading-tight">
-            One Partner.<br />
-            <em className="italic text-gc-green-500">Complete Field Coverage.</em>
-          </h2>
-          <p className="mt-4 text-black leading-relaxed text-sm">
-            The highest-value engagements combine multiple service lines into one contract. 
-            One accountable partner. One invoice. Complete field coverage.
-          </p>
-        </Fade>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {PACKAGES.map((pkg, i) => (
-            <Fade key={pkg.id} delay={i * 80}
-              className="group rounded-2xl border border-gc-stone-100 hover:border-gc-green-200 hover:shadow-xl transition-all duration-300 overflow-hidden">
-              {/* Header */}
-              <div className="bg-gc-green-900 px-7 py-5 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gc-green-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                  {pkg.id}
-                </div>
-                <div>
-                  <h3 className="font-display font-semibold text-white text-lg leading-snug">{pkg.title}</h3>
-                  <p className="text-[11px] text-gc-green-400 mt-0.5">{pkg.soldTo}</p>
-                </div>
-              </div>
-              {/* Body */}
-              <div className="px-7 py-6 bg-white">
-                <p className="text-xs text-black leading-relaxed mb-5">{pkg.covers}</p>
-                <div className="flex items-end justify-between border-t border-gc-stone-100 pt-4">
-                  <span className="text-[10px] uppercase tracking-widest text-black/40 font-medium">Annual Value</span>
-                  <div className="text-right">
-                    <div className="text-xl font-bold text-gc-green-500 leading-none">{pkg.value}</div>
-                    <div className="text-[10px] text-black/40 mt-1">{pkg.valueSub}</div>
-                  </div>
-                </div>
-              </div>
-            </Fade>
-          ))}
         </div>
       </div>
     </section>
@@ -800,7 +699,6 @@ export default function InstitutionalPage() {
       <WhoWeServe />
       <Timeline />
       <Services />
-      <Packages />
       <WhyGC />
       <Process />
       <TechStack />
