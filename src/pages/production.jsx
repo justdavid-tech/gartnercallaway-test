@@ -36,9 +36,9 @@ function useInView(threshold = 0.15) {
 const PRODUCT_CATEGORIES = [
     {
         name: "Economic Trees",
-        variety: "Hibiscus Sabdariffa",
-        description: "Premium deep-red calyces with high anthocyanin content, organic-certified, and traceable from seed to export.",
-        image: "/assets/economic-tree.jpeg",
+        variety: "Plantain, Fruits trees and others",
+        description: "These are long term  financial assets for agroforestry and environmental stabilization. They provide high-value yields such as timber, fruits, nuts, oils.",
+        image: "/assets/Plantain leaves.jpg",
         tags: ["Organic", "High Anthocyanin", "Export Grade"],
         accent: "#4a8a5b"
     },
@@ -46,39 +46,39 @@ const PRODUCT_CATEGORIES = [
         name: "Cut Flowers",
         variety: "Mixed Seasonal Varieties",
         description: "Stem-cut-to-spec, climate-controlled, and packed for extended vase life, serving premium florists and exporters.",
-        image: "/assets/farm (8).jpg",
+        image: "/assets/economic-tree.jpeg",
         tags: ["Stem-cut", "Climate Controlled", "Extended Vase Life"],
         accent: "#FF0000"
     },
     {
         name: "Premium Herbs",
         variety: "Basil, Mint, Rosemary, Thyme",
-        description: "Hydroponically grown, pesticide-free culinary herbs harvested on demand for Lagos's premium hospitality sector.",
-        image: "/assets/farm (1).jpg",
+        description: "Organically grown, pesticide-free culinary herbs harvested on demand for Lagos's premium hospitality sector.",
+        image: "/assets/basil.jpg",
         tags: ["Hydroponic", "Pesticide-free", "On-demand Harvest"],
         accent: "#4a8a5b"
     },
     {
         name: "Leafy Greens",
-        variety: "Lettuce, Kale, Swiss Chard",
+        variety: "Ugwu, Shoko, Ewedu",
         description: "365-day production of crisp, nutrient-dense leafy greens independent of rainfall and soil degradation.",
-        image: "/assets/farm (3).jpg",
+        image: "/assets/ugwu.jpg",
         tags: ["Year-round", "Nutrient-dense", "Rainfall Independent"],
         accent: "#4a8a5b"
     },
     {
-        name: "Specialty Vegetables",
-        variety: "Heirloom Tomatoes, Bell Peppers, Cucumbers",
-        description: "Premium vegetables grown in controlled environments with precision irrigation and fertigation.",
-        image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=600&q=80",
+        name: "Specialty Crops",
+        variety: "Moringa, Goji Berries and more",
+        description: "Specialty crops refer to a diverse range of crops that are not classified as traditional commodities, such as corn or soy, and include crops that are grown for niche markets, including but not limited to fruits, vegetables, and other agricultural products.",
+        image: "/assets/maringa.jpg",
         tags: ["Controlled Environment", "Precision Irrigation", "Premium Grade"],
         accent: "#FF0000"
     },
     {
-        name: "Coco Coir",
+        name: "Grow Mediums",
         variety: "Sustainable Growing Medium",
-        description: "Eco-friendly, renewable coco coir substrate for both soil-based and container cultivation, export-ready.",
-        image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80",
+        description: "Eco-friendly, renewable soil substrates for both soil-based and container cultivation, export-ready.",
+        image: "/assets/growmedium.jpeg",
         tags: ["Eco-friendly", "Renewable", "Export-ready"],
         accent: "#4a8a5b"
     },
@@ -92,7 +92,7 @@ const PRODUCT_CATEGORIES = [
     },
     {
         name: "Value-added Products",
-        variety: "Dried Herbs, Teas, Spices",
+        variety: "Dried Vegetables, Herbs, Teas and Spices",
         description: "Solar-dried and packaged value-added products for retail, hospitality, and export markets.",
         image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=600&q=80",
         tags: ["Solar-dried", "Retail Ready", "Value-added"],
