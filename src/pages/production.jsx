@@ -71,7 +71,7 @@ const PRODUCT_CATEGORIES = [
         variety: "Moringa, Goji Berries and more",
         description: "Specialty crops refer to a diverse range of crops that are not classified as traditional commodities, such as corn or soy, and include crops that are grown for niche markets, including but not limited to fruits, vegetables, and other agricultural products.",
         image: "/assets/maringa.jpg",
-        tags: ["Controlled Environment", "Precision Irrigation", "Premium Grade"],
+        tags: ["Curated Niche", "Precision Irrigation", "Premium Grade"],
         accent: "#FF0000"
     },
     {

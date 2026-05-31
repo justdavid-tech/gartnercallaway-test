@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AutoSlider from "../components/newslider";
 import { getAllMedia } from "../lib/sanity";
+import YoutubeSection from "../components/youtubeFeed"
 
 /* ─────────────────────────────────────────────
    Animation Hook
@@ -221,6 +222,7 @@ export default function VideosPage() {
       ) : (
         <ImageGrid images={images} />
       )}
+      <YoutubeSection />
 
       <CTA />
     </>

@@ -363,7 +363,7 @@ function MapSection() {
         <Fade delay={150} className="rounded-2xl overflow-hidden shadow-xl">
           <iframe
             title="Gartner Callaway Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.917102378747!2d3.3597!3d6.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b1b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1234567890!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7299514396664!2d3.482016973503555!3d6.428729024260483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5c8962a936d%3A0x919ad3ed1486f6b!2s54%20Earls%20Court%20Rd%2C%20Eti-Osa%2C%20Lagos%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1780237609624!5m2!1sen!2sng"
             width="100%" height="420" style={{ border: 0 }}
             allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
           />

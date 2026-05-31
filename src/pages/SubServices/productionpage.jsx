@@ -82,7 +82,7 @@ const DIFFERENTIATORS = [
 ];
 
 const STATS = [
-  { value: 30, suffix: "+", label: "Farm Systems Built" },
+  { value: 20, suffix: "+", label: "Farm Systems Built" },
   { value: 4, suffix: "+", label: "States Covered" },
   { value: 250, suffix: "ha", label: "Hectares Designed" },
   { value: 98, suffix: "%", label: "Client Retention" },
@@ -285,7 +285,7 @@ function Overview() {
             />
             <div className="absolute -bottom-6 -left-6 bg-gc-green-900 text-white rounded-2xl p-6 shadow-xl max-w-[220px]">
               <p className="text-3xl font-display font-light mb-1">
-                <Counter target={48} suffix="+" />
+                <Counter target={20} suffix="+" />
               </p>
               <p className="text-xs text-white uppercase tracking-widest">Farm Systems Delivered</p>
             </div>

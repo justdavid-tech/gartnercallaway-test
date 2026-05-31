@@ -4,12 +4,6 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'type',
       title: 'Media Type',
       type: 'string',
