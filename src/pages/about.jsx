@@ -201,7 +201,7 @@ function Timeline() {
             Our Evolution
           </div>
           <h2 id="timeline-heading" className="ab-section-h2 ab-section-h2--light">
-            Nine Years of Building<br /><em>One Operating Thesis</em>
+            Ten Years of Building<br /><em>One Operating Thesis</em>
           </h2>
         </div>
       </Reveal>

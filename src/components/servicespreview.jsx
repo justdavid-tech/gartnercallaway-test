@@ -33,7 +33,7 @@ const SERVICES = [
   //   accent: "#4a8a5b", // green
   // },
   {
-    num: "04",
+    num: "03",
     title: "GC Academy",
     href: "/services/academy",
     oneliner: "Institutional capacity-building in modern and regenerative agriculture",
